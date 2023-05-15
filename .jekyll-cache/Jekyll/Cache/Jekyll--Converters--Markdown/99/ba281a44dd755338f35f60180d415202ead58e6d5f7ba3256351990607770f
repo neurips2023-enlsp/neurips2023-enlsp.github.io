@@ -1,15 +1,6 @@
----
-#
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
-layout: home
----
-<div id="banner">
+I"€<div id="banner">
 	<center>
-	<h2 class="blackpar_title">The 3<sup>rd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
+	<h2 class="blackpar_title">The 3<sup>rd</sup> workshop on<br />Efficient Natural Language and Speech Processing (ENLSP)</h2>
 	<h3 class="blackpar_title">(Models, Training and Inference)</h3>
 	</center>
 </div>
@@ -17,7 +8,7 @@ layout: home
 <p>
 TBD
 
-<br><br>
+<br /><br />
 
 <h2 class="blackpar_title" id="overview">Overview</h2>
 <p>
@@ -42,28 +33,67 @@ TBD
 
 <!--Confirmed Speakers-->
 <h2 class="blackpar_title" id="speakers">Confirmed Speakers</h2>
-{% include speakers.html %}
+
+
+	
+	<div class="row_perso">
+	
+	
+		
+	
+	</div>
+
 
 <h2 class="blackpar_title" id="speakers">Panelists</h2>
-{% include panelists.html %}
+
+hell
+
 
 <!-- Schedule -->
 <h2 class="blackpar_title" id="schedule">Schedule (EST time zone - New York/Montreal/Toronto)</h2>
-{% include schedule.html %}
+
+
+
+TBD
+
 
 <!-- Organizers -->
 <h2 class="blackpar_title" id="organizers">Organizers</h2>
-{% include organizers.html %}
+
+
+	
+	<div class="row_perso">
+	
+	
+		
+			
+			<div class="card_perso column_perso" style="margin-left:13%;">
+			  <img src="/images/Mehdi_Rezagholizadeh.jpg" alt="Mehdi Rezagholizadeh" class="img_card_perso" />
+			  <div class="container_perso">
+				<center>
+				<h6>
+					<b>Mehdi Rezagholizadeh</b>
+					<br />
+					Huawei Noah's Ark Lab
+				</h6>
+				</center>
+			  </div>
+			</div>
+			
+		
+	
+	</div>
+
 
 <h2 class="blackpar_title" id="Organizers">Volunteers</h2>
 <div class="row_perso">
 	<div class="card_perso column_perso justify-content-center" style="margin-left:35%;">
-	  <img src="/images/khalil_bibi.png" alt="Khalil Bibi" class="img_card_perso">
-	  <div class="container_perso" >
+	  <img src="/images/khalil_bibi.png" alt="Khalil Bibi" class="img_card_perso" />
+	  <div class="container_perso">
 		<center>
 		<h6>
 			<b>Khalil Bibi</b>
-			<br>
+			<br />
 			Huawei Noah's Ark Lab
 		</h6>
 		</center>
@@ -72,14 +102,37 @@ TBD
 </div>
 
 
-<br><br>
+<br /><br />
 
 <!-- Technical Committee -->
 <h2 class="blackpar_title" id="technical_committee">Technical Committee</h2>
-{% include technical_committee.html %}
-<br><br>
+
+
+<table>
+	<tr>
+		<td>
+			<ul>
+				
+					
+						<li> TBD </li>
+					
+				
+			</ul>
+		</td>
+		<td>
+			<ul>
+				
+					
+				
+			</ul>
+		</td>
+	</tr>
+</table>
+<br /><br />
 
 <h2 class="blackpar_title">Sponsor</h2>
 <center>
-	<img src="/images/logos.png">	
+	<img src="/images/logos.png" />	
 </center>
+</p>
+:ET
