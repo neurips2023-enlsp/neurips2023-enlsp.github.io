@@ -1,0 +1,18 @@
+- num_row: 1
+  speakers:
+    - name: Samy Bengio
+      title: Dr.
+      affiliation: Apple
+      photo: samy_bengio.jpg
+    - name: Tatiana Likhomanenko
+      title: Dr.
+      affiliation: Apple
+      photo: tatiana_likhomanenko.jpg
+    - name: Tara Sainath 
+      title: Dr.
+      affiliation: Google
+      photo: Tara_Sainath.jpg
+    - name: Sarath Chandar
+      title: Prof.
+      affiliation: MILA / Polytechnique Montreal
+      photo: sarath.jpg
