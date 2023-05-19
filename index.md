@@ -9,7 +9,7 @@ layout: home
 ---
 <div style="font-family: 'Source Sans Pro', sans-serif; background: url('/images/banner_no_text.png') no-repeat; background-size: cover; user-select: none;">
 	<center>
-		<h2 class="blackpar_title" >The 2<sup>nd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
+		<h2 class="blackpar_title" >The 3<sup>rd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
 		<h3 class="blackpar_title">[DATE], [LOCATION]<br> <b>In-person</b>and <b>Virtual</b> </h3>
 	</center>
 </div>
