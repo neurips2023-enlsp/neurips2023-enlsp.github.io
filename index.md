@@ -7,10 +7,10 @@
 #
 layout: home
 ---
-<div id="banner">
+<div style="font-family: 'Source Sans Pro', sans-serif; background: url('/images/banner_no_text.png') no-repeat; background-size: cover; user-select: none;">
 	<center>
-	<h2 class="blackpar_title">The 3<sup>rd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
-	<h3 class="blackpar_title">(Models, Training and Inference)</h3>
+		<h2 class="blackpar_title" >The 2<sup>nd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
+		<h3 class="blackpar_title">[DATE], [LOCATION]<br> <b>In-person</b>and <b>Virtual</b> </h3>
 	</center>
 </div>
 
@@ -65,6 +65,14 @@ TBD
 			<b>Khalil Bibi</b>
 			<br>
 			Huawei Noah's Ark Lab
+			<br>
+			<a href="https://scholar.google.ca/citations?user=feQAvxoAAAAJ&hl=en">
+				<i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i>
+			</a>
+			&nbsp;
+			<a href="https://www.linkedin.com/in/khalilbibi/">
+				<i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+			</a>
 		</h6>
 		</center>
 	  </div>
