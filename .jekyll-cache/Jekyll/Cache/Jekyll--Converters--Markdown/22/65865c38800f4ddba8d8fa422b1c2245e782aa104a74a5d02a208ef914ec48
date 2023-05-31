@@ -1,6 +1,6 @@
-I"<div style="font-family: 'Source Sans Pro', sans-serif; background: url('/images/banner_no_text.png') no-repeat; background-size: cover; user-select: none;">
+I"<<div style="font-family: 'Source Sans Pro', sans-serif; background: url('/images/banner_no_text.png') no-repeat; background-size: cover; user-select: none;">
 	<center>
-		<h2 class="blackpar_title">The 2<sup>nd</sup> workshop on<br />Efficient Natural Language and Speech Processing (ENLSP)</h2>
+		<h2 class="blackpar_title">The 3<sup>rd</sup> workshop on<br />Efficient Natural Language and Speech Processing (ENLSP)</h2>
 		<h3 class="blackpar_title">[DATE], [LOCATION]<br /> <b>In-person</b>and <b>Virtual</b> </h3>
 	</center>
 </div>
@@ -42,6 +42,19 @@ TBD
 		
 			
 				<div class="card_perso column_perso">
+				  <img src="/images/zettlemoyer.jpg" alt="Luke Zettelmoyer" class="img_card_perso" />
+				  <div class="container_perso">
+					<center>
+					<h6>
+						<b>Prof.<br />Luke Zettelmoyer</b>
+						<br />
+						University of Washington &amp; Meta AI
+					</h6>
+					</center>
+				  </div>
+				</div>
+			
+				<div class="card_perso column_perso">
 				  <img src="/images/samy_bengio.jpg" alt="Samy Bengio" class="img_card_perso" />
 				  <div class="container_perso">
 					<center>
@@ -75,6 +88,27 @@ TBD
 						<b>Dr.<br />Tara Sainath</b>
 						<br />
 						Google
+					</h6>
+					</center>
+				  </div>
+				</div>
+			
+		
+		</div>
+	
+		
+		<div class="row_perso">
+		
+		
+			
+				<div class="card_perso column_perso">
+				  <img src="/images/sarath.jpg" alt="Mirella Lapata" class="img_card_perso" />
+				  <div class="container_perso">
+					<center>
+					<h6>
+						<b>Prof.<br />Mirella Lapata</b>
+						<br />
+						University of Edinburgh
 					</h6>
 					</center>
 				  </div>
@@ -155,6 +189,10 @@ TBD
 					<br />
 					Huawei Noah's Ark Lab
 				</h6>
+				<br />
+				<a href="https://scholar.google.com/citations?user=MvXlF6kAAAAJ&amp;hl=en"><i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i></a>
+				&nbsp;
+				<a href="https://www.linkedin.com/in/mehdi-rezagholizadeh-61212346/"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></a>
 				</center>
 			  </div>
 			</div>
@@ -174,6 +212,14 @@ TBD
 			<b>Khalil Bibi</b>
 			<br />
 			Huawei Noah's Ark Lab
+			<br />
+			<a href="https://scholar.google.ca/citations?user=feQAvxoAAAAJ&amp;hl=en">
+				<i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i>
+			</a>
+			&nbsp;
+			<a href="https://www.linkedin.com/in/khalilbibi/">
+				<i class="bi bi-linkedin" style="font-size: 2rem;"></i>
+			</a>
 		</h6>
 		</center>
 	  </div>

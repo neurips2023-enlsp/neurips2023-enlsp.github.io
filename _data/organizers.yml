@@ -5,3 +5,33 @@
       photo: Mehdi_Rezagholizadeh.jpg
       scholar_link: https://scholar.google.com/citations?user=MvXlF6kAAAAJ&hl=en
       linkedin_link: https://www.linkedin.com/in/mehdi-rezagholizadeh-61212346/
+    - name: Peyman Passban
+      affiliation: BenchSci
+      photo: peyman_passban.jpg
+      linkedin_link: https://www.linkedin.com/in/passban/?originalSubdomain=ca
+    - name: Yue Dong
+      affiliation: University of California
+      photo: Yue_Dong.jpg
+      scholar_link: https://scholar.google.ca/citations?user=WYkn4loAAAAJ
+      linkedin_link: https://www.linkedin.com/in/yuedongcs/
+    - name: Lili Mou
+      affiliation: University of Alberta
+      photo: lili_mou.jpg
+      scholar_link: https://scholar.google.com/citations?user=32UrMrQAAAAJ&hl=en
+- num_row: 1
+  organizers:
+    - name: Yu Cheng
+      affiliation: Microsoft
+      photo: yu_cheng.jfif
+      scholar_link: https://scholar.google.com/citations?user=ORPxbV4AAAAJ&hl=en
+      linkedin_link: https://www.linkedin.com/in/chengyu05/
+    - name: Qun Liu
+      affiliation: Huawei Noah's Ark Lab
+      photo: qun_liu.png
+      scholar_link: https://scholar.google.com.sg/citations?user=2HhiGzcAAAAJ&hl=en
+      linkedin_link: https://www.linkedin.com/in/qunliu/
+    - name: Boxing Chen
+      affiliation: Huawei Noah's Ark Lab
+      photo: boxing.jpg
+      scholar_link: https://scholar.google.ca/citations?user=LiINs3gAAAAJ&hl=en
+      linkedin_link: https://www.linkedin.com/in/boxingchen/

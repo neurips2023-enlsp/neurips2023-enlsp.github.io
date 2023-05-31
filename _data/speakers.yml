@@ -1,5 +1,9 @@
 - num_row: 1
   speakers:
+    - name: Luke Zettelmoyer
+      title: Prof.
+      affiliation: University of Washington & Meta AI
+      photo: zettlemoyer.jpg
     - name: Samy Bengio
       title: Dr.
       affiliation: Apple
@@ -12,7 +16,21 @@
       title: Dr.
       affiliation: Google
       photo: Tara_Sainath.jpg
+- num_row: 2
+  speakers:
+    - name: Mirella Lapata
+      title: Prof.
+      affiliation: University of Edinburgh
+      photo: mirella-lapata.jpeg
+    - name: Haoli Bai
+      title: Dr.
+      affiliation: Huawei Noah’s Ark Lab
+      photo: haoli_bai.jpg
     - name: Sarath Chandar
       title: Prof.
       affiliation: MILA / Polytechnique Montreal
       photo: sarath.jpg
+    - name: Kenneth Heafield
+      title: Prof.
+      affiliation: University of Edinburgh
+      photo: kenneth.jpg

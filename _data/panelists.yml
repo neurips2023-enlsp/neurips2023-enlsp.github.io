@@ -1,5 +1,14 @@
 - num_row: 1
   speakers:
-    - name: Nazneen Rajan
+    - title: Dr.
+      name: Nazneen Rajan
       affiliation: Huggingface
       photo: Nazneen_Rajan.jpg
+    - title: Dr.
+      name: Minjia Zhang
+      affiliation: Microsoft / Deepspeed
+      photo: Minjia_Zhang.png
+    - title: Dr.
+      name: Tanya Roosta
+      affiliation: Amazon
+      photo: tanya_roosta.jpg

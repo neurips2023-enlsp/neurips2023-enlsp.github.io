@@ -14,6 +14,16 @@
 					<br>
 					{{ organizer.affiliation }}
 				</h6>
+				<br>
+				{% if organizer.scholar_link %}
+					<a href="{{ organizer.scholar_link }}"><i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i></a>
+				{% endif %}
+				{% if organizer.scholar_link and organizer.linkedin_link %}
+					&nbsp;
+				{% endif %}
+				{% if organizer.linkedin_link %}
+					<a href="{{ organizer.linkedin_link }}"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></a>
+				{% endif %}
 				</center>
 			  </div>
 			</div>
@@ -35,7 +45,9 @@
 					{{ organizer.affiliation }}
 				</h6>
 				<br>
-				<a href="{{ organizer.scholar_link }}"><i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i></a>
+				{% if organizer.scholar_link %}
+					<a href="{{ organizer.scholar_link }}"><i class="bi bi-mortarboard-fill" style="font-size: 2rem;"></i></a>
+				{% endif %}
 				&nbsp;
 				<a href="{{ organizer.linkedin_link }}"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></a>
 				</center>
