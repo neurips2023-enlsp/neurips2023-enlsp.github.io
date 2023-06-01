@@ -11,7 +11,7 @@ layout: home
 	<center>
 		<h2 class="blackpar_title" >The 3<sup>rd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
 		<h3 class="blackpar_title">The Future of Large Language and Speech Foundation Models</h3>
-		<h3 class="blackpar_title">Dec 15<sup>th</sup> 2023, New Orleans  <b>-</b> In person </h3>
+		<h3 class="blackpar_title">[DATE TBD], New Orleans  <b>-</b> In person </h3>
 	</center>
 </div>
 
