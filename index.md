@@ -7,14 +7,7 @@
 #
 layout: home
 ---
-<div style="font-family: 'Source Sans Pro', sans-serif; background: url('/images/banner_no_text.png') no-repeat; background-size: cover; user-select: none;">
-	<center>
-		<h2 class="blackpar_title" >The 3<sup>rd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
-		<h3 class="blackpar_title">The Future of Large Language and Speech Foundation Models</h3>
-		<h3 class="blackpar_title">[DATE TBD], New Orleans  <b>-</b> In person </h3>
-	</center>
-</div>
-
+<img src="/images/banner4.png" style="pointer-events: none; user-select: none;">
 <p>
 The third version of the Efficient Natural Language and Speech Processing (ENLSP-III) workshop will focus on the future of large language and speech foundation models; and how to make them more efficient in terms of <b>Data</b>, <b>Model</b>, <b>Training</b>, and <b>Inference</b> for real-world applications as well as academic research.  The workshop program offers an interactive platform for gathering different experts and talents from academia and industry through invited talks, panel discussion, paper submissions, reviews, interactive posters, oral presentations and a mentorship program.
 This will be a unique opportunity to discuss and share challenging problems, build connections,  exchange ideas and brainstorm solutions, and foster future collaborations. The topics of this workshop can be of interest for people working on general machine learning, deep learning, optimization, theory and NLP & Speech applications. 
@@ -108,7 +101,7 @@ TBD
 
 <h2 class="blackpar_title" id="Organizers">Volunteers</h2>
 <div class="row_perso">
-	<div class="card_perso column_perso justify-content-center" style="margin-left:35%;">
+	<div class="card_perso column_perso justify-content-center" id="volunteer_card">
 	  <img src="/images/khalil_bibi.png" alt="Khalil Bibi" class="img_card_perso">
 	  <div class="container_perso" >
 		<center>
