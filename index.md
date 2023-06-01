@@ -16,7 +16,7 @@ This will be a unique opportunity to discuss and share challenging problems, bui
 
 <h2 class="blackpar_title" id="overview">Overview</h2>
 <p>
-With the emergence of large language and speech models (such as GPT-3, GPT-4, wav2vec, Hubert, wavLM, Whisper, PALM, LLaMA, and PALM 2, and then their variants which are fine-tuned on following instructions (such as Instruct-GPT, Alpaca, Dolly and especially, conversational language models (such as ChatGPT (Link), Bard, Vicuna, StableLM-Tuned, OpenAssistant), we have taken one significant step towards mimicking the human intelligence by machines. This great success has come with the price of pre-training these large models on a huge amount of data, fine-tuning them with instruction-based data and human supervised fine-tuning data, and extensive engineering efforts. Despite the great success of these large models, it is evident that most of them are largely over-parameterized and their efficiency is under question. Lack of efficiency can largely limit the application of these advanced techniques in practice. Training, adapting or deploying these large models on devices or even cloud services with limited memory and computational power can be very challenging.
+With the emergence of large language and speech models (such as GPT-3, GPT-4, wav2vec, Hubert, wavLM, Whisper, PALM, LLaMA, and PALM 2, and then their variants which are fine-tuned on following instructions (such as Instruct-GPT, Alpaca, Dolly and especially, conversational language models (such as ChatGPT, Bard, Vicuna, StableLM-Tuned, OpenAssistant), we have taken one significant step towards mimicking the human intelligence by machines. This great success has come with the price of pre-training these large models on a huge amount of data, fine-tuning them with instruction-based data and human supervised fine-tuning data, and extensive engineering efforts. Despite the great success of these large models, it is evident that most of them are largely over-parameterized and their efficiency is under question. Lack of efficiency can largely limit the application of these advanced techniques in practice. Training, adapting or deploying these large models on devices or even cloud services with limited memory and computational power can be very challenging.
 <br><br>
 While these current achievements have paved the road for the faster progress of improving large foundation models from different aspects in the future, we need to address different efficiency issues of these models at the same time. For example, it has been shown that larger model sizes reveal more zero-shot or few-shot (in-context learning) capabilities in handling different tasks. However, collecting data, pre-training and maintaining such large models can be very expensive. In terms of training data, it is still not very clear to what extent expanding the training data can improve these pre-trained models and whether we can compress pre-training data without much sacrificing the performance. The problem of efficiency becomes more critical when we think about pre-training multimodal models.  At the time of deployment, designing proper prompts for different tasks can be very arbitrary and time consuming. Fine-tuning large language models with billions of parameters is very costly. One can think of transferring the knowledge of large foundation models to smaller models (by distillation or symbolic distillation) but still we do not have a straightforward recipe for this task. Furthermore, there is a debate in the literature that to what extent we can transfer the knowledge of powerful large black-box models such as ChatGPT to smaller models in specific or general domains. Additionally, due to the huge size of the foundation models, applying model compression techniques to them is not an easy task. 
 </p>
@@ -67,12 +67,19 @@ tasks can be expensive and it is prone to overfitting.
 
 <h2 class="blackpar_title">Submission Instructions</h2>
 <p>
-TBD
+You are invited to submit your papers in our CMT submission portal (the link will be available soon). All the submitted papers have to be anonymous for double-blind review. We expect each paper will be reviewed by at least three reviewers. The content of the paper (excluding the references and supplementary materials) should not be longer than 4 pages, strictly following the NeurIPS template style. 
+<br /><br />
+Authors can submit up to 100 MB of supplementary materials separately. Authors are highly encouraged to submit their codes for reproducibility purposes. According to the guideline of the NeurIPS workshops, already published papers are not encouraged for submission, but you are allowed to submit your ArXiv papers or the ones which are under submission. Moreover, a work that is presented at the main NeurIPS conference should not appear in a workshop. Please make sure to indicate the complete list of conflict of interests for all the authors of your paper. To encourage higher quality submissions, our sponsors are offering the <b>Best Paper</b> and the <b>Best Poster</b> Award to qualified outstanding original oral and poster presentations (upon nomination of the reviewers). Bear in mind that our workshop is not archival, but the accepted papers will be hosted on the workshop website.
 </p>
 
 <h2 class="blackpar_title">Important Dates:</h2>
 <p>
-TBD
+<ul>
+	<li>Submission Deadline: September 29, 2023 <b>AOE</b> </li>
+	<li>Acceptance Notification: October 27, 2023 <b>AOE</b> </li>
+	<li>Camera-Ready Submission: November 3, 2023 <b>AOE</b> </li>
+	<li>Workshop Date: <b>TBD</b></li>
+</ul>
 </p>
 
 
@@ -88,7 +95,7 @@ TBD
 </p>
 
 <!-- Schedule -->
-<h2 class="blackpar_title" id="schedule">Schedule (EST time zone - New York/Montreal/Toronto)</h2>
+<h2 class="blackpar_title" id="schedule">Schedule</h2>
 <p>
 {% include schedule.html %}
 </p>

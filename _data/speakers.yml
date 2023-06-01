@@ -1,9 +1,5 @@
 - num_row: 1
   speakers:
-    - name: Luke Zettelmoyer
-      title: Prof.
-      affiliation: University of Washington & Meta AI
-      photo: zettlemoyer.jpg
     - name: Samy Bengio
       title: Dr.
       affiliation: Apple
@@ -12,6 +8,10 @@
       title: Dr.
       affiliation: Apple
       photo: tatiana_likhomanenko.jpg
+    - name: Luke Zettelmoyer
+      title: Prof.
+      affiliation: University of Washington & Meta AI
+      photo: zettlemoyer.jpg
     - name: Tara Sainath 
       title: Dr.
       affiliation: Google

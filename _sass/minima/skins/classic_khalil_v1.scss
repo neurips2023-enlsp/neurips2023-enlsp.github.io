@@ -322,3 +322,8 @@ p{
 #banner{
 	//background-image: url("../../images/banner.jpg");
 }
+@media only screen and (min-width: 600px) {
+	#volunteer_card{
+		margin-left: 35%;
+	}
+}
