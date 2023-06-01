@@ -10,7 +10,8 @@ layout: home
 <div style="font-family: 'Source Sans Pro', sans-serif; background: url('/images/banner_no_text.png') no-repeat; background-size: cover; user-select: none;">
 	<center>
 		<h2 class="blackpar_title" >The 3<sup>rd</sup> workshop on<br>Efficient Natural Language and Speech Processing (ENLSP)</h2>
-		<h3 class="blackpar_title">[DATE], [LOCATION]<br> <b>In-person</b>and <b>Virtual</b> </h3>
+		<h3 class="blackpar_title">The Future of Large Language and Speech Foundation Models</h3>
+		<h3 class="blackpar_title">Dec 15<sup>th</sup> 2023, New Orleans  <b>-</b> In person </h3>
 	</center>
 </div>
 
@@ -19,7 +20,6 @@ The third version of the Efficient Natural Language and Speech Processing (ENLSP
 This will be a unique opportunity to discuss and share challenging problems, build connections,  exchange ideas and brainstorm solutions, and foster future collaborations. The topics of this workshop can be of interest for people working on general machine learning, deep learning, optimization, theory and NLP & Speech applications. 
 </p>
 
-<br><br>
 
 <h2 class="blackpar_title" id="overview">Overview</h2>
 <p>
@@ -84,7 +84,7 @@ TBD
 
 
 <!--Confirmed Speakers-->
-<h2 class="blackpar_title" id="speakers">Confirmed Speakers</h2>
+<h2 class="blackpar_title" id="speakers">Confirmed Keynote Speakers</h2>
 <p>
 {% include speakers.html %}
 </p>
@@ -96,7 +96,9 @@ TBD
 
 <!-- Schedule -->
 <h2 class="blackpar_title" id="schedule">Schedule (EST time zone - New York/Montreal/Toronto)</h2>
+<p>
 {% include schedule.html %}
+</p>
 
 <!-- Organizers -->
 <h2 class="blackpar_title" id="organizers">Organizers</h2>
@@ -133,7 +135,9 @@ TBD
 
 <!-- Technical Committee -->
 <h2 class="blackpar_title" id="technical_committee">Technical Committee</h2>
+<p>
 {% include technical_committee.html %}
+</p>
 <br><br>
 
 <h2 class="blackpar_title">Sponsor</h2>

@@ -1,0 +1,140 @@
+- Title: Opening Speech
+  Time: 08:20AM - 08:30AM
+  Whole_line: true
+  
+- Title: (KeyNote Talk) TBD
+  Time: 08:30AM - 09:00AM
+  Presenter: Tatiana Likhomanenko
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD 
+- Title: (KeyNote Talk) TBD
+  Time: 09:00AM - 09:30AM
+  Presenter: Samy Bengio
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD
+  
+  
+- Title: (Paper Oral Presentation) TBD
+  Time: 09:30AM - 09:40AM
+  Presenter: TBD
+  Is_paper: true
+  Whole_line: false
+  Authors: TBD
+  Abstract: TBD
+- Title: (Paper Oral Presentation) TBD
+  Time: 09:40AM - 09:50AM
+  Presenter: TBD
+  Is_paper: true
+  Whole_line: false
+  Authors: TBD
+  Abstract: TBD
+- Title: (Paper Oral Presentation) TBD
+  Time: 09:50AM - 10:00AM
+  Presenter: TBD
+  Is_paper: true
+  Whole_line: false
+  Authors: TBD
+  Abstract: TBD
+  
+- Title: Morning Break and <b>Poster Setup</b>
+  Time: 10:00AM - 10:30AM
+  Whole_line: true
+
+
+- Title: (KeyNote Talk) TBD
+  Time: 10:30AM - 11:00AM
+  Presenter: Luke Zettelmoyer
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD
+- Title: (KeyNote Talk) TBD
+  Time: 11:00AM - 11:30AM
+  Presenter: Sarath Chandar
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD
+  
+
+- Title: (Paper Oral Presentation) TBD
+  Time: 11:30AM - 11:40AM
+  Presenter: TBD
+  Is_paper: true
+  Whole_line: false
+  Authors: TBD
+  Abstract: TBD
+- Title: (Paper Oral Presentation) TBD
+  Time: 11:40AM - 11:50AM
+  Presenter: TBD
+  Is_paper: true
+  Whole_line: false
+  Authors: TBD
+  Abstract: TBD
+- Title: (Paper Oral Presentation) TBD
+  Time: 11:50AM - 12:00PM
+  Presenter: TBD
+  Is_paper: true
+  Whole_line: false
+  Authors: TBD
+  Abstract: TBD
+
+- Title: Lunch Break
+  Time: 12:00PM - 12:45PM
+  Whole_line: true
+ 
+- Title: <b>Poster Session I</b>
+  Time: 12:45PM - 01:45PM
+  Whole_line: true
+  
+- Title: (KeyNote Talk) TBD
+  Time: 01:45PM - 02:15PM
+  Presenter: Mirella Lapata
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD  
+  
+- Title: Interactive Industrial Panel
+  Time: 02:15PM - 03:00PM
+  Presenter: <ul><li>Nazneen Rajan</li><li>Minjia Zhang</li><li>Tanya Roosta</li><li>Tim Dettmers</li></ul>
+  Is_paper: false
+  Whole_line: false
+
+- Title: Afternoon Break and <b>Poster Session II</b>
+  Time: 03:00PM - 03:30PM
+  Whole_line: true
+
+- Title: (KeyNote Talk) TBD
+  Time: 03:30PM-04:00PM
+  Presenter: Tara Sainath
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD  
+  
+  
+- Title: (KeyNote Talk) TBD
+  Time: 04:00PM-04:30PM
+  Presenter: Haoli Bai
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD  
+  
+- Title: (KeyNote Talk) TBD
+  Time: 04:30PM-05:00PM
+  Presenter: Pascal Poupart
+  Is_paper: false
+  Whole_line: false
+  Bio: TBD
+  Abstract: TBD  
+
+
+- Title: Best Paper and Poster Award & Closing
+  Time: 05:00PM-05:10PM
+  Whole_line: true

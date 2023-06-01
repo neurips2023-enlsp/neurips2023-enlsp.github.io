@@ -41,6 +41,8 @@ TBD
 					<td>{{ event.Time }}</td>
 					{% if event.Title == "break" %}
 						<td colspan='3'>Break</td>
+					{% elsif event.Whole_line %}
+						<td colspan='3'>{{ event.Title }}</td>
 					{% else %}
 						{% if event.Abstract %}
 							<td>{{ event.Title }}</td>
@@ -54,7 +56,7 @@ TBD
 						{% else %}
 							<td colspan='2'>{{ event.Title }}</td>
 						{% endif %}
-						<td>{{ event.Presenter }}</td>
+						<td><b>{{ event.Presenter }}</b></td>
 					{% endif %}
 				</tr>
 			{% endfor %}
