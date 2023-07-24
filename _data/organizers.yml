@@ -14,17 +14,22 @@
       photo: Yue_Dong.jpg
       scholar_link: https://scholar.google.ca/citations?user=WYkn4loAAAAJ
       linkedin_link: https://www.linkedin.com/in/yuedongcs/
-    - name: Lili Mou
-      affiliation: University of Alberta
-      photo: lili_mou.jpg
-      scholar_link: https://scholar.google.com/citations?user=32UrMrQAAAAJ&hl=en
-- num_row: 1
-  organizers:
     - name: Yu Cheng
       affiliation: Microsoft
       photo: yu_cheng.jfif
       scholar_link: https://scholar.google.com/citations?user=ORPxbV4AAAAJ&hl=en
       linkedin_link: https://www.linkedin.com/in/chengyu05/
+- num_row: 1
+  organizers:
+    - name: Soheila Samiee
+      affiliation: BASF
+      photo: soheila.jpg
+      scholar_link: https://scholar.google.ca/citations?user=9aZFWa8AAAAJ&hl=en
+      linkedin_link: https://www.linkedin.com/in/soheila-samiee-3696a858/ 
+    - name: Lili Mou
+      affiliation: University of Alberta
+      photo: lili_mou.jpg
+      scholar_link: https://scholar.google.com/citations?user=32UrMrQAAAAJ&hl=en 
     - name: Qun Liu
       affiliation: Huawei Noah's Ark Lab
       photo: qun_liu.png
