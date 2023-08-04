@@ -161,12 +161,12 @@ Authors can submit up to 100 MB of supplementary materials separately. Authors a
 <div class="row">
 	<div class="col">
 		<center>
-			<img src="/images/logos.png" width="400px">
+			<img src="/images/logos.png" width="600px">
 		</center>
 	</div>
 	<div class="col">
 		<center>
-			<img src="/images/BASF_logo.png" width="200px">
+			<img src="/images/BASF_logo.png" width="400px">
 		</center>
 	</div>
 </div>
