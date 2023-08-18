@@ -71,6 +71,7 @@ tasks can be expensive and it is prone to overfitting.
 <ul>
 	<li>Knowledge localization, knowledge editing, or targeted editing/training of foundation models</li>
 	<li>Efficient dense retrieval and search</li>
+	<li>Efficient graphs for NLP</li>
 	<li>Training models on device</li>
 	<li>Incorporating external knowledge into pre-trained models</li>
 	<li>Efficient Federated learning for NLP: reduce the communication costs, tackling heterogeneous data, heterogeneous models.</li>
