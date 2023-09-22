@@ -27,6 +27,7 @@
       affiliation: Huawei Noah’s Ark Lab
       photo: haoli_bai.jpg
 - num_row: 3
+  speakers:
     - name: Sarath Chandar
       title: Prof.
       affiliation: MILA / Polytechnique Montreal
