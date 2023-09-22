@@ -89,7 +89,7 @@ Authors can submit up to 100 MB of supplementary materials separately. Authors a
 <h2 class="blackpar_title">Important Dates:</h2>
 <p>
 <ul>
-	<li>Submission Deadline: September 29, 2023 <b>AOE</b> </li>
+	<li>Submission Deadline: October 2, 2023 <b>AOE</b> </li>
 	<li>Acceptance Notification: October 27, 2023 <b>AOE</b> </li>
 	<li>Camera-Ready Submission: November 3, 2023 <b>AOE</b> </li>
 	<li>Workshop Date: <b>TBD</b></li>
