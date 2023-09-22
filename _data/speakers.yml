@@ -12,12 +12,12 @@
       title: Prof.
       affiliation: University of Washington & Meta AI
       photo: zettlemoyer.jpg
+- num_row: 2
+  speakers:
     - name: Tara Sainath 
       title: Dr.
       affiliation: Google
       photo: Tara_Sainath.jpg
-- num_row: 2
-  speakers:
     - name: Mirella Lapata
       title: Prof.
       affiliation: University of Edinburgh
@@ -26,6 +26,7 @@
       title: Dr.
       affiliation: Huawei Noah’s Ark Lab
       photo: haoli_bai.jpg
+- num_row: 3
     - name: Sarath Chandar
       title: Prof.
       affiliation: MILA / Polytechnique Montreal
@@ -34,3 +35,7 @@
       title: Prof.
       affiliation: University of Edinburgh
       photo: kenneth2.jpg
+    - name: Ali Madani
+      title: Dr.
+      affiliation: Profluent
+      photo: ali_madani.png
