@@ -154,7 +154,7 @@ Authors can submit up to 100 MB of supplementary materials separately. Authors a
 </p>
 <br><br>
 
-<h2 class="blackpar_title">Sponsors</h2>
+<h2 class="blackpar_title">Diamond Sponsors</h2>
 <!-- <center>
 	<img src="/images/logos.png">	
 	<img src="/images/BASF_logo.png">	
