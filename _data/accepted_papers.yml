@@ -75,4 +75,30 @@
 "authors": "Jinyan Su (Cornell University); Peilin Yu (Brown University)*; Jieyu Zhang (University of Washington); Stephen H Bach (Brown University)",
 "has_supp": false,
 },
+{
+"id": "17",
+"title": "SPEED: Speculative Pipelined Execution for Efficient Decoding",
+"abstract": "Generative Large Language Models (LLMs) based on the Transformer architecture have recently emerged as a dominant foundation model for a wide range of Natural  Language Processing tasks. Nevertheless, their application in real-time scenarios has been highly restricted due to the significant inference latency associated with these models. This is particularly pronounced due to the autoregressive nature of generative LLM inference, where tokens are generated sequentially since each token depends on all previous output tokens. It is therefore challenging to achieve any token-level parallelism, making inference extremely memory-bound. In this work, we propose SPEED, which improves inference efficiency by speculatively executing multiple future tokens in parallel with the current token using predicted values based on early-layer hidden states. For Transformer decoders which employ parameter sharing, the memory operations for the tokens executing in parallel can be amortized, which allows us to accelerate generative LLM inference. We demonstrate the efficiency of our method in terms of latency reduction relative to model accuracy and demonstrate how speculation allows for training deeper decoders with parameter sharing with minimal runtime overhead.",
+"authors": "Coleman Hooper (UC Berkeley)*; Sehoon Kim (University of California, Berkeley); Hiva Mohammadzadeh (UC Berkeley); Hasan N Genc (University of California, Berkeley); Kurt Keutzer (EECS, UC Berkeley); Amir Gholami (UC Berkeley); Sophia Shao (Berkeley)",
+"has_supp": false,
+},
+{
+"id": "18",
+"title": "Efficiently Adapting Pretrained Language Models to New Languages",
+"abstract": "Recent large language models (LLM) exhibit sub-optimal performance on low-resource languages, as the training data of these models is usually dominated by English and other high-resource languages. 
+Furthermore, it is challenging to train models for low-resource languages, especially from scratch, due to a lack of high quality training data. 
+Adapting pretrained LLMs reduces the need for data in the new language while also providing cross lingual transfer capabilities. However, naively adapting to new languages leads to catastrophic forgetting and poor tokenizer efficiency.
+In this work, we study how to efficiently adapt any existing pretrained LLM to a new language without running into these issues.
+In particular, we improve the encoding efficiency of the tokenizer by adding new tokens from the target language and study the data mixing recipe to mitigate forgetting.
+Our experiments on adapting an English LLM to Hungarian and Thai show that our recipe can reach better performance than open source models on the target language, with minimal regressions on English.",
+"authors": "Zoltan C Csaki (SambaNova Systems)*; Pian Pawakapan (SambaNova Systems); Urmish Thakker (SambaNova Systems); Qiantong Xu (Facebook AI Research)",
+"has_supp": false,
+},
+{
+"id": "19",
+"title": "MultiPrompter: Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning",
+"abstract": "Recently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines. ",
+"authors": "Dong Ki Kim (LG AI Research)*; Sungryull Sohn (LG AI Research); Lajanugen Logeswaran (University of Michigan); Dongsub Shim (LG AI Research); Honglak Lee (LG AI Research)",
+"has_supp": false,
+},
 ]
