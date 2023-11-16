@@ -58,7 +58,7 @@ cursor: zoom-in;
 			</div>
 			<div class="card-footer">
 				<center>
-					<a href="" data-bs-toggle="modal" data-bs-target="#paper_{{row.id}}" class="btn btn-primary">Read More</a><br><br>
+					<a href="#" data-bs-toggle="modal" data-bs-target="#paper_{{row.id}}" class="btn btn-info"><i class="bi bi-info-circle"></i> &nbsp; Read More</a><br><br>
 					<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Paper</a><br><br>
 				        {% if row.has_supp %}
 				          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
