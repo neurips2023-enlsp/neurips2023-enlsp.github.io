@@ -3,6 +3,13 @@
 "title": "What is Lost in Knowledge Distillation?",
 "abstract": "Deep neural networks (DNNs) have improved NLP tasks significantly, but training and maintaining such networks could be costly. Model compression techniques, such as, knowledge distillation (KD), have been proposed to address the issue; however, the compression process could be lossy. Motivated by this, our work investigates how a distilled student model differs from its teacher, if the distillation process causes any information losses, and if the loss follows a specific pattern. Our experiments tries to shed light on what types of tasks might be less or more sensitive to KD by reporting data points on the contribution of different factors, such as the number of layers or attention heads. Results such as ours could be utilized when determining effective and efficient configurations to achieve an optimal information transfer between larger (teacher) and smaller (student) models.",
 "authors": "Manas Ranjan Mohanty (Amazon)*; Tanya G Roosta (Amazon); Peyman Passban (Amazon)",
-"has_supp": false
+"has_supp": false,
+},
+{
+"id": "2",
+"title": "What is Lost in Knowledge Distillation?",
+"abstract": "Deep neural networks (DNNs) have improved NLP tasks significantly, but training and maintaining such networks could be costly. Model compression techniques, such as, knowledge distillation (KD), have been proposed to address the issue; however, the compression process could be lossy. Motivated by this, our work investigates how a distilled student model differs from its teacher, if the distillation process causes any information losses, and if the loss follows a specific pattern. Our experiments tries to shed light on what types of tasks might be less or more sensitive to KD by reporting data points on the contribution of different factors, such as the number of layers or attention heads. Results such as ours could be utilized when determining effective and efficient configurations to achieve an optimal information transfer between larger (teacher) and smaller (student) models.",
+"authors": "Manas Ranjan Mohanty (Amazon)*; Tanya G Roosta (Amazon); Peyman Passban (Amazon)",
+"has_supp": false,
 }
 ]
