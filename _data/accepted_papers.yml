@@ -19,4 +19,18 @@
 "authors": "Zhengxiang Shi (University College London)*; Aldo Lipani (University College London)",
 "has_supp": false,
 },
+{
+"id": "4",
+"title": "LLM-MQ: Mixed-precision Quantization for Efficient LLM Deployment",
+"abstract": "Large Language Models (LLMs) have demonstrated impressive performance across various tasks. Nevertheless, deploying LLMs on edge devices presents significant challenges, primarily due to their substantial model size (e.g., over 10 billion parameters). Low-precision quantization is a promising way to reduce the memory requirement of LLMs. However, directly applying ultra-low-bit quantization to LLMs leads to significant performance degradation and fails to meet a specific weight memory budget. In this paper, we propose LLM-MQ, a Mixed-precision Quantization method, to address the above issues. Our method mainly contains three folds: (1) We propose a sparse outlier protection strategy for low-precision layers by protecting the outliers in FP16 format to maintain the performance. (2) We propose sensitivity-based precision allocation to assign the proper bit-width for each layer within the given budget for weight memory based on their first-order information and quantization error. (3) We develop efficient CUDA core kernels to accelerate mix-precision LLMs by fusing the dequantization and General Matrix-Vector Multiplication (GEMV). With comparable performance on various tasks, LLM-MQ can flexibly quantize LLMs that meet the given budget for weight memory. On NVIDIA T4 GPU, we achieve up to 1.6× end-to-end speedup compared to the pytorch FP16 baseline.",
+"authors": "Shiyao Li (Tsinghua University)*; Xuefei Ning (Tsinghua University); Ke Hong (Tsinghua University); Tengxuan Liu (Tsinghua University); Luning Wang (Tsinghua University); Xiuhong Li (Peking University); Kai Zhong (Tsinghua University); Guohao Dai (Shanghai Jiao Tong University); Huazhong Yang (Tsinghua University); Yu Wang (Tsinghua University)",
+"has_supp": true,
+},
+{
+"id": "6",
+"title": "DYAD: A Descriptive Yet Abjuring Density Efficient Approximation to Linear Neural Network Layers",
+"abstract": "We devise, implement and performance-asses DYAD, a layer which can serve as a faster and more memory-efficient approximate replacement for linear layers, (nn.Linear() in Pytorch). These layers appear in common subcomponents, such as in the ff module of Transformers. DYAD is based on a bespoke near-sparse matrix structure which approximates the dense "weight" matrix W that matrix-multiplies the input in the typical realization of such a layer, a.k.a DENSE. Our alternative near-sparse matrix structure is decomposable to a sum of 2 matrices permutable to a block-sparse counterpart. These can be represented as 3D tensors, which in unison allow a faster execution of matrix multiplication with the mini-batched input matrix X compared to DENSE (O(rows(W) × cols(W)) → O(rows(W)×cols(W)/(# of blocks)). As the crux of our experiments, we pretrain both DYAD and DENSE variants of 2 sizes of the OPT arch and 1 size of the Pythia arch, including at different token scales of the babyLM benchmark. We find DYAD to be competitive (≥ 95%) of DENSE performance on zero-shot (e.g. BLIMP), few-shot (OPENLM) and finetuning (GLUE) benchmarks, while being ≥7-15% faster to train on-GPU even at 125m scale, besides surfacing larger speedups at increasing scale and model width.",
+"authors": "Sarin Chandy (ASAPP); Varun Gangal (ASAPP Inc)*; Yi Yang (ASAPP); Gabriel A Maggiotti (ASAPP)",
+"has_supp": false,
+},
 ]
