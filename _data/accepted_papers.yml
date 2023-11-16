@@ -269,4 +269,40 @@ Our experiments on adapting an English LLM to Hungarian and Thai show that our r
 "authors": "Vishvak Murahari (Princeton University)*; Ameet Deshpande (Princeton University); Carlos E Jimenez (Princeton University); Izhak Shafran (Google AI); Mingqiu Wang (Google Inc); Yuan Cao (Google Brain); Karthik Narasimhan (Princeton University)",
 "has_supp": false,
 },
+{
+"id": "54",
+"title": "Towards End-to-end 4-Bit Inference on  Generative Large Language Models",
+"abstract": " We show that the majority of the inference computations for large generative models such as LLaMA and OPT can be performed with both weights and activations being cast to 4 bits, in a way that leads to practical speedups while at the same time maintaining good accuracy. We achieve this via a hybrid quantization strategy called QUIK, which compresses most of the weights and activations to 4-bit, while keeping some outlier weights and activations in higher-precision. Crucially, our scheme is designed with computational efficiency in mind: we provide GPU kernels with highly-efficient layer-wise runtimes, which lead to practical end-to-end throughput improvements of up to 3.1x relative to FP16 execution. 
+ Code and models are provided at: https://github.com/IST-DASLab/QUIK.",
+"authors": "Saleh Ashkboos (ETH Zurich); Ilia Markov (IST Austria); Elias Frantar (IST Austria); Tingxuan Zhong (Xidian University); Xincheng Wang (Xidian university ); Jie Ren (KAUST); Torsten Hoefler (ETH Zurich); Dan Alistarh (IST Austria & NeuralMagic)*",
+"has_supp": false,
+},
+{
+"id": "56",
+"title": "SortedNet, a Place for Every Network and Every Network in its Place",
+"abstract": "As the size of deep learning models continues to grow, finding optimal models under memory and computation constraints becomes increasingly more important. Although the architecture and constituent building blocks of neural networks usually allow them to be used modularly (i.e., using the sub-networks of a given network after training), their training process is unaware of this modularity. Consequently, conventional neural network training lacks the flexibility to adapt the computational load of the model during inference. This paper proposes SortedNet, a generalized and scalable solution to harness the inherent modularity of deep neural networks across various dimensions (e.g. width, depth, blocks) for efficient dynamic inference. Our training considers a nested architecture for the sub-models with shared parameters and trains all models simultaneously to obtain many-in-one sorted models. We utilize a novel updating scheme during training that combines a random sub-model sampling with gradient accumulation to improve training efficiency. Furthermore, the sorted nature of our training leads to a search-free sub-model selection at inference time; and the nested architecture of the resulting sub-models leads to minimal storage requirement and efficient switching between sub-models at inference. Our general dynamic training approach is demonstrated across various architectures and tasks, including BERT on language understanding and ResNet on image classification. Experimental results show the efficacy of the proposed method in achieving efficient sub-models while outperforming state-of-the-art dynamic training approaches.",
+"authors": "Mojtaba Valipour (University of Waterloo)*; Mehdi Rezagholizadeh (Huawei Technologies); Hossein Rajabzadeh (University of Waterloo); Marzieh Tahaei (Huawei Noah's Ark Lab); Boxing Chen (Huawei Noah's Ark Lab); Ali Ghodsi (University of Waterloo)",
+"has_supp": false,
+},
+{
+"id": "57",
+"title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
+"abstract": "Large Language Models (LLMs) have achieved state-of-the-art performance across various language tasks but pose challenges for practical deployment due to their substantial memory requirements. Furthermore, the latest generative models suffer from high inference costs caused by the memory bandwidth bottleneck in the auto-regressive decoding process. To address these issues, we propose an efficient weight-only quantization method that reduces memory consumption and accelerates inference for LLMs. To ensure minimal quality degradation, we introduce a simple and effective heuristic approach that quantizes only the model weights of a pre-trained model with finer granularity. This approach is applicable to both Mixture-of-Experts (MoE) and dense models without requiring additional fine-tuning. Furthermore, we implement highly efficient GPU GEMMs that perform on-the-fly matrix multiplication and dequantization, supporting the multiplication of fp16 or bf16 activations with int8 or int4 weights. We evaluate our approach on large-scale open source models such as OPT-175B and internal MoE models, showcasing minimal accuracy loss while achieving up to 3.65 times higher throughput on the same number of GPUs.",
+"authors": "Young Jin Kim (Microsoft)*; Rawn Henry (NVIDIA); Raffy Fahim (Microsoft); Hany Hassan (microsoft)",
+"has_supp": false,
+},
+{
+"id": "61",
+"title": "KronA: Parameter Efficient Tuning with Kronecker Adapter",
+"abstract": "Fine-tuning a Pre-trained Language Model (PLM) on a specific downstream task has been a well-known paradigm in natural language processing. However, with the growing size of PLMs, training the entire model on downstream tasks has become significantly time-consuming and resource-hungry. Therefore, Parameter Efficient Tuning (PET) techniques have been proposed to address the growing demand for the efficient fine-tuning of PLMs. One popular PET technique is inserting trainable adapters into a frozen model during fine-tuning. However, adapters have low-rank projections, which may reduce their representation power, resulting in sub-optimal performance. We address this problem using the Kronecker product instead of low-rank multiplications to improve the flexibility and performance of adapters. We introduce KronA, a Kronecker equivalent of LoRA for efficient fine-tuning of transformer-based PLMs. We apply the proposed adapters for fine-tuning a well-known PLM, called  T5, on the GLUE benchmark to show that our method outperforms the popular PET baselines.",
+"authors": "Ali Edalati (McGill)*; Marzieh Tahaei (Huawei Noah's Ark Lab); Ivan Kobyzev (Huawei); Vahid Partovi Nia (Huawei Noah's Ark Lab); James J. Clark (McGill University); Mehdi Rezagholizadeh (Huawei Technologies)",
+"has_supp": false,
+},
+{
+"id": "62",
+"title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
+"abstract": "Large Language Models (LLMs) with billions of parameters have drastically transformed AI applications. However, their demanding computation during inference has raised significant challenges for deployment on resource-constrained devices. Despite recent trends favoring alternative activation functions such as GELU or SiLU, known for increased computation, this study strongly advocates for reinstating ReLU activation in LLMs. We demonstrate that using the ReLU activation function has a negligible impact on convergence and performance while significantly reducing computation and weight transfer. This reduction is particularly valuable during the memory-bound inference step, where efficiency is paramount. Exploring sparsity patterns in ReLU-based LLMs, we unveil the reutilization of activated neurons for generating new tokens and leveraging these insights, we propose practical strategies to substantially reduce LLM inference computation up to three times, using ReLU activations with minimal performance trade-offs.",
+"authors": "Seyed Iman Mirzadeh (Apple)*; Keivan Alizadeh-Vahid (University of Washington); Sachin Mehta (University of Washington); Carlo C  Del Mundo (Apple); Oncel Tuzel (Apple); Golnoosh Samei (Apple); Mohammad Rastegari (Apple Inc); Mehrdad Farajtabar (Apple)",
+"has_supp": true,
+},
 ]
