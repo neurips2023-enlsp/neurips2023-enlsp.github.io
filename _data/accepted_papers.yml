@@ -47,4 +47,11 @@
 "authors": "Vinay Shukla (University of California, Los Angeles)*; Yang Yang (Google); Siddarth Malreddy (Google); Jinoo Baek (Google); Dale Johnson (Google); Wenfei Zou (Google); Karthik Lakshmanan (Google); Mark Williams (Google); Minh Pham (Google)",
 "has_supp": false,
 },
+{
+"id": "10",
+"title": "Parameter Efficient Finetuning for Reducing Activation Density in Transformers",
+"abstract": "Pretrained Language Models (PLMs) have become the de facto starting point for fine-tuning on downstream tasks. However, as model sizes continue to increase, traditional fine-tuning of all parameters becomes challenging. To address this, parameter-efficient fine-tuning (PEFT) methods have gained popularity as a means to adapt PLMs effectively. In parallel, recent studies have revealed the presence of activation sparsity within the intermediate outputs of the MLP blocks in transformers. Low activation density enables efficient model inference on sparsity-aware hardware. Building upon this insight, in this work, we propose a novel density loss that encourages higher activation sparsity (equivalently, lower activation density) in the pre-trained models. In our experiments, we demonstrate the effectiveness of our proposed approach \textbf{DEFT} by employing mainstream PEFT techniques like LoRA, Adapter, Prompt/Prefix Tuning. DEFT consistently achieves substantial reductions in activation density. For example, on the T5-Base model, DEFT leads to reductions of average \textbf{47.77\%} in encoder density and \textbf{81.82\%} in decoder density compared to PEFT. These trends are mirrored across various GeLU activation-based models, including ViT-Base (86M), ViT-Large (307M), RoBERTa-Base (125M), RoBERTa-Large (355M), and GPT2 (117M), with density reductions ranging from \textbf{29.61\%} to \textbf{56.68\%}.",
+"authors": "Bharat Runwal (Indian Institute of Technology(IIT), Delhi)*; Tejaswini Pedapati (IBM Research); Pin-Yu Chen (IBM Research)",
+"has_supp": false,
+},
 ]
