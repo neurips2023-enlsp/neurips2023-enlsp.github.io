@@ -171,3 +171,19 @@ Authors can submit up to 100 MB of supplementary materials separately. Authors a
 		</center>
 	</div>
 </div>
+<h2 class="blackpar_title">Platinum Sponsor</h2>
+<div class="row">
+	<div class="col">
+		<center>
+			<img src="/images/netmind_logo.png" width="400px">
+		</center>
+	</div>
+</div>
+<h2 class="blackpar_title">Gold Sponsor</h2>
+<div class="row">
+	<div class="col">
+		<center>
+			<img src="/images/Apple-Logo.jpg" width="200px">
+		</center>
+	</div>
+</div>
