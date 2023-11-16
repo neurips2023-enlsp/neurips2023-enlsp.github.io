@@ -49,7 +49,7 @@ cursor: zoom-in;
 <div class="container">
 	<div class="row">
 	{% for row in rows %}
-	<div class="col-lg-4 mb-3 d-flex align-items-stretch">
+	<div class="col-lg-3 mb-3 d-flex align-items-stretch">
 		<div class="card">
 			<!--<img src="..." class="card-img-top" alt="...">-->
 			<iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="https://neurips2023-enlsp.github.io/papers/paper_{{row.id}}.pdf" frameborder="1" scrolling="auto"></iframe>
@@ -59,8 +59,12 @@ cursor: zoom-in;
 			<div class="card-footer">
 				<center>
 					<a href="" data-bs-toggle="modal" data-bs-target="#paper_{{row.id}}" class="btn btn-primary">Read More</a><br><br>
-					<a href="" class="btn btn-primary">Paper</a><br><br>
-					<a href="" class="btn btn-primary">Supplementary Material</a>
+					<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Paper</a><br><br>
+				        {% if row.has_supp %}
+				          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
+				        {% else %}
+					  <button type="button" class="btn btn-secondary" disabled>Supplementary Material</button>
+				        {% endif %}
 				</center>
 		  	</div>
 		</div>
