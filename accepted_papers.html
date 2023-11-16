@@ -59,11 +59,11 @@ cursor: zoom-in;
 			<div class="card-footer">
 				<center>
 					<button data-bs-toggle="modal" data-bs-target="#paper_{{row.id}}" class="btn btn-info" style="color:white;"><i class="bi bi-info-circle" style="font-size: 1.1rem;"></i> &nbsp; Read More</button><br><br>
-					<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Paper</a><br><br>
+					<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Paper</a> &nbsp; 
 				        {% if row.has_supp %}
-				          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
+				          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Appendix</a>
 				        {% else %}
-					  <button type="button" class="btn btn-secondary" disabled>Supplementary Material</button>
+					  <button type="button" class="btn btn-secondary" disabled>Appendix</button>
 				        {% endif %}
 				</center>
 		  	</div>
