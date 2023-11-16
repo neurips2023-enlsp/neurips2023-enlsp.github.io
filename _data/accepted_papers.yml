@@ -11,5 +11,636 @@
 "abstract": "Today, the exponential rise of large models developed by academic and industrial institutions with the help of massive computing resources raises the question of whether someone without access to such resources can make a valuable scientific contribution. To explore this, we tried to solve the challenging task of multilingual image retrieval having a limited budget of $1,000. As a result, we present NLLB-CLIP - CLIP model with a text encoder from the NLLB model. To train the model, we used an automatically created dataset of 106,246 good-quality images with captions in 201 languages derived from the LAION COCO dataset. We trained multiple models using image and text encoders of various sizes and kept different parts of the model frozen during the training. We thoroughly analyzed the trained models using existing evaluation datasets and newly created XTD200 and Flickr30k-200 datasets. We show that NLLB-CLIP is comparable in quality to state-of-the-art models and significantly outperforms them on low-resource languages.",
 "authors": "Alexander Visheratin (Independent researcher)*",
 "has_supp": true,
+},
+{
+"id": "3",
+"title": "DePT: Decomposed Prompt Tuning for Parameter-Efficient Fine-tuning",
+"abstract": "Prompt tuning (PT), where a small amount of trainable soft (continuous) prompt vectors is affixed to the input of language models (LM), has shown promising results across various tasks and models for parameter-efficient fine-tuning (PEFT). PT stands out from other PEFT approaches because it maintains competitive performance with fewer trainable parameters and does not drastically scale up its parameters as the model size expands. However, PT introduces additional soft prompt tokens, leading to longer input sequences, which significantly impacts training and inference time and memory usage due to the Transformer's quadratic complexity. Particularly concerning for Large Language Models (LLMs) that face heavy daily querying. To address this issue, we propose Decomposed Prompt Tuning (DePT), which decomposes the soft prompt into a shorter soft prompt and a pair of low-rank matrices that are then optimised with two different learning rates. This allows DePT to achieve better performance while saving over 20% memory and time costs compared to vanilla PT and its variants, without changing trainable parameter sizes. Through extensive experiments on 21 natural language processing (NLP) , we demonstrate that DePT outperforms state-of-the-art PEFT approaches, including the full fine-tuning baseline in some scenarios. Additionally, we empirically show that DEPT grows more efficient as the model size increases.",
+"authors": "Zhengxiang Shi (University College London)*; Aldo Lipani (University College London)",
+"has_supp": false,
+},
+{
+"id": "4",
+"title": "LLM-MQ: Mixed-precision Quantization for Efficient LLM Deployment",
+"abstract": "Large Language Models (LLMs) have demonstrated impressive performance across various tasks. Nevertheless, deploying LLMs on edge devices presents significant challenges, primarily due to their substantial model size (e.g., over 10 billion parameters). Low-precision quantization is a promising way to reduce the memory requirement of LLMs. However, directly applying ultra-low-bit quantization to LLMs leads to significant performance degradation and fails to meet a specific weight memory budget. In this paper, we propose LLM-MQ, a Mixed-precision Quantization method, to address the above issues. Our method mainly contains three folds: (1) We propose a sparse outlier protection strategy for low-precision layers by protecting the outliers in FP16 format to maintain the performance. (2) We propose sensitivity-based precision allocation to assign the proper bit-width for each layer within the given budget for weight memory based on their first-order information and quantization error. (3) We develop efficient CUDA core kernels to accelerate mix-precision LLMs by fusing the dequantization and General Matrix-Vector Multiplication (GEMV). With comparable performance on various tasks, LLM-MQ can flexibly quantize LLMs that meet the given budget for weight memory. On NVIDIA T4 GPU, we achieve up to 1.6× end-to-end speedup compared to the pytorch FP16 baseline.",
+"authors": "Shiyao Li (Tsinghua University)*; Xuefei Ning (Tsinghua University); Ke Hong (Tsinghua University); Tengxuan Liu (Tsinghua University); Luning Wang (Tsinghua University); Xiuhong Li (Peking University); Kai Zhong (Tsinghua University); Guohao Dai (Shanghai Jiao Tong University); Huazhong Yang (Tsinghua University); Yu Wang (Tsinghua University)",
+"has_supp": true,
+},
+{
+"id": "6",
+"title": "DYAD: A Descriptive Yet Abjuring Density Efficient Approximation to Linear Neural Network Layers",
+"abstract": "We devise, implement and performance-asses DYAD, a layer which can serve as
+a faster and more memory-efficient approximate replacement for linear layers,
+(nn.Linear() in Pytorch). These layers appear in common subcomponents, such as
+in the ff module of Transformers. DYAD is based on a bespoke near-sparse matrix
+structure which approximates the dense "weight" matrix W that matrix-multiplies
+the input in the typical realization of such a layer, a.k.a DENSE. Our alternative
+near-sparse matrix structure is decomposable to a sum of 2 matrices permutable to a block-sparse counterpart. These can be represented as 3D tensors, which in unison allow a faster execution of matrix multiplication with the mini-batched input matrix X compared to DENSE (O(rows(W) × cols(W)) → O(rows(W)×cols(W)/(# of blocks)). As the crux of our experiments, we pretrain both DYAD and DENSE variants of 2 sizes of the OPT arch and 1 size of the Pythia arch, including at different token scales of the babyLM benchmark. We find DYAD to be competitive (≥ 95%) of DENSE performance on zero-shot (e.g. BLIMP), few-shot (OPENLM) and finetuning (GLUE) benchmarks, while being ≥7-15% faster to train on-GPU even at 125m scale, besides surfacing larger speedups at increasing scale and model width.",
+"authors": "Sarin Chandy (ASAPP); Varun Gangal (ASAPP Inc)*; Yi Yang (ASAPP); Gabriel A Maggiotti (ASAPP)",
+"has_supp": false,
+},
+{
+"id": "7",
+"title": "Transfer Learning for Structured Pruning under Limited Task Data",
+"abstract": "Pre-trained models are growing increasingly large which can be problematic for applications with strong inference constraints. Fortunately, task-aware structured pruning offers a solution. While existing pruning algorithms can be efficient, the common practical setting where task-specific data is limited is yet to be addressed. To ameliorate the data scarcity problem, we propose a structured pruning strategy that leverages transfer learning. Detailed analyses of simple transfer learning based remedies lead us to a simple, flexible formulation of what, how and when to transfer, resulting in pruned models with improved generalization over strong baselines.",
+"authors": "Lucio M Dery (Carnegie Mellon University); Awni Hannun (Facebook AI Research); David Grangier (Apple)*",
+"has_supp": false,
+},
+{
+"id": "9",
+"title": "Embedding User-Generated Content using Structural Supervision and Generative Models",
+"abstract": "One well-studied solution to the need for vast amounts of human-labeled data is to use self-supervised training objectives in pretraining, which enables learning on completely unlabeled samples.  Especially in the case of larger models such as LLMs, these pretraining procedures have demonstrated benefits [Devlin et al.,2018]. In this work we focus on training LLMs for producing semantically expressive sentence embeddings for User-Generated Content (UGC) in comment-style mediums.  We provide a novel self-supervised training paradigm that leverages the structure of comment data and also demonstrate the efficacy of LLM generation for producing quality training data. Through empirical evaluation, we show improvements against existing baselines methods on several downstream tasks.",
+"authors": "Vinay Shukla (University of California, Los Angeles)*; Yang Yang (Google); Siddarth Malreddy (Google); Jinoo Baek (Google); Dale Johnson (Google); Wenfei Zou (Google); Karthik Lakshmanan (Google); Mark Williams (Google); Minh Pham (Google)",
+"has_supp": false,
+},
+{
+"id": "10",
+"title": "Parameter Efficient Finetuning for Reducing Activation Density in Transformers",
+"abstract": "Pretrained Language Models (PLMs) have become the de facto starting point for fine-tuning on downstream tasks.
+However, as model sizes continue to increase, traditional fine-tuning of all parameters becomes challenging.
+To address this, parameter-efficient fine-tuning (PEFT) methods have gained popularity as a means to adapt PLMs effectively.
+In parallel, recent studies have revealed the presence of activation sparsity within the intermediate outputs of the MLP blocks in transformers.
+Low activation density enables efficient model inference on sparsity-aware hardware.
+Building upon this insight, in this work, we propose a novel density loss that encourages higher activation sparsity (equivalently, lower activation density) in the pre-trained models. In our experiments, we demonstrate the effectiveness of our proposed approach \textbf{DEFT} by employing mainstream PEFT techniques like LoRA, Adapter, Prompt/Prefix Tuning. DEFT consistently achieves substantial reductions in activation density. For example, on the T5-Base model, DEFT leads to reductions of average \textbf{47.77\%} in encoder density and \textbf{81.82\%} in decoder density compared to PEFT. These trends are mirrored across various GeLU activation-based models, including ViT-Base (86M), ViT-Large (307M), RoBERTa-Base (125M), RoBERTa-Large (355M), and GPT2 (117M), with density reductions ranging from \textbf{29.61\%} to \textbf{56.68\%}.",
+"authors": "Bharat Runwal (Indian Institute of Technology(IIT), Delhi)*; Tejaswini Pedapati (IBM Research); Pin-Yu Chen (IBM Research)",
+"has_supp": false,
+},
+{
+"id": "11",
+"title": "GQKVA: Efficient Pre-training of Transformers by Grouping Queries, Keys, and Values",
+"abstract": "Massive transformer-based models face several challenges, including slow and computationally intensive pre-training and over-parametrization. This paper addresses these challenges by proposing a versatile method called GQKVA, which generalizes query, key, and value grouping techniques. GQKVA is designed to speed up transformer pre-training while reducing the model size. Our experiments with various GQKVA variants highlight a clear trade-off between performance and model size, allowing for customized choices based on resource and time limitations. Our findings also indicate that the conventional multi-head attention approach is not always the best choice, as there are lighter and faster alternatives available. We tested our method on ViT, which achieved an approximate 0.3% increase in accuracy while reducing the model size by about 4% in the task of image classification. Additionally, our most aggressive model reduction experiment resulted in a reduction of approximately 15% in model size, with only around a 1% drop in accuracy.",
+"authors": "Farnoosh Javadi (Huawei Technologies)*; Walid Ahmed (Huawei); Habib Hajimolahoseini (Huawei Toronto Research Centre); Foozhan Ataiefard (Huawei Technologies); Mohammad Hassanpour (Huawei Technologies); Saina Asani (University of Toronto); Austin Wen (Huawei Technologies); Omar Mohamed Awad (Huawei); Kangling Liu (Huawei Technologies); Yang Liu (Huawei Canada)",
+"has_supp": false,
+},
+{
+"id": "12",
+"title": "Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL",
+"abstract": "In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. We introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+"authors": "Hao Sun (University of Cambridge)*; Alihan Hüyük (University of Cambridge); Mihaela van der Schaar (University of California, Los Angeles)",
+"has_supp": false,
+},
+{
+"id": "13",
+"title": "Structure Discovery in Prompted Weak Supervision",
+"abstract": "Prompted weak supervision (PromptedWS) applies pre-trained large language models (LLMs) as supervision sources in a weak supervision setup to efficiently distill information from LLMs and obtain labeled datasets at scale. We further extend the use of LLMs to address one of the key challenges in weak supervision: learning the dependency structure among noisy supervision sources. In this work, we highlight the challenge of structure discovery in PromptedWS. We propose a Structure Refining Module, a simple yet effective first approach based on the similarities of the prompts by taking advantage of the intrinsic structure in the embedding space. At the core of our method are Labeling Function Removal (LaRe) and Correlation Structure Generation  (CosGen). Compared to previous methods that learn the dependencies from weak labels, our method finds the dependencies that are intrinsic in the embedding space. We show that Structure Refining Module improves the PromptedWS by up to 12.7 points on benchmark tasks.",
+"authors": "Jinyan Su (Cornell University); Peilin Yu (Brown University)*; Jieyu Zhang (University of Washington); Stephen H Bach (Brown University)",
+"has_supp": false,
+},
+{
+"id": "17",
+"title": "SPEED: Speculative Pipelined Execution for Efficient Decoding",
+"abstract": "Generative Large Language Models (LLMs) based on the Transformer architecture have recently emerged as a dominant foundation model for a wide range of Natural  Language Processing tasks. Nevertheless, their application in real-time scenarios has been highly restricted due to the significant inference latency associated with these models. This is particularly pronounced due to the autoregressive nature of generative LLM inference, where tokens are generated sequentially since each token depends on all previous output tokens. It is therefore challenging to achieve any token-level parallelism, making inference extremely memory-bound. In this work, we propose SPEED, which improves inference efficiency by speculatively executing multiple future tokens in parallel with the current token using predicted values based on early-layer hidden states. For Transformer decoders which employ parameter sharing, the memory operations for the tokens executing in parallel can be amortized, which allows us to accelerate generative LLM inference. We demonstrate the efficiency of our method in terms of latency reduction relative to model accuracy and demonstrate how speculation allows for training deeper decoders with parameter sharing with minimal runtime overhead.",
+"authors": "Coleman Hooper (UC Berkeley)*; Sehoon Kim (University of California, Berkeley); Hiva Mohammadzadeh (UC Berkeley); Hasan N Genc (University of California, Berkeley); Kurt Keutzer (EECS, UC Berkeley); Amir Gholami (UC Berkeley); Sophia Shao (Berkeley)",
+"has_supp": false,
+},
+{
+"id": "18",
+"title": "Efficiently Adapting Pretrained Language Models to New Languages",
+"abstract": "Recent large language models (LLM) exhibit sub-optimal performance on low-resource languages, as the training data of these models is usually dominated by English and other high-resource languages. 
+Furthermore, it is challenging to train models for low-resource languages, especially from scratch, due to a lack of high quality training data. 
+Adapting pretrained LLMs reduces the need for data in the new language while also providing cross lingual transfer capabilities. However, naively adapting to new languages leads to catastrophic forgetting and poor tokenizer efficiency.
+In this work, we study how to efficiently adapt any existing pretrained LLM to a new language without running into these issues.
+In particular, we improve the encoding efficiency of the tokenizer by adding new tokens from the target language and study the data mixing recipe to mitigate forgetting.
+Our experiments on adapting an English LLM to Hungarian and Thai show that our recipe can reach better performance than open source models on the target language, with minimal regressions on English.",
+"authors": "Zoltan C Csaki (SambaNova Systems)*; Pian Pawakapan (SambaNova Systems); Urmish Thakker (SambaNova Systems); Qiantong Xu (Facebook AI Research)",
+"has_supp": false,
+},
+{
+"id": "19",
+"title": "MultiPrompter: Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning",
+"abstract": "Recently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines. ",
+"authors": "Dong Ki Kim (LG AI Research)*; Sungryull Sohn (LG AI Research); Lajanugen Logeswaran (University of Michigan); Dongsub Shim (LG AI Research); Honglak Lee (LG AI Research)",
+"has_supp": false,
+},
+{
+"id": "21",
+"title": "Efficient LLM Inference on CPUs",
+"abstract": "Large language models (LLMs) have demonstrated remarkable performance and tremendous potential across a wide range of tasks. However, deploying these models has been challenging due to the astronomical amount of model parameters, which requires a demand for large memory capacity and high memory bandwidth. In this paper, we propose an effective approach that can make the deployment of LLMs more efficiently. We support an automatic INT4 weight-only quantization flow and design a special LLM runtime with highly-optimized kernels to accelerate the LLM inference on CPUs. We demonstrate the general applicability of our approach on popular LLMs including Llama2, Llama, GPT-NeoX, and showcase the extreme inference efficiency on CPUs. The code will be open-sourced soon.",
+"authors": "Haihao Shen (Intel)*; Hanwen Chang (Intel); Bo Dong (Intel); Hengyu Meng (Intel); Yu Luo (Intel)",
+"has_supp": false,
+},
+{
+"id": "22",
+"title": "FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores",
+"abstract": "Convolution models with long filters have demonstrated state-of-the-art reasoning abilities in many long-sequence tasks but lag behind the most optimized Transformers in wall-clock time.
+A major bottleneck is the Fast Fourier Transform (FFT)---which allows long convolutions to run in $O(N \log N)$ time in sequence length $N$ but has poor hardware utilization.
+In this paper, we study how to optimize the FFT convolution.
+We find two key bottlenecks: the FFT does not effectively use specialized matrix multiply units, and it incurs expensive I/O between layers of the memory hierarchy.
+In response, we propose FlashFFTConv.
+FlashFFTConv uses a matrix decomposition that computes the FFT using matrix multiply units and enables kernel fusion for long sequences, reducing I/O.
+FlashFFTConv speeds up exact FFT convolutions by up to 6.54$\times$ over PyTorch and achieves up to 4.4$\times$ speedup end-to-end.
+Given the same compute budget, FlashFFTConv allows Hyena-GPT-s to achieve 2.3 points better perplexity and M2-BERT-base to achieve 3.3 points higher GLUE score---matching models with twice the parameter count.",
+"authors": "Daniel Y Fu (Stanford University)*; Hermann N Kumbong (Stanford University); Eric Nguyen (Stanford University); Christopher Re (Stanford University)",
+"has_supp": false,
+},
+{
+"id": "23",
+"title": "Efficient Long-Range Transformers: You Need to Attend More, but Not Necessarily at Every Layer",
+"abstract": "Pretrained transformer models leverage the attention mechanism to capture long- and short-range dependencies in the sequence. However, the (full) attention mechanism incurs high computational cost -- quadratic in the sequence length, which is not affordable in tasks with long sequences, e.g., inputs with 8k tokens. Although sparse attention can be used to improve computational efficiency, as suggested in existing work, it has limited modeling capacity and often fails to capture complicated dependencies in long sequences. To tackle this challenge, we propose MASFormer, an easy-to-implement transformer variant with mixed attention spans. Specifically, MASFormer is equipped with full attention to capture long-range dependencies, but only at a small number of layers. For the remaining layers, MASformer only employs sparse attention to capture short-range dependencies. Our experiments on natural language modeling and generation tasks show that a decoder-only MASFormer model of 1.3B parameters can achieve competitive performance to vanilla transformers with full attention while significantly reducing computational cost (up to 75\%).  ",
+"authors": "Qingru Zhang (Georgia Institute of Technology)*; Dhananjay Ram (AWS); Cole Hawkins (Amazon Web Services); Sheng Zha (Amazon Web Services); Tuo Zhao (Georgia Tech)",
+"has_supp": false,
+},
+{
+"id": "24",
+"title": "IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs",
+"abstract": "One limitation of existing transformer-based models is that they cannot handle very long sequences as input since their self-attention operations exhibit quadratic time and space complexity. This problem becomes especially acute when transformers are deployed on hardware platforms equipped only with CPUs. To address this issue, we propose a novel method for accelerating self-attention at inference time that works with pretrained transformer models out-of-the-box without requiring retraining. We experiment using our method to accelerate various long-sequence transformers on various benchmarks and demonstrate a greater speedup compared to the baselines. ",
+"authors": "Yuzhen Mao (School of Computing Sciences, Simon Fraser University)*; Martin Ester (Simon Fraser University); Ke Li (Simon Fraser University)",
+"has_supp": false,
+},
+{
+"id": "25",
+"title": "On the Zero-Shot Generalization of Machine-Generated Text Detectors",
+"abstract": "The rampant proliferation of large language models, fluent enough to generate text indistinguishable from human-written language, gives unprecedented importance to the detection of machine-generated text. This work is motivated by an important research question: How will the detectors of machine-generated text perform on outputs of a new generator, that the detectors were not trained on? We begin by collecting generation data from a wide range of LLMs, and train neural detectors on data from each generator and test its performance on held-out generators. While none of the detectors can generalize to all generators, we observe a consistent and interesting pattern that the detectors trained on data from a medium-size LLM can zero-shot generalize to the larger version. As a concrete application, we demonstrate that robust detectors can be built on an ensemble of training data from medium-sized models.",
+"authors": "Xiao Pu (Peking University)*; Jingyu Zhang (Johns Hopkins University); Xiaochuang Han (University of Washington); Yulia Tsvetkov (University of Washington); Tianxing He (University of Washington)",
+"has_supp": false,
+},
+{
+"id": "27",
+"title": "Intra-Class Similarity-Guided Feature Distillation",
+"abstract": "Knowledge Distillation (KD) is an effective technique for compressing large language models through the teacher-student framework. Previous work in feature distillation mainly applied an exact matching between the hidden representations of the student and the teacher. However, as the student has a lower capacity compared to the teacher, it may struggle to mimic its exact hidden representations. This leads to a large discrepancy between their features as shown in preceding research. Therefore, we propose intra-class similarity-guided feature distillation, a novel approach to make the task easier for the student. In this work, we map each sample representation by the student to its K nearest neighbor samples representations by the teacher that are within the same class. This method is novel and can be combined with other distillation techniques. Empirical results show the effectiveness of our proposed approach by maintaining good performance on benchmark datasets.",
+"authors": "Khouloud Saadi (University of Passau)*; Jelena Mitrović (University of Passau); Michael Granitzer (University of Passau)",
+"has_supp": false,
+},
+{
+"id": "28",
+"title": "Less is More! A slim architecture, optimal for language tasks",
+"abstract": "The softmax attention  has emerged as a noteworthy development in the field of Deep Learning, building on the successes of Transformer-based architectures. Their ever increasing sizes need increasing computational memory, that limits their usage. We propose QgV, a sigmoid gate that significantly boosts performance without increasing architecture size. We also leverage Tensor Chains to identify and prune the excess parameters. We find that such excess resides primarily within the embedding layer, and not in the output linear layer. To further improve performance and reduce parameters, we introduce H-SoftPOS, a hierarchical embedding layer. Remarkably, on the WMT14 English-German validation set, our approach yields a threefold reduction in perplexity, surpassing the current state-of-the-art, while reducing parameter counts also by a factor of 3. When we further reduce the number of parameters up to sevenfold, we can still achieve a 21\% decrease in perplexity with respect to the baseline Transformer. To test generalization capabilities, we conduct experiments on the 7 language pairs of the WMT17 dataset. Our model, Anthe, outperforms existing techniques in terms of test loss while simultaneously halving the number of parameters. Moreover, we observe a 70 times reduction in variance with respect to the prior state-of-the-art. In conclusion, our proposed method yields significant improvements in performance at lower memory cost.",
+"authors": "Luca Celotti (Université de Sherbrooke)*; Ermal Rrapaj (LBNL)",
+"has_supp": false,
+},
+{
+"id": "30",
+"title": "Comprehensive Bench-marking of Entropy and Margin Based Scoring Metrics for Data Selection",
+"abstract": "While data selection methods have been studied extensively in active learning, data pruning, and data augmentation settings, there is little evidence for the efficacy of these methods in industry scale settings, particularly in low-resource languages. Our work presents ways of assessing prospective training examples in those settings for their "usefulness" or "difficulty". We also demonstrate how these measures can be used in selecting important examples for training supervised machine learning models. We primarily experiment with entropy and Error L2-Norm (EL2N) scores. We use these metrics to curate high quality datasets from a large pool of Weak Signal Labeled data, which assigns no-defect high confidence hypotheses during inference as ground truth labels. We then conduct training data augmentation experiments using these de-identified datasets and demonstrate that score-based selection can result in a 2% decrease in semantic error rate and 4%-7% decrease in domain classification error rate when compared to the baseline technique of random selection. ",
+"authors": "Anusha Sabbineni (Amazon)*; Nikhil Anand (Amazon); Maria Minakova (Amazon)",
+"has_supp": false,
+},
+{
+"id": "32",
+"title": "Lightweight Retrieval Tuning for Black-Box Language Models",
+"abstract": "Retrieval-augmented language models have demonstrated remarkable effectiveness, particularly in knowledge-intensive tasks.  Previous studies on retrieval augmentation typically require tuning the parameters of language models or updating the vector datastore, resulting in huge computational costs.  However, it becomes infeasible as the scale of language models and the vector datastore continues to increase, especially when language models are only accessible through APIs.  Hence, we treat the language model as a black box and keep the vector datastore frozen. We propose a lightweight retrieval tuning technique by introducing a self-adapted similarity matching module, employing less than 1M parameters. Proximal Policy Optimization (PPO) is utilized to fine-tune the introduced parameters because the black-box language models cannot be trained end-to-end.  Our approach exhibits great scalability as it can be employed in any scenario, regardless of the frozen vector datastore and the black-box language model.  Moreover, our approach has high training efficiency, the speed bottleneck of which lies in the inference of the black-box language models.  Experiments conducted on the MMLU and TrivialQA benchmarks demonstrate that our lightweight retrieval tuning technique significantly improves the performance of retrieval augmentation across different scales and architectures of language models.  Specifically, our method improves InstructGPT's performance on the MMLU benchmark by 6%.",
+"authors": "Xiao-Wen Yang (Nanjing University)*; Hong-Jie You (Nanjing University); Peng-Xiao Song (Nanjing University); Hao-Ran Hao (Nanjing University); Jie-Jing Shao (Nanjing University); Yu-Feng Li (Nanjing University)",
+"has_supp": false,
+},
+{
+"id": "33",
+"title": "Skeleton-of-Thought: Large Language Models Can Do Parallel Decoding",
+"abstract": "This work aims at decreasing the end-to-end generation latency of large language models (LLMs). One of the major causes of the high generation latency is the sequential decoding approach adopted by almost all state-of-the-art LLMs. In this work, motivated by the thinking and writing process of humans, we propose Skeleton-of-Thought (SoT), which first guides LLMs to generate the skeleton of the answer, and then conducts parallel API calls or batched decoding to complete the contents of each skeleton point in parallel. Not only does SoT provide considerable speed-ups across 12 LLMs, but it can also potentially improve the answer quality on several question categories. SoT is an initial attempt at data-centric optimization for inference efficiency, and further underscores the potential of pushing LLMs to think more like a human for answer quality.",
+"authors": "Xuefei Ning (Tsinghua University); Zinan Lin (Microsoft Research)*; Zixuan Zhou (Tsinghua University); Zifu Wang (KU Leuven); Huazhong Yang (Tsinghua University); Yu Wang (Tsinghua University)",
+"has_supp": false,
+},
+{
+"id": "34",
+"title": "Investigating the Impact of Compression on Parametric Knowledge in Language Models",
+"abstract": "Compressing large language models (LLMs), often consisting of billions of parameters, provides faster inference, smaller memory footprints, and enables local deployment. Two fundamental compression techniques are pruning and quantization, with the former eliminating redundant connections in model layers and the latter representing model parameters with as few as 4 bits. The key tradeoff is between the degree of compression and the impact on the quality of the compressed model. Existing research on LLM compression primarily focuses on performance in terms of general metrics like perplexity or downstream task accuracy. More fine-grained metrics, such as those measuring parametric knowledge, remain significantly underexplored. To help bridge this gap, we present a comprehensive analysis across multiple model families (ENCODER, ENCODER-DECODER, and DECODER) using the LAMA and LM-HARNESS benchmarks in order to systematically quantify the effect of commonly employed compression techniques on model performance. A particular focus is on tradeoffs involving parametric knowledge, with the goal of providing practitioners with practical insights to make informed decisions on compression. All of our code and checkpoints will be released.",
+"authors": "Satya Sai Srinath Namburi GNVV (University of Wisconsin - Madison)*; Makesh Narsimhan Sreedhar (Nvidia); Srinath Srinivasan (University of Wisconsin-Madison); Frederic Sala (University of Wisconsin-Madison)",
+"has_supp": false,
+},
+{
+"id": "35",
+"title": "Get more for less: Principled Data Selection for Warming Up Fine-Tuning in LLMs",
+"abstract": "This work focuses on leveraging and selecting from vast, unlabeled, open data to *pre-fine-tune* a pre-trained language model. The goal is to minimize the need for costly domain-specific data for subsequent fine-tuning while achieving desired performance levels. While many data selection algorithms have been designed for small-scale applications, rendering them unsuitable for our context, some emerging methods do cater to language data scales. However, they often prioritize data that aligns with the target distribution. While this strategy may be effective when training a model from scratch, it can yield limited results when the model has already been pre-trained on a different distribution. Differing from prior work, our key idea is to select data that nudges the pre-training distribution closer to the target distribution. We show the optimality of this approach for fine-tuning tasks under certain conditions. We demonstrate the efficacy of our methodology across a diverse array of tasks, showing that it consistently surpasses other selection methods. Moreover, our proposed method is significantly faster than existing techniques, scaling to millions of samples within a single GPU hour. Our code is open-sourced. While fine-tuning offers significant potential for enhancing performance across diverse tasks, its associated costs often limit its widespread adoption; with this work, we hope to lay the groundwork for cost-effective fine-tuning, making its benefits more accessible.",
+"authors": "Feiyang Kang (Virginia Tech)*; Hoang Anh Just (Virginia Tech); Himanshu Jahagirdar (Virginia Tech); Yifan Sun (Columbia University); Yuanzhi Zhang (Virginia Tech); Rongxing Du (Virginia Tech); Anit Kumar Sahu (Amazon Alexa AI); Ruoxi Jia (Virginia Tech)",
+"has_supp": false,
+},
+{
+"id": "37",
+"title": "Exploiting Transformer Activation Sparsity with Dynamic Inference",
+"abstract": "Transformer models, despite their impressive performance, often face practical limitations due to their high computational requirements. At the same time, previous studies have revealed significant activation sparsity in these models, indicating the presence of redundant computations. In this paper, we propose Dynamic Sparsified Transformer Inference (DSTI), a method that radically reduces the inference cost of Transformer models by enforcing activation sparsity and subsequently transforming a dense model into its sparse Mixture of Experts (MoE) version. We demonstrate that it is possible to train small gating networks that successfully predict the relative contribution of each expert during inference. Furthermore, we introduce a mechanism that dynamically determines the number of executed experts individually for each token. DSTI can be applied to any Transformer-based architecture and has negligible impact on the accuracy. For the BERT-base classification model, we reduce inference cost by almost 60%.",
+"authors": "Mikołaj Piórczyński (Warsaw University of Technology); Filip Szatkowski (Warsaw University of Technlogy, IDEAS NCBR)*; Klaudia Bałazy (Jagiellonian University); Bartosz Wójcik (Jagiellonian University)",
+"has_supp": false,
+},
+{
+"id": "38",
+"title": "Retrieval Augmented Generation for Dialog Modeling",
+"abstract": "In this work, we explore the use of Large Language Models (LLMs) for the challenging task of long-range dialog modeling. While LLMs have excelled in various Natural Language Processing (NLP) tasks, adapting them for extended dialog contexts poses challenges due to computational overhead and data requirements. LLMs often struggle with fixed context window sizes, limiting their application in lengthy conversations. In this work, we leverage LLMs' contextual learning capabilities using instruction prompts and retrieval-based context augmentation, without any fine-tuning. We focus on long-term dialog modeling, addressing challenges like data independence, avoiding fine-tuning, and accommodating the context of long conversations within shorter windows. Our empirical experiments on two datasets, namely Multi-Session Chat and MultiDoc2Dial demonstrate how including relevant information in LLMs' input context affects dialog generation performance while reducing computational costs associated with longer contexts.",
+"authors": "Lilly Kumari (University of Washington, Seattle)*; Usama Bin Shafqat (Google); Nikhil Sarda (Google)",
+"has_supp": false,
+},
+{
+"id": "39",
+"title": "Decoding Data Quality via Synthetic Corruptions: Embedding-guided Pruning of Code Data",
+"abstract": "Code datasets, often collected from diverse and uncontrolled sources such as GitHub, potentially suffer from quality issues, thereby affecting the performance and training efficiency of Large Language Models (LLMs) optimized for code generation. Previous studies demonstrated the benefit of using embedding spaces for data pruning, but they mainly focused on duplicate removal or increasing variety, and in other modalities, such as images. Our work focuses on using embeddings to identify and remove ``low-quality'' code data. First, we explore features of ``low-quality'' code in embedding space, through the use of synthetic corruptions. Armed with this knowledge, we devise novel pruning metrics that operate in embedding space to identify and remove low-quality entries in the Stack dataset. We demonstrate the benefits of this synthetic corruption informed pruning (SCIP) approach on the well-established HumanEval and MBPP benchmarks, outperforming existing embedding-based methods. Importantly, we achieve up to a 3% performance improvement over no pruning, thereby showing the promise of insights from synthetic corruptions for data pruning.",
+"authors": "Yu Yang (University of California, Los Angeles)*; Aaditya K Singh (UCL); Mostafa Elhoushi (Meta); Anas Mahmoud (University of Toronto); Kushal Tirumala (FAIR); Fabian Gloeckle (Meta AI); Baptiste Roziere (Facebook AI Research); Carole-Jean Wu (Meta / FAIR); Ari S Morcos (Facebook AI Research (FAIR)); Newsha Ardalani (Meta AI (FAIR))",
+"has_supp": false,
+},
+{
+"id": "40",
+"title": "TCNCA: Temporal Convolution Network with Chunked Attention for Scalable Sequence Processing",
+"abstract": "MEGA is a recent transformer-based architecture, which utilizes a linear recurrent operator whose parallel computation, based on the FFT, scales as O(LlogL), with L being the sequence length. We build upon their approach by replacing the linear recurrence with a special temporal convolutional network which permits larger receptive field size with shallower networks, and reduces the computational complexity to O(L). The resulting model is called TCNCA, a Temporal Convolutional Network with Chunked Attention. We evaluate TCNCA on EnWik8 language modeling, long-range-arena (LRA) sequence classification, as well as a synthetic reasoning benchmark associative recall. On EnWik8, TCNCA outperforms MEGA, reaching a lower loss with 1.37×/1.24× faster forward/backward pass during training. The dilated convolutions used in TCNCA are consistently and significantly faster operations than the FFT-based parallelized recurrence in GPUs, making them a scalable candidate for handling very large sequence lengths: they are up to 7.07×/2.86× faster in the forward/backward pass for sequences up to 131 k. Further on LRA, TCNCA achieves, on average, 1.28× speed-up during inference with similar accuracy to what MEGA achieves. On associative recall, we find that even a simplified version of TCNCA, without excessive multiplicative and additive interactions, remains superior or competitive to MEGA on a range of sequence lengths and vocabulary sizes.",
+"authors": "Aleksandar Terzic (ETH Zurich); Michael Hersche (IBM Research Zurich GmbH); Geethan Karunaratne (IBM Research Europe)*; Luca Benini (ETHZ, University of Bologna ); Abu Sebastian (IBM Research Zurich GmbH); Abbas Rahimi (IBM Research-Zurich)",
+"has_supp": true,
+},
+{
+"id": "41",
+"title": "Ensemble of low-rank adapters for large language model fine-tuning",
+"abstract": "Finetuned LLMs often exhibit poor uncertainty quantification, manifesting as overconfidence, poor calibration, and unreliable prediction results on test data or out-of-distribution samples. One approach commonly used in vision for alleviating this issue is a deep ensemble, which constructs an ensemble by training the same model multiple times using different random initializations. However, there is a huge challenge to ensembling LLMs: the most effective LLMs are very, very large. Keeping a single LLM in memory is already challenging enough: keeping an ensemble of e.g. 5 LLMs in memory is impossible in many settings. To address these issues, we propose an ensemble approach using Low-Rank Adapters (LoRA), a parameter-efficient fine-tuning technique. Critically, these low-rank adapters represent a very small number of parameters, orders of magnitude less than the underlying pre-trained model. Thus, it is possible to construct large ensembles of LoRA adapters with almost the same computational overhead as using the original model. We find that LoRA ensembles, applied on its own or on top of pre-existing regularization techniques, gives consistent improvements in predictive accuracy and uncertainty quantification.",
+"authors": "Xi Wang (university of massachusetts amherst)*; Laurence Aitchison (University of Bristol); Maja Rudolph (BCAI)",
+"has_supp": false,
+},
+{
+"id": "42",
+"title": "Sorted LLaMA: Unlocking the Potential of Intermediate Layers of Large Language Models for Dynamic Inference Using Sorted Fine-Tuning (SoFT)",
+"abstract": "The rapid advancement of large language models (LLMs) has revolutionized natural language processing (NLP). While these models excel at understanding and generating human-like text, their widespread deployment can be prohibitively expensive. SortedNet is a recent training technique for enabling dynamic inference for deep neural networks. We extend SortedNet to generative NLP tasks, making large language models dynamic without any pretraining and by only replacing standard Supervised Fine-Tuning (SFT) with Sorted Fine-Tuning (SoFT). Our approach boosts model efficiency, eliminating the need for multiple models for various scenarios during inference. We show that using this approach, we are able to unlock the potential of intermediate layers of transformers in generating the target output. Our sub-models remain integral components of the original model, minimizing storage requirements and transition costs between different computational/latency budgets. By applying this approach on LLaMA 2 13B for tuning on the Stanford Alpaca dataset and comparing it to normal tuning and early exit via PandaLM benchmark, we show that Sorted Fine-Tuning can deliver models almost twice as fast as the original model while maintaining  performance.",
+"authors": "Parsa Kavehzadeh (Huawei Noah's Ark Lab)*; Mojtaba Valipour (University of Waterloo); Marzieh Tahaei (Huawei Noah's Ark Lab); Ali Ghodsi (University of Waterloo); Boxing Chen (Huawei Noah's Ark Lab); Mehdi Rezagholizadeh (Huawei Technologies)",
+"has_supp": false,
+},
+{
+"id": "43",
+"title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning",
+"abstract": "The popularity of LLaMA and other recently emerged moderate-sized large language models (LLMs) highlights the potential of building smaller yet powerful LLMs. Regardless, the cost of training such models from scratch on trillions of tokens remains high. In this work, we study structured pruning as an effective means to develop smaller LLMs from pre-trained, larger models. Our approach employs two key techniques:  (1) targeted structured pruning, which prunes a larger model to a specified target shape by removing layers, heads, intermediate and hidden dimensions in an end-to-end manner, and (2) dynamic batch loading, which dynamically updates the composition of sampled data in each training batch based on varying losses across different domains. We demonstrate the efficacy of our approach by presenting the Sheared-LLaMA series, pruning the LLaMA2-7B model down to 1.3B and 2.7B parameters. Sheared-LLaMA models outperform state-of-the-art open-source models of equivalent sizes, such as Pythia, INCITE, and OpenLLaMA models, on a wide range of downstream and instruction tuning evaluations, while requiring less than 3% of compute compared to training such models from scratch. This work provides compelling evidence that leveraging existing LLMs with structured pruning is a far more cost-effective approach for building smaller LLMs.",
+"authors": "Mengzhou Xia (Princeton University)*; Tianyu Gao (Princeton University); Zhiyuan Zeng (Tsinghua University); Danqi Chen (Princeton University)",
+"has_supp": false,
+},
+{
+"id": "45",
+"title": "BTLM-3B-8K: 7B Parameter Performance in a 3B Parameter Model",
+"abstract": "We study recent techniques targeted to improve the parameter efficiency and modeling quality of large language models (LLMs). We experiment with recently-proposed training approaches, such as overtraining for a large number of tokens-per-parameter on a high-quality dataset, carefully tuning hyperparameters with maximal update parameterization (\textmu P), and adjusting learning rate and batch size. We also test recent state-of-the-art model features, namely, rotary and ALiBi position embeddings, and the Swish-gated linear unit (SwiGLU). We find a pretraining recipe that improves over Cerebras-GPT \textmu P validation loss by 12.7\% for the same parameter budget.
+
+With this recipe, we train the state-of-the-art 3B parameter foundation model, called the Bittensor Language Model ("BTLM-3B-8K"), which is sized to deploy easily on memory or compute-constrained devices. Over a broad set of downstream tasks, BTLM beats all other 3B foundation models by 2-5.5\%, making it competitive with some 7B parameter models that are 2.5$\times$ larger. BTLM-3B-8K is available under an Apache 2.0 license on Hugging Face: \url{https://huggingface.co/cerebras/btlm-3b-8k-base}.",
+"authors": "Nolan Dey (Cerebras Systems)*; Daria Soboleva (Cerebras Systems); Faisal Al-Khateeb (Cerebras Systems); Bowen Yang (N/A); Ribhu Pathria (Cerebras Systems); Hemant Khachane (Cerebras Systems); Shaheer Muhammad (Cerebras Systems); Zhiming (Charles) Chen (Cerebras Systems); Robert Myers (manifold labs); Jacob Robert Steeves (opentensor foundation); Natalia Vassilieva (Cerebras Systems); Marvin Tom (Cerebras Systems); Joel T Hestness (Cerebras)",
+"has_supp": false,
+},
+{
+"id": "47",
+"title": "Sparse Fine-Tuning for Inference Acceleration of Large Language Models",
+"abstract": "We consider the problem of accurate \emph{sparse fine-tuning} of large language models (LLMs), that is, fine-tuning pretrained LLMs on specialized tasks, while inducing sparsity in their weights. We observe that standard loss-based fine-tuning may fail to recover accuracy, especially at high sparsities. To address this, we perform a detailed study of distillation-type losses, determining an L2-based distillation approach we term SquareHead which enables accurate recovery even at higher sparsities, across all model types. On the efficiency side, we show that sparse LLMs can be executed with speedups by taking advantage of sparsity, for both CPU and GPU runtimes. While the standard approach is to leverage sparsity for computational reduction, we observe that in the case of memory-bound LLMs sparsity can also be leveraged for reducing memory bandwidth. We exhibit end-to-end results showing speedups due to sparsity, while recovering accuracy, on T5 (language translation), Whisper (speech translation), and open GPT-type (MPT for text generation). For MPT text generation, we show for the first time that sparse fine-tuning can reach 75\% sparsity without accuracy drops, provide notable end-to-end speedups for both CPU and GPU inference, and highlight that sparsity is also compatible with quantization approaches. Models and software for reproducing our results are provided in Section~\ref{sec:reproducibility}. ",
+"authors": "Eldar Kurtic (IST Austria)*; Denis Denisovich Kuznedelev (Skoltech & Yandex); Elias Frantar (IST Austria); Michael Goin (Neural Magic ); Dan Alistarh (IST Austria & NeuralMagic)",
+"has_supp": false,
+},
+{
+"id": "50",
+"title": "Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs",
+"abstract": "In this study, we introduce adaptive KV cache compression, a plug-and-play method that reduces the memory footprint of generative inference for Large Language Models (LLMs). Different from the conventional KV cache that retains key and value vectors for all context tokens, we conduct targeted profiling to discern the intrinsic structure of attention modules. Based on the recognized structure, we then construct the KV cache in an adaptive manner: evicting long-range contexts on attention heads emphasizing local contexts, discarding non-special tokens on attention heads centered on special tokens, and only employing the standard KV cache for attention heads that broadly attend to all tokens. Moreover, with the lightweight attention profiling used to guide the construction of the adaptive KV cache, FastGen can be deployed without resource-intensive fine-tuning or re-training. In our experiments across various asks, FastGen demonstrates substantial  GPU memory reduction with negligible generation quality loss.",
+"authors": "Suyu Ge (University of Illinois Urbana Champaign)*; Yunan Zhang (University of Illinois at Urbana-Champaign); Liyuan Liu (Microsoft Research); Minjia Zhang (Microsoft AI and Research); Jiawei Han (UIUC); Jianfeng  Gao (Microsoft Research)",
+"has_supp": false,
+},
+{
+"id": "52",
+"title": "LoDA: Low-Dimensional Adaptation of Large Language Models",
+"abstract": "Parameter-Efficient Fine-Tuning (PEFT) has recently garnered significant attention, due to the enormous size of Large Language Models (LLM). Among various PEFT methods, Low-Rank Adaptation (LoRA) demonstrates comparable performance to full fine-tuning, despite having significantly fewer trainable parameters. In this work, we first generalize LoRA from a low-rank linear adaptation/mapping to low-dimensional, non-linear adaptation/mapping, called Low-Dimensional Adaptation (LoDA). We further propose LoDA+, which further improves the expressiveness of the non-linear adaptation and still uses almost the same number of tunable parameters as LoRA. Both LoDA and LoDA+ include LoRA as a special case. To improve computational efficiency at inference, we further propose R-LoDA(+) and S-LoDA(+), replacing the pre-trained weight matrix by its low-rank or sparse approximation, which is frozen during fine-tuning. Empirical evaluations on Natural Language Generation tasks show that LoDA(+) and some variants outperform LoRA as well as other baselines. We will release a package that facilitates the integration of LoDA(+) and their variants with PyTorch models.",
+"authors": "Jing Liu (MERL)*; Toshiaki Koike-Akino (Mitsubishi Electric Research Laboratories); Pu Wang (MERL); Matthew Brand (Mitsubishi Electric Research labs); Ye Wang (Mitsubishi Electric Research Laboratories); Kieran Parsons (Mitsubishi Electric Research Laboratories)",
+"has_supp": false,
+},
+{
+"id": "53",
+"title": "MUX-PLMs: Data Multiplexing for High-throughput Language Models",
+"abstract": "The widespread adoption of large language models such as ChatGPT and Bard has led to unprecedented demand for these technologies.
+The burgeoning cost of inference for ever-increasing model sizes coupled with hardware shortages has limited affordable access and poses a pressing need for efficiency approaches geared towards high throughput and performance.
+Multi-input multi-output (MIMO) algorithms such as data multiplexing, offer a promising solution with a many-fold increase in throughput by performing inference for multiple inputs at the cost of a single input.
+Yet these approaches are not currently performant enough to be deployed in modern systems. We change that by developing MUX-PLMs, a class of deployable high throughput pre-trained language models (PLMs) trained with data multiplexing, that can be fine-tuned on any downstream task. Our novel multiplexing and demultiplexing modules proficiently entangle and disentangle inputs, and enable high-performance high throughput MUX-PLMs that are competitive with vanilla PLMs while achieving 2x/5x inference speedup with only a 1-4 % performance drop on a broad suite of tasks.",
+"authors": "Vishvak Murahari (Princeton University)*; Ameet Deshpande (Princeton University); Carlos E Jimenez (Princeton University); Izhak Shafran (Google AI); Mingqiu Wang (Google Inc); Yuan Cao (Google Brain); Karthik Narasimhan (Princeton University)",
+"has_supp": false,
+},
+{
+"id": "54",
+"title": "Towards End-to-end 4-Bit Inference on  Generative Large Language Models",
+"abstract": " We show that the majority of the inference computations for large generative models such as LLaMA and OPT can be performed with both weights and activations being cast to 4 bits, in a way that leads to practical speedups while at the same time maintaining good accuracy. We achieve this via a hybrid quantization strategy called QUIK, which compresses most of the weights and activations to 4-bit, while keeping some outlier weights and activations in higher-precision. Crucially, our scheme is designed with computational efficiency in mind: we provide GPU kernels with highly-efficient layer-wise runtimes, which lead to practical end-to-end throughput improvements of up to 3.1x relative to FP16 execution. 
+ Code and models are provided at: https://github.com/IST-DASLab/QUIK.",
+"authors": "Saleh Ashkboos (ETH Zurich); Ilia Markov (IST Austria); Elias Frantar (IST Austria); Tingxuan Zhong (Xidian University); Xincheng Wang (Xidian university ); Jie Ren (KAUST); Torsten Hoefler (ETH Zurich); Dan Alistarh (IST Austria & NeuralMagic)*",
+"has_supp": false,
+},
+{
+"id": "56",
+"title": "SortedNet, a Place for Every Network and Every Network in its Place",
+"abstract": "As the size of deep learning models continues to grow, finding optimal models under memory and computation constraints becomes increasingly more important. Although the architecture and constituent building blocks of neural networks usually allow them to be used modularly (i.e., using the sub-networks of a given network after training), their training process is unaware of this modularity. Consequently, conventional neural network training lacks the flexibility to adapt the computational load of the model during inference. This paper proposes SortedNet, a generalized and scalable solution to harness the inherent modularity of deep neural networks across various dimensions (e.g. width, depth, blocks) for efficient dynamic inference. Our training considers a nested architecture for the sub-models with shared parameters and trains all models simultaneously to obtain many-in-one sorted models. We utilize a novel updating scheme during training that combines a random sub-model sampling with gradient accumulation to improve training efficiency. Furthermore, the sorted nature of our training leads to a search-free sub-model selection at inference time; and the nested architecture of the resulting sub-models leads to minimal storage requirement and efficient switching between sub-models at inference. Our general dynamic training approach is demonstrated across various architectures and tasks, including BERT on language understanding and ResNet on image classification. Experimental results show the efficacy of the proposed method in achieving efficient sub-models while outperforming state-of-the-art dynamic training approaches.",
+"authors": "Mojtaba Valipour (University of Waterloo)*; Mehdi Rezagholizadeh (Huawei Technologies); Hossein Rajabzadeh (University of Waterloo); Marzieh Tahaei (Huawei Noah's Ark Lab); Boxing Chen (Huawei Noah's Ark Lab); Ali Ghodsi (University of Waterloo)",
+"has_supp": false,
+},
+{
+"id": "57",
+"title": "FineQuant: Unlocking Efficiency with Fine-Grained Weight-Only Quantization for LLMs",
+"abstract": "Large Language Models (LLMs) have achieved state-of-the-art performance across various language tasks but pose challenges for practical deployment due to their substantial memory requirements. Furthermore, the latest generative models suffer from high inference costs caused by the memory bandwidth bottleneck in the auto-regressive decoding process. To address these issues, we propose an efficient weight-only quantization method that reduces memory consumption and accelerates inference for LLMs. To ensure minimal quality degradation, we introduce a simple and effective heuristic approach that quantizes only the model weights of a pre-trained model with finer granularity. This approach is applicable to both Mixture-of-Experts (MoE) and dense models without requiring additional fine-tuning. Furthermore, we implement highly efficient GPU GEMMs that perform on-the-fly matrix multiplication and dequantization, supporting the multiplication of fp16 or bf16 activations with int8 or int4 weights. We evaluate our approach on large-scale open source models such as OPT-175B and internal MoE models, showcasing minimal accuracy loss while achieving up to 3.65 times higher throughput on the same number of GPUs.",
+"authors": "Young Jin Kim (Microsoft)*; Rawn Henry (NVIDIA); Raffy Fahim (Microsoft); Hany Hassan (microsoft)",
+"has_supp": false,
+},
+{
+"id": "61",
+"title": "KronA: Parameter Efficient Tuning with Kronecker Adapter",
+"abstract": "Fine-tuning a Pre-trained Language Model (PLM) on a specific downstream task has been a well-known paradigm in natural language processing. However, with the growing size of PLMs, training the entire model on downstream tasks has become significantly time-consuming and resource-hungry. Therefore, Parameter Efficient Tuning (PET) techniques have been proposed to address the growing demand for the efficient fine-tuning of PLMs. One popular PET technique is inserting trainable adapters into a frozen model during fine-tuning. However, adapters have low-rank projections, which may reduce their representation power, resulting in sub-optimal performance. We address this problem using the Kronecker product instead of low-rank multiplications to improve the flexibility and performance of adapters. We introduce KronA, a Kronecker equivalent of LoRA for efficient fine-tuning of transformer-based PLMs. We apply the proposed adapters for fine-tuning a well-known PLM, called  T5, on the GLUE benchmark to show that our method outperforms the popular PET baselines.",
+"authors": "Ali Edalati (McGill)*; Marzieh Tahaei (Huawei Noah's Ark Lab); Ivan Kobyzev (Huawei); Vahid Partovi Nia (Huawei Noah's Ark Lab); James J. Clark (McGill University); Mehdi Rezagholizadeh (Huawei Technologies)",
+"has_supp": false,
+},
+{
+"id": "62",
+"title": "ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models",
+"abstract": "Large Language Models (LLMs) with billions of parameters have drastically transformed AI applications. However, their demanding computation during inference has raised significant challenges for deployment on resource-constrained devices. Despite recent trends favoring alternative activation functions such as GELU or SiLU, known for increased computation, this study strongly advocates for reinstating ReLU activation in LLMs. We demonstrate that using the ReLU activation function has a negligible impact on convergence and performance while significantly reducing computation and weight transfer. This reduction is particularly valuable during the memory-bound inference step, where efficiency is paramount. Exploring sparsity patterns in ReLU-based LLMs, we unveil the reutilization of activated neurons for generating new tokens and leveraging these insights, we propose practical strategies to substantially reduce LLM inference computation up to three times, using ReLU activations with minimal performance trade-offs.",
+"authors": "Seyed Iman Mirzadeh (Apple)*; Keivan Alizadeh-Vahid (University of Washington); Sachin Mehta (University of Washington); Carlo C  Del Mundo (Apple); Oncel Tuzel (Apple); Golnoosh Samei (Apple); Mohammad Rastegari (Apple Inc); Mehrdad Farajtabar (Apple)",
+"has_supp": true,
+},
+{
+"id": "64",
+"title": "SwiftLearn: A Data-Efficient Training Method of Deep Learning Models using Importance Sampling",
+"abstract": "In this paper, we present SwiftLearn, a data-efficient approach to accelerate training
+of deep learning models using a subset of data samples selected during the warm-up
+stages of training. This subset is selected based on an importance criteria measured
+over the entire dataset during warm-up stages, aiming to preserve the model
+performance with fewer examples during the rest of training. The importance
+measure we propose could be updated during training every once in a while, to
+make sure that all of the data samples have a chance to return to the training loop
+if they show a higher importance. The model architecture is unchanged but since
+the number of data samples controls the number of forward and backward passes
+during training, we can reduce the training time by reducing the number of training
+samples used in each epoch of training. Experimental results on a variety of CV
+and NLP models during both pre-training and fine-tuning show that the model
+performance could be preserved while achieving a significant speed-up during
+training. More specifically, BERT finetuning on GLUE benchmark shows that almost 90% of the data can be dropped achieving an end-to-end average speedup of 3.36x while keeping the average accuracy drop less than 0.92% . ",
+"authors": "Habib Hajimolahoseini (Huawei Toronto Research Centre)*; Omar Mohamed Awad (Huawei); Walid Ahmed (Huawei); Austin Wen (Huawei); Saina Asani (University of Toronto); Mohammad Hassanpour (Huawei Technologies); Farnoosh Javadi (Huawei Technologies); Mehdi Ahmadi (Huawei); Foozhan Ataiefard (Huawei); Kangling Liu (Huawei); Yang Liu (Huawei Canada)",
+"has_supp": false,
+},
+{
+"id": "65",
+"title": "MatFormer: Nested Transformer for Elastic Inference",
+"abstract": "Transformer models are deployed in a wide range of settings, from multi-accelerator clusters to standalone mobile phones. The diverse inference constraints in these scenarios necessitate practitioners to train foundation models such as PaLM 2 & Llama as a series of models of varying sizes. Due to significant training costs, only a select few model sizes are trained and supported, limiting more fine-grained control over relevant tradeoffs (latency, cost, accuracy). We introduce MatFormer, a nested Transformer architecture designed to offer elasticity in a variety of deployment constraints. Each Feed Forward Network (FFN) block of a  MatFormer model is jointly optimized with a few nested smaller FFN blocks. This allows for the Mix'n'Match of model granularities across layers -- i.e., a trained universal MatFormer model enables extraction of hundreds of accurate smaller models which were never explicitly optimized.  We empirically demonstrate MatFormer's effectiveness for decoder only language modeling and find that a 2.6B decoder-only MatFormer language model (MatLM) allows us to extract smaller models spanning from 1.5B to 2.6B, each exhibiting comparable validation loss and one-shot downstream evaluations to their independently trained counterparts. Finally, we showcase that speculative decoding with the accurate and consistent submodels extracted from  MatFormer can further reduce inference latency. ",
+"authors": "Fnu Devvrit (University of Texas at Austin)*; Sneha Kudugunta (Google DeepMind); Aditya Kusupati (University of Washington); Tim Dettmers (University of Washington); Kaifeng Chen (Google); Inderjit S. Dhillon (UT Austin & Amazon); Yulia Tsvetkov (University of Washington); Hannaneh Hajishirzi (); Sham Kakade (Harvard University); Ali Farhadi (University of Washington, Allen Institue for AI, Apple); Prateek Jain (Google )",
+"has_supp": false,
+},
+{
+"id": "66",
+"title": "LoftQ: LoRA-Fine-Tuning-Aware Quantization for Large Language Models",
+"abstract": "Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning (Dettmers et al.,
+2023). In this work we focus on the scenario where quantization and LoRA fine-
+tuning are applied together on a pre-trained model. In such cases it is common
+to observe a consistent gap in the performance on downstream tasks between full
+fine-tuning and quantization plus LoRA fine-tuning approach. In response, we
+propose LoftQ (LoRA-Fine-Tuning-aware Quantization), a novel quantization
+framework that simultaneously quantizes an LLM and finds a proper low-rank
+initialization for LoRA fine-tuning. Such an initialization alleviates the discrep-
+ancy between the quantized and full-precision model and significantly improves
+the generalization in downstream tasks. We evaluate our method on natural lan-
+guage understanding, question answering, summarization, and natural language
+generation tasks. Experiments show that our method is highly effective and out-
+performs existing quantization methods, especially in the challenging 2-bit and
+2/4-bit mixed precision regimes. We will release our code.",
+"authors": "Yixiao Li (Georgia Institute of Technology)*; Yifan Yu (Georgia Institute of technology); Chen Liang (Georgia Tech); Nikos Karampatziakis (Microsoft); Pengcheng  He (Microsoft); Weizhu Chen (Microsoft); Tuo Zhao (Gatech)",
+"has_supp": false,
+},
+{
+"id": "68",
+"title": "Herd: Using multiple, smaller LLMs to match the performances of proprietary, large LLMs via an intelligent composer",
+"abstract": "Currently, over a thousand LLMs exist that are multi-purpose and are capable of performing real world tasks, including Q&A, text summarization, content generation, etc. However, accessibility, scale and reliability of free models prevents them from being widely deployed in everyday use cases. To address the first two issues of access and scale, organisations such as HuggingFace have created model repositories where users have uploaded model weights and quantized versions of models trained using different paradigms, as well as model cards describing their training process. While some models report performance on commonly used benchmarks, not all do, and interpreting the real world impact of trading off performance on a benchmark for model deployment cost, is unclear. Here, we show that a herd of open source models can match or exceed the performance of proprietary models via an intelligent router. We show that a Herd of open source models is able to match the accuracy of ChatGPT, despite being composed of models that are effectively 2.5x smaller. We show that in cases where GPT is not able to answer the query, Herd is able to identify a model that can, at least 40% of the time.",
+"authors": "Surya Narayanan Hari (California Institute of Technology)*; Matt Thomson (California Institute of Technology)",
+"has_supp": false,
+},
+{
+"id": "69",
+"title": "Efficient Online Data Mixing For Language Model Pre-Training",
+"abstract": "The data used to pretrain large language models has a decisive impact on a model's downstream performance, which has led to a large body of work on data selection methods that aim to  automatically determine the most suitable data to use for pretraining.
+Existing data selection methods suffer from slow and computationally expensive processes, a problem amplified by the increasing size of models and of pretraining datasets.
+Data mixing, on the other hand, reduces the complexity of data selection by grouping data points together and determining sampling probabilities across entire groups. However, data mixing proportions are typically fixed before training and therefore cannot adapt to changing training dynamics.
+To address these limitations, we develop an efficient algorithm for Online Data Mixing (ODM) that combines elements from both data selection and data mixing.
+Based on multi-armed bandit algorithms, our online approach optimizes the data mixing proportions during training.
+Remarkably, our method trains a model that reaches the final perplexity of the next best method with 19% fewer training iterations, and improves performance on the 5-shot MMLU benchmark by 1.9% relative accuracy, while adding negligible wall-clock time during pretraining.",
+"authors": "Alon Albalak (University of California, Santa Barbara)*; Liang-Ming Pan (University of California, Santa Barbara); Colin Raffel (Google Brain); William Yang Wang (UC Santa Barbara)",
+"has_supp": false,
+},
+{
+"id": "70",
+"title": "Student as an Inherent Denoiser of Noisy Teacher",
+"abstract": "Knowledge distillation (KD) has been widely employed to transfer knowledge from a large language model (LLM) to a specialized model in low-data regimes through pseudo label learning. However, pseudo labels generated by teacher models are usually noisy and may influence KD performance. This study delves into KD with noisy teachers and uncovers that the student model can already generate more accurate predictions than the teacher labels used to train it in the middle of KD, indicating its inherent ability to \textit{denoise} noisy teacher labels. Motivated by this finding, we propose Peer-Advised KD to improve vanilla KD from noisy teachers. Experiments show that Peer-Advised KD can outperform LLM by approximately 5\% with 50 human-labeled data, and even competitive to standard supervised finetuning with 750 human-labeled data.",
+"authors": "Jiachen ZHAO (UMass Amherst)*",
+"has_supp": false,
+},
+{
+"id": "71",
+"title": "UT5: Pretraining Non autoregressive T5 with unrolled denoising",
+"abstract": "Recent advances in Transformer-based LargeLanguage Models have made great strides innatural  language  generation.  However,  to  decode K tokens, an autoregressive model needs K sequential  forward  passes,  which  may  bea  performance  bottleneck  for  large  languagemodels.  Many  non-autoregressive  (NAR)  re-search are aiming to address this sequentialitybottleneck, albeit many have focused on a ded-icated architecture in supervised benchmarks.In this work, we studied unsupervised pretrain-ing for non auto-regressive T5 models via un-rolled denoising and shown its SoTA results indownstream generation tasks such as SQuAD question generation and XSum",
+"authors": "Mahmoud Salem (cerebras systems)*; Jiayu Ye (Google.Inc); Frederick Liu (Google Inc.); Chu-Cheng  Lin (Google)",
+"has_supp": false,
+},
+{
+"id": "72",
+"title": "LatticeGen: A Cooperative Framework Which Hides Generated Text in A Lattice For Privacy-Aware Generation on Cloud",
+"abstract": "In the current user-server interaction paradigm of prompted generation with large language model (LLM) on cloud, the server fully controls the generation process, which leaves zero option for users who want to keep the generated text to themselves. We propose LatticeGen, a cooperative framework in which the server still handles most of computation while the user controls the sampling operation. The key idea is that the true generated sequence is mixed with noise tokens by the user and hidden in a noised lattice. Considering potential attack from a hypothetically malicious server and how the user can defend against it, we propose the repeated beam-search attack and the mixing noise scheme. In our experiments we apply LatticeGen to protect both prompt and generation. It is shown that while the noised lattice degrades generation quality, LatticeGen successfully protects the true generation to a remarkable degree under strong attacks (more than 50% of the semantic remains hidden as measured by BERTScore).",
+"authors": "Mengke Zhang (UC San Diego)*; Tianxing He (University of Washington); Tianle Wang (UC San Diego); Lu Mi (University of Washington and Allen Institute for Brain Science); Niloofar Mireshghallah (University of Washington); Binyi Chen (Espresso Systems); Hao Wang (Rutgers University); Yulia Tsvetkov (University of Washington)",
+"has_supp": false,
+},
+{
+"id": "73",
+"title": "Measuring and Improving Recall in Convolutional Language Models",
+"abstract": "Convolution-based language models are asymptotically more efficient than Transformers as sequence length grows and are increasingly competitive in quality. To better understand the quality differences between these architectures, we pre-train a suite of 14 language models across attention and convolution-based architectures, finding that the SoTA gated convolution architectures still underperform Transformers by up to 2.1 perplexity points on the Pile. Our analysis shows that a single language modeling capability, termed associative recall (AR) accounts for 76% of the perplexity gap on average. The task requires recalling an association from earlier in the context, e.g. Hakuna Matata means no worries...Hakuna Matata it means no → ??. We show via experiments and theory that the associative recall solution encoded by convolution-based models is less parameter efficient than the one encoded by attention. The issue arises because convolution-based models process sequences using fixed filters that do not depend on the input data. Finally, we provide evidence that convolutional models with input-dependent filters can solve AR with improved parameter-efficiency.",
+"authors": "Sabri Eyuboglu (Stanford University)*; Simran Arora (Stanford University); Aman Timalsina (University at Buffalo, SUNY); Isys Johnson (SUNY at Buffalo); Michael Poli (Stanford University); James Zou (Stanford University); Atri Rudra (University at Buffalo); Christopher Re (Stanford University)",
+"has_supp": false,
+},
+{
+"id": "74",
+"title": "Multimodal Multi-Hop Question Answering Through a Conversation Between Tools and Efficiently Finetuned Large Language Models",
+"abstract": "We employ a tool-interacting divide-and-conquer strategy enabling large language models (LLMs) to answer complex multimodal multi-hop questions. In particular, we harness the power of large language models to divide a given multimodal multi-hop question into unimodal single-hop sub-questions to be  answered by the appropriate tool from a predefined set of tools. After all  corresponding tools provide the LLM with their answers, the LLM generates the next relevant unimodal single-hop question. To increase the reasoning ability of LLMs, we prompt chatGPT to generate a tool-interacting divide-and-conquer dataset. This dataset is then used to efficiently finetune the corresponding LLM.
+To assess the effectiveness of this approach, we conduct an evaluation on two recently introduced complex question-answering datasets. The experimental analysis demonstrate substantial improvements over existing state-of-the-art solutions, indicating the efficacy and generality of our strategy.",
+"authors": "Hossein Rajabzadeh (University of Waterloo)*; Suyuchen Wang (Université de Montréal); HYOCK JU HJ KWON (University of Waterloo); Bang Liu (University of Montreal)",
+"has_supp": false,
+},
+{
+"id": "75",
+"title": "Beyond Chinchilla-Optimal: Accounting for Inference in Language Model Scaling Laws",
+"abstract": "Large language model (LLM) scaling laws are empirical formulas that estimate changes in model quality as a result of increasing parameter count and training data. However, these formulas, including the popular DeepMind Chinchilla scaling laws, neglect to include the cost of inference. We modify the Chinchilla scaling laws to calculate the optimal LLM parameter count and pre-training data size to train and deploy a model of a given quality and inference demand. We conduct our analysis both in terms of a compute budget and real-world costs and find that LLM researchers expecting reasonably large inference demand (~1B requests) should train models smaller and longer than Chinchilla-optimal.",
+"authors": "Nikhil Sardana (MosaicML)*; Jonathan Frankle (MosaicML)",
+"has_supp": false,
+},
+{
+"id": "76",
+"title": "Continual Pre-Training of Large Language Models: How to (re)warm your model?",
+"abstract": "Large language models (LLMs) are routinely pre-trained on billions of tokens, only to restart the process over again once new data becomes available. A much cheaper and more efficient solution would be to enable the continual pre-training of these models, i.e. updating pre-trained models with new data instead of re-training them from scratch. However, the distribution shift induced by novel data typically results in degraded performance on past data. Taking a step towards efficient continual pre-training, in this work, we examine the effect of different warm-up strategies. Our hypothesis is that the learning rate must be re-increased to improve compute efficiency when training on a new dataset. We study the warmup phase of models pre-trained on the Pile (upstream data, 300B tokens) as we continue to pre-train on SlimPajama (downstream data, 297B tokens), following a linear warmup and cosine decay schedule. We conduct all experiments on the Pythia 410M language model architecture and evaluate performance through validation perplexity. We experiment with different pre-training checkpoints, various maximum learning rates, and various warmup lengths. Our results show that while rewarming models first increases the loss on upstream and downstream data, in the longer run it improves the downstream performance, outperforming models trained from scratch---even for a large downstream dataset.",
+"authors": "Kshitij Gupta (University of Montreal)*; Benjamin Thérien (University of Waterloo); Adam Ibrahim (Mila, Université de Montréal); Mats L Richter (Mila - Quebec AI Institute); Quentin Anthony (Eleuther AI); Eugene Belilovsky (Concordia University); Irina Rish (University of Montreal); Timothee Lesort (UdeM)",
+"has_supp": false,
+},
+{
+"id": "79",
+"title": "Improving Natural Language Understanding with Computation-Efficient Retrieval Representation Fusion",
+"abstract": "Retrieval-based augmentations that aim to incorporate knowledge from an external database into language models have achieved great success in various knowledge-intensive (KI) tasks, such as question-answering and text generation.
+However, integrating retrievals in non-knowledge-intensive (NKI) tasks, such as text classification, is still challenging.
+Existing works focus on concatenating retrievals to inputs as context to form the prompt-based inputs. 
+Unfortunately, such methods require language models to have the capability to handle long texts.
+Besides, inferring such concatenated data would also consume a significant amount of computational resources.
+To solve these challenges, we propose \textbf{ReFusion} in this paper, a computation-efficient \textbf{Re}trieval representation \textbf{Fusion} with neural architecture search. 
+The main idea is to directly fuse the retrieval representations into the language models.
+Specifically, ReFusion first retrieves the representations of similar sentences and uses Neural Architecture Search (NAS) to seek the optimal fusion structures. 
+Experimental results demonstrate our ReFusion can achieve superior and robust performance on various NKI tasks.",
+"authors": "Shangyu Wu (City University of Hong Kong`)*; Ying Xiong (Harbin Institute of Technology¸Shenzhen); Yufei Cui (McGill University); Xue Liu (McGill University); Buzhou Tang (Harbin Institute of Technology, Shenzhen); Tei-Wei Kuo (National Taiwan University); Chun Jason XUE (City University of Hong Kong)",
+"has_supp": false,
+},
+{
+"id": "80",
+"title": "Improving Linear Attention via Softmax Mimicry",
+"abstract": "Linear attentions are promising methods to improve Transformer efficiency. 
+This improved efficiency is applicable to training linear Transformers from scratch, converting finetuned Transformers into linear versions that recover task-specific performance, and converting pretrained Transformers into linear versions for downstream transfer. However, linear attentions often lag behind softmax attention in performance. To address this gap, we identify two key empirical properties of softmax attention missing in linear attentions: low-entropy "spiky" weights and dot-product monotonicity.  We thus introduce Hedgehog, a learnable linear attention trained to "mimic" softmax attention by minimizing cross-entropy between attention weights. Experiments show Hedgehog significantly closes the attention performance gap. Hedgehog closes 68.6% of the gap on WikiText-103 when training 125M-parameter linear Transformers from scratch, improving upon prior linear attentions by up to 6 perplexity points (PPL), and recovers >99% of GLUE points when converting finetuned BERT models, outperforming prior methods up to 8.7 points. By "linearizing" GPT-2, Hedgehog outperforms efficient Transformer alternatives, obtaining state-of-the-art 16.7 perplexity on WikiText-103.",
+"authors": "Michael Zhang (Stanford University)*; Kush Bhatia (Stanford University); Hermann N Kumbong (Stanford University); Christopher Re (Stanford University)",
+"has_supp": false,
+},
+{
+"id": "81",
+"title": "Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness",
+"abstract": "Large Mixture of Experts (MoE) models could achieve state-of-the-art quality on various language tasks, including machine translation task, thanks to the efficient model scaling capability with expert parallelism. However, it has brought a fundamental issue of larger memory consumption and increased memory bandwidth bottleneck at deployment time. In this paper, we propose Mixture of Quantized Experts (MoQE) which is a simple weight-only quantization method applying ultra low-bit down to 2-bit quantizations only to expert weights for mitigating the increased memory and latency issues of MoE models. We show that low-bit quantization together with the MoE architecture delivers a reliable model performance while reducing the memory size significantly even without any additional training in most cases. In particular, expert layers in MoE models are much more robust to the quantization than conventional feedforward networks (FFN) layers. In our comprehensive analysis, we show that MoE models with 2-bit expert weights can deliver better model performance than the dense model trained on the same dataset. As a result of low-bit quantization, we show the model size can be reduced by 79.6% of the original half precision floating point (fp16) MoE model. Combined with an optimized GPU runtime implementation, it also achieves 1.24X speed-up on A100 GPUs.",
+"authors": "Young Jin Kim (Microsoft)*; Raffy Fahim (Microsoft); Hany Hassan (microsoft)",
+"has_supp": false,
+},
+{
+"id": "82",
+"title": "DiffTune: A Diffusion-Based Approach to Diverse Instruction-Tuning Data Generation",
+"abstract": "Instruction tuning has become pivotal in enhancing the adaptability and responsiveness of Large Language Models (LLMs) to human instructions. Despite its critical role, current methods for generating instruction-tuning datasets exhibit significant bottlenecks, primarily in terms of high cost and limited diversity. However, as previously shown in the literature, the diversity of an instruction-tuning dataset is crucial to LLM's downstream performance. To address these challenges, we propose a Diffusion Language Model (DiffLM)-based technique to generate unlimited diverse instructions at a low cost. Specifically, we have enhanced the variability of instructions by strategically modifying the sampling process within the DiffLM. Our method presents the opportunity to augment any existing instruction-tuning dataset, thereby enriching its content and potential utility. Both automatic and human evaluation show that our generated instructions achieve high quality and better n-gram diversity than the original dataset. Instruction tuning of LLaMA on the augmented dataset delivers better instruction following capability and superior performance on a broad set of benchmarks, indicating the effectiveness of our instruction generation method.",
+"authors": "Suyuchen Wang (Université de Montréal)*; Bang Liu (University of Montreal)",
+"has_supp": false,
+},
+{
+"id": "83",
+"title": "PaSS: Parallel Speculative Sampling",
+"abstract": "Scaling the size of language models to tens of billions of parameters has led to impressive performance on a wide range of tasks. At generation, these models are used auto-regressively, requiring a forward pass for each generated token, and thus reading the full set of parameters from memory. This memory access forms the primary bottleneck for generation and it worsens as the model size increases. Moreover, executing a forward pass for multiple tokens in parallel often takes nearly the same time as it does for just one token. These two observations lead to the development of speculative sampling, where a second smaller model is used to draft a few tokens, that are then validated or rejected using a single forward pass of the large model. Unfortunately, this method requires two models that share the same tokenizer and thus limits its adoption. As an alternative, we propose to use parallel decoding as a way to draft multiple tokens from a single model with no computational cost, nor the need for a second model. Our approach only requires an additional input token that marks the words that will be generated simultaneously. We show promising performance (up to $30\%$ speed-up) while requiring only as few as $O(d_{emb})$ additional parameters.",
+"authors": "Giovanni Monea (EPFL)*; Armand Joulin (FAIR); Edouard Grave (Apple)",
+"has_supp": false,
+},
+{
+"id": "84",
+"title": "QDyLoRA: Quantized Dynamic Low-Rank Adaptation for Efficient Large Language Model Tuning",
+"abstract": "We employ a tool-interacting divide-and-conquer strategy enabling large language models (LLMs) to answer complex multimodal multi-hop questions. In particular, we harness the power of large language models to divide a given multimodal multi-hop question into unimodal single-hop sub-questions to be  answered by the appropriate tool from a predefined set of tools. After all  corresponding tools provide the LLM with their answers, the LLM generates the next relevant unimodal single-hop question. To increase the reasoning ability of LLMs, we prompt chatGPT to generate a tool-interacting divide-and-conquer dataset. This dataset is then used to efficiently finetune the corresponding LLM.
+To assess the effectiveness of this approach, we conduct an evaluation on two recently introduced complex question-answering datasets. The experimental analysis demonstrate substantial improvements over existing state-of-the-art solutions, indicating the efficacy and generality of our strategy.",
+"authors": "Hossein Rajabzadeh (University of Waterloo)*; Mojtaba Valipour (University of Waterloo); Marzieh Tahaei (Huawei Noah's Ark Lab); HYOCK JU HJ KWON (University of Waterloo); Ali Ghodsi (University of Waterloo); Boxing Chen (Huawei Noah's Ark Lab); Mehdi Rezagholizadeh (Huawei Technologies)",
+"has_supp": false,
+},
+{
+"id": "85",
+"title": "Model Fusion through Bayesian Optimization in Language Model Fine-Tuning",
+"abstract": "Fine-tuning a pretrained model for downstream tasks is a widely-adopted technique, which is known for its adaptability and reliability across various domains. Despite its conceptual simplicity, fine-tuning entails several engineering choices such as the selection of hyperparameters and the determination of checkpoints from an optimization trajectory. To tackle the difficulty of choosing the best model among multiple ones obtained from those choices, one of the effective solutions is model fusion, which combines multiple models on a parameter space. On the other hand, we observe a large discrepancy between loss and actual metric values where a loss is often used to pick out models to fuse. While the loss is generally differentiable and thus easier to optimize, the consideration of metrics is often a preferable goal to improve model performance. In response, we present a novel model fusion technique, optimizing a desired metric as well as a loss using \gls{bo}. Moreover, combining the multi-objective \gls{bo} into model fusion, we devise a bilevel framework, composed of \gls{bo} models for hyperparameter optimization and model fusion. Experiments across various downstream tasks validate decent performance improvements achieved using our \gls{bo}-based model fusion method.",
+"authors": "Chaeyun Jang (kaist)*; Jungtaek Kim (University of Pittsburgh); Hyungi Lee (KAIST); Juho Lee (KAIST)",
+"has_supp": false,
+},
+{
+"id": "86",
+"title": "Group Preference Optimization: Few-Shot Alignment of Large Language Models",
+"abstract": "Applications of large language models (LLMs) often demand nuanced judgments that vary among different groups. Existing alignment algorithms can be costly, requiring extensive group-specific data and computation. 
+We present Group Preference Optimization (GPO), a framework that efficiently aligns LLMs to group preferences using a few-shot approach.
+In GPO, we augment the base LLM with an independent transformer module to predict the preferences of a group for the LLM generations.
+For few-shot learning, this module acts as an in-context autoregressive transformer and is trained via meta-learning on several groups. Through empirical validation on opinion adaptation tasks involving US demographic groups, global countries, and individuals, GPO demonstrates superior alignment performance, requiring fewer group-specific preferences and reduced training and computational resources, surpassing existing strategies like in-context steering and fine-tuning.",
+"authors": "Siyan Zhao (UCLA)*; John Dang (University of California, Los Angeles); Aditya Grover (UCLA)",
+"has_supp": false,
+},
+{
+"id": "87",
+"title": "Fast-ELECTRA for Efficient Pre-training",
+"abstract": "ELECTRA pre-trains language models by detecting tokens in a sequence that have been replaced by an auxiliary model. Although ELECTRA offers a significant boost in efficiency, its potential is constrained by the training cost brought by the auxiliary model. Notably, this model, which is jointly trained with the main model, only serves to assist the training of the main model and is discarded post-training. This results in a substantial amount of training cost being expended in vain. To mitigate this issue, we propose Fast-ELECTRA, which leverages an existing language model as the auxiliary model. To construct a learning curriculum for the main model, we smooth its output distribution via temperature scaling following a descending schedule. Our approach rivals the performance of state-of-the-art ELECTRA-style pre-training methods, while significantly eliminating the computation and memory cost brought by the joint training of the auxiliary model. Our method also reduces the sensitivity to hyper-parameters and enhances the pre-training stability.",
+"authors": "Chengyu Dong (University of California, San Diego)*; Liyuan Liu (Microsoft Research); Hao Cheng (Microsoft Research Redmond); Jingbo Shang (University of California, San Diego); Jianfeng  Gao (Microsoft Research); Xiaodong Liu (Microsoft Research)",
+"has_supp": false,
+},
+{
+"id": "88",
+"title": "Parameter-Efficient Fine-tuning of InstructBLIP for Visual Reasoning Tasks",
+"abstract": "Visual language models have recently demonstrated enhanced capabilities in visual reasoning tasks by employing external modules upon language models for visual language alignment. InstructBLIP uses a Q-Former and a projection layer to convert input image embeddings into soft visual prompts to enhance the instruction-following capabilities of large language models (LLMs). Although fine-tuning InstructBLIP has shown great results in downstream tasks, previous works have been restrictive, only full fine-tuning the Q-Former, while freezing the LLM.
+In this work, we investigate the performance of the PEFT method, LoRA, on both the Q-Former and the base LLMs, specifically Flan-T5-XL and Vicuna-7B, using visual reasoning benchmarks ScienceQA and IconQA. We observe that, when the LLM is frozen, training the Q-Former with LoRA achieves comparable performance to full fine-tuning using under 2% of the trainable parameters. Furthermore, fine-tuning the LLM consistently result in better performances, regardless of how the Q-Former is fine-tuned.
+Lastly, applying LoRA to both the LLM and the Q-Former surpasses the performance of only full fine-tuning the Q-Former while using less than 10% of the trainable parameters. These results highlight the effectiveness of applying PEFT to visual language models for visual reasoning tasks. The code is available at https://github.com/AttentionX/InstructBLIP_PEFT.",
+"authors": "Sungkyung Kim (Seoul National University)*; Adam Lee (UC Berkeley); Junyoung Park (Seoul National University); Sounho Chung (Seoul National University); Jusang Oh (Seoul national university); Jay-Yoon Lee (Carnegie Mellon)",
+"has_supp": false,
+},
+{
+"id": "90",
+"title": "Local LoRA: Memory-Efficient Fine-Tuning of Large Language Models",
+"abstract": "We present Local LoRA, a memory-flexible fine-tuning approach that, in principle, can fine-tune an arbitrarily large model on fixed hardware, including consumer grade GPUs. Our approach aims to decouple the size of the model and the memory required to fine-tune it by dividing the model into chunks and sequentially fine tuning each chunk. Our results show that Local LoRA closes the gap between the un-tuned model and end-to-end LoRA on math reasoning tasks.",
+"authors": "Oscar Key (University College London)*; Jean Alexander Kaddour (University College London); Pasquale Minervini (University College London)",
+"has_supp": false,
+},
+{
+"id": "92",
+"title": "A Leap Forward in LLMs Post-Training W4A8 Quantization Using Floating-Point Formats",
+"abstract": "In the complex domain of large language models (LLMs), striking a balance between computational efficiency and maintaining model quality is a formidable challenge. 
+Navigating the inherent limitations of uniform quantization, particularly when dealing with outliers, and motivated by the launch of NVIDIA's H100 hardware, this study delves into the viability of floating-point (FP) quantization, particularly focusing on FP8 and FP4, as a potential solution. 
+Our comprehensive investigation reveals that for LLMs, FP8 activation consistently outshines its integer (INT8) equivalent, with the performance edge becoming more noticeable in models possessing parameters beyond one billion. 
+For weight quantization, our findings indicate that FP4 exhibits comparable, if not superior, performance to INT4, simplifying deployment on FP-supported hardware like H100.  To mitigate the overhead from precision alignment caused by the disparity between weights and activations, we propose two scaling constraints for weight quantization that negligibly impact the performance compared to the standard W4A8 model. We additionally enhance our quantization methods by integrating the Low Rank Compensation (LoRC) strategy, yielding improvements especially in smaller models. The results of our investigation emphasize the immense potential of FP quantization for LLMs, paving the way for high-efficiency deployment in resource-limited settings.",
+"authors": "Xiaoxia Wu (Microsoft)*; Zhewei Yao (University of California, Berkeley); Yuxiong He (Microsoft)",
+"has_supp": false,
+},
+{
+"id": "93",
+"title": " Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
+"abstract": "Post-training quantization (PTQ) has emerged as a promising technique for mitigating memory consumption and computational costs in large language models (LLMs). However, a systematic examination of various quantization schemes, model families, and quantization bit precision has been absent from the literature. In this paper, we conduct a comprehensive analysis of these factors by investigating the effects of PTQ on weight-only, activation-only, and weight-and-activation quantization using diverse methods such as round-to-nearest (RTN), GPTQ, ZeroQuant, and their variants. We apply these methods to two distinct model families with parameters ranging from 125M to 176B. Our contributions include: (1) a sensitivity analysis revealing that activation quantization is generally more susceptible to weight quantization, with smaller models often outperforming larger models in terms of activation quantization; (2) an evaluation and comparison of existing PTQ methods to optimize model size reduction while minimizing the impact on accuracy, revealing that none of the current methods can achieve the original model quality for quantization with either INT4-weight or INT4-weight-and-INT8-activation; (3) based on these insights, we propose an optimized method called Low-Rank Compensation (LoRC), which employs low-rank matrices to enhance model quality recovery with a minimal increase in model size.",
+"authors": "Zhewei Yao (University of California, Berkeley); Xiaoxia Wu (Microsoft)*; Cheng Li (Databricks); Stephen S Youn (microsoft); Yuxiong He (Microsoft)",
+"has_supp": false,
+},
+{
+"id": "94",
+"title": "DeepSpeed Data Efficiency: Improving Deep Learning Model Quality and Training Efficiency via Efficient Data Sampling and Routing",
+"abstract": "Recent advances on deep learning models come at the price of formidable training cost. The increasing model size is one of the root causes, but another less-emphasized fact is that data scale is actually increasing at a similar speed as model scale, and the training cost is proportional to both of them. Compared to the rapidly evolving model architecture, how to efficiently use the training data (especially for the expensive foundation model pretraining) is both less explored and difficult to realize due to the lack of a convenient framework that focus on data efficiency capabilities. To this end, we present \OURS, a framework that makes better use of data, increases training efficiency, and improves model quality. Specifically, we propose and combine two data efficiency techniques: efficient data sampling via a general curriculum learning library, and efficient data routing via a novel random layerwise token dropping technique. For GPT-3 1.3B language model pretraining, our work achieves 12.5x less data/time/cost (\$3.7K if rent on Azure), while still maintaining 95\% of model quality compared to baseline with full data and cost (\$46.3K). For GPT-3 1.3B and BERT-large pretraining, our work can also achieve the same model quality with up to 2x less data/time/cost, or achieve better model quality under same data/time/cost. \OURS is easy to use and tune, enabling us to easily apply it and verify its benefit on additional tasks including GPT-3 MoE model pretraining and small-scale GPT-2/ViT finetuning.",
+"authors": "Conglong Li (Microsoft); Zhewei Yao (University of California, Berkeley); Xiaoxia Wu (Microsoft)*; Minjia Zhang (Microsoft AI and Research); Connor M Holmes (Microsoft); Cheng Li (Microsoft); Yuxiong He (Microsoft)",
+"has_supp": false,
+},
+{
+"id": "96",
+"title": "Arabic Mini-ClimateGPT : A Climate Change and Sustainability Tailored Arabic LLM",
+"abstract": " Climate change is one of the most significant challenges we face together as a society. Creating awareness and educating policy makers the wide-ranging impact of climate change is an essential step towards a sustainable future. Recently, Large Language Models (LLMs) like ChatGPT and Bard have shown impressive conversational abilities and excel in a wide variety of NLP tasks. While these models are close-source, recently alternative open-source LLMs such as Stanford Alpaca and Vicuna have shown promising results. However, these open-source models are not specifically tailored for climate related domain specific information and also struggle to generate meaningful responses in other languages such as, Arabic. To this end, we propose a light-weight Arabic Mini-ClimateGPT that is built on an open-source LLM and is specifically fine-tuned on a conversational-style instruction tuning curated Arabic dataset Clima500-Instruct with over 500k instructions about climate change and sustainability. Further, our model also utilizes a vector embedding based retrieval mechanism during inference. We validate our proposed model through quantitative and qualitative evaluations on climate-related queries. Our model surpasses the baseline LLM in 88.3% of cases during ChatGPT-based evaluation. Furthermore, our human expert evaluation reveals an 81.6% preference for our model's responses over multiple popular open-source models. Our open-source models, demos and source code are available here : https://github.com/mbzuai-oryx/ClimateGPT",
+"authors": "Sahal Shaji Mullappilly (Mohammed bin Zayed University of Artificial Intelligence)*; Abdelrahman M Shaker (MBZUAI); Omkar Thawakar (MBZUAI); Hisham Cholakkal (MBZUAI); Rao Anwer (MBZUAI); Salman Khan (MBZUAI); Fahad Shahbaz (MBZUAI)",
+"has_supp": false,
+},
+{
+"id": "15",
+"title": "Multimodal Data and Resource Efficient Device-directed Speech Detection with Large Foundation Models",
+"abstract": "Interactions with virtual assistants typically start with a trigger phrase followed by a command. 
+In this work, we explore the possibility of making these interactions more natural by eliminating the need for a trigger phrase. Our goal is to determine whether a user addressed the virtual assistant based on signals obtained from the streaming audio recorded by the device’s microphone. We address this task by combining 1-best hypotheses and decoder signals from an automatic speech recognition system with acoustic representations from an audio encoder as input features to a large language model (LLM). In particular, we are interested in data and resource efficient systems that require only a small amount of training data and can operate in scenarios with only a single frozen LLM available on a device. For this reason, our model is trained on 80k or less examples of multimodal data using a combination of low-rank adaptation and prefix tuning. We compare the proposed system to unimodal baselines and show that the multimodal approach achieves lower equal-error-rates (EERs), while using only a fraction of the training data. 
+We also show that low-dimensional specialized audio representations lead to lower EERs than high-dimensional general audio representations.  ",
+"authors": "Dominik Wagner (Technische Hochschule Nuernberg Georg Simon Ohm)*; Alexander W Churchill (Apple Inc.); Siddharth Sigtia (Apple); Panayiotis Georgiou (Apple); Seyedmahdad Mirsamadi (Apple); Aarshee Mishra (Apple); Erik Marchi (Apple)",
+"has_supp": false,
+},
+{
+"id": "26",
+"title": "Representative Subset Selection for Efficient Fine-Tuning in Self-Supervised Speech Recognition",
+"abstract": "Self-supervised speech recognition models require considerable labeled training data for learning high-fidelity representations for Automatic Speech Recognition (ASR), which is computationally demanding and time-consuming. We consider the task of identifying an optimal subset of data for efficient fine-tuning in self-supervised speech models for ASR. We discover that the dataset pruning strategies used in vision tasks for sampling the most informative examples do not perform better than random subset selection on fine-tuning self-supervised ASR. We then present the Cowerage algorithm for representative subset selection in self-supervised ASR. Cowerage is based on our finding that ensuring the coverage of examples based on training Word Error Rate (WER) in the early training epochs leads to better generalization performance. Extensive experiments with the wav2vec 2.0 and HuBERT model on TIMIT, Librispeech, and LJSpeech datasets show the effectiveness of Cowerage and its transferability across models, with up to 17% relative WER improvement over existing dataset pruning methods and random sampling. We also demonstrate that the coverage of training instances in terms of WER values ensures the inclusion of phonemically diverse examples, leading to better test accuracy in self-supervised speech recognition models.
+",
+"authors": "Abdul Hameed Azeemi (Lahore University of Management Sciences)*; Ihsan Ayyub A Qazi (Lahore University of Management Sciences (LUMS)); Agha Ali  Raza (Lahore University of Management Sciences)",
+"has_supp": false,
+},
+{
+"id": "36",
+"title": "ASR Data Selection from Multiple Sources: A Practical Approach on Performance Scaling",
+"abstract": "This paper proposes a framework leveraging small samples from different Automatic Speech Recognition~(ASR) data sources to predict model performance and facilitate ASR data selection decisions. By utilizing data distribution distance and a mapping technique inspired by neural scaling laws, our framework estimates the model performance for various data mixtures within the disclosed range and extrapolates it onto much larger target data sizes. This is the first study on extending this novel approach to ASR problems. Experiments conducted on the Librispeech and the TED-LIUM3 datasets confirm the effectiveness of the proposed data selection framework. Compared to a heuristic-based selection baseline, our framework consistently demonstrates 13~17% relative word error rate reductions under 40$/ $50$/ $100-hour fine-tuning data hour budgets.",
+"authors": "Hoang Anh Just (Virginia Tech)*; I-Fan Chen (Amazon Inc.); Feiyang Kang (Virginia Tech); Yuanzhi Zhang (Virginia Tech); Anit Kumar Sahu (Amazon Alexa AI); Ruoxi Jia (Virginia Tech)",
+"has_supp": false,
+},
+{
+"id": "49",
+"title": "Fed-EE: Federating Heterogeneous ASR Models using Early-Exit Architectures",
+"abstract": "Automatic speech recognition models require large speech recordings for training. However, the collection of such data often is cumbersome and leads to privacy concerns. Federated learning has been widely used as an effective decentralized technique that collaboratively learns a shared prediction model while keeping the data local on different clients devices. Unfortunately, client devices often feature limited computation and communication resources leading to practical difficulties for large models. In addition, the heterogeneity that characterizes edge devices make unpractical federating a single model that fits all the different clients. Differently from the recent literature, where multiple models with different architectures are used, in this work we propose using early-exit models. This solution brings 2 benefits: a single model is used on a variety of devices; federating the models is straightforward. Experiments on the public dataset (TED-LIUM 3) show that our proposed approach is effective and can be combined with basic federated learning strategies. We also shed light on how to federate self-attention models for speech recognition, for which an established recipe does not exist in literature.",
+"authors": "Mohamed Nabih Ali Mohamed Nawar (FBK)*; Alessio Brutti (FBK); Falavigna Daniele (FBK)",
+"has_supp": false,
+},
+{
+"id": "58",
+"title": "Recursive Joint Cross-Attention for Audio-Visual Speaker Verification",
+"abstract": "Speaker verification has been recently gaining a lot of attention using audio-visual fusion as faces and voices share close associations with each other. Though existing approaches based on audio-visual fusion showed improvement over unimodal systems, the potential of audio-visual fusion for speaker verification is not fully exploited. In this paper, we have investigated the prospect of effectively capturing both the intra- and inter-modal relationships across audio and visual modalities simultaneously, which can play a crucial role in significantly improving the fusion performance over unimodal systems. Specifically, we introduce a recursive fusion of the joint cross-attentional model, where a joint audio-visual feature representation is employed in the cross-attention framework in a recursive fashion in order to obtain more refined feature representations that can efficiently capture the intra- and inter-modal associations. Extensive experiments are conducted on the Voxceleb1 dataset to evaluate the proposed model. Results indicate that the proposed model is found to be promising in improving the performance of the audio-visual system.",
+"authors": "Gnana Praveen Rajasekhar (Computer Research Institute Montreal)*; Jahangir  Alam (Computer Research Institute of Montreal (CRIM), Montreal (Quebec) Canada)",
+"has_supp": false,
+},
+{
+"id": "78",
+"title": "Efficient infusion of self-supervised representations in Automatic Speech Recognition",
+"abstract": "Self-supervised learned (SSL) models such as Wav2vec and HuBERT yield state-of-the-art results on speech-related tasks. Given the effectiveness of such models, it is advantageous to use them in conventional ASR systems. While some approaches suggest incorporating these models as a trainable encoder or a learnable frontend, training such systems is extremely slow and requires a lot of computation cycles. In this work, we propose two simple approaches that use (1) framewise addition and (2) cross-attention mechanisms to efficiently incorporate the representations from the SSL model(s) into the ASR architecture, resulting in models that are comparable in size with standard encoder-decoder conformer systems while also avoiding the usage of SSL models during training. Our approach results in faster training and yields significant performance gains on the Librispeech and Tedlium datasets compared to baselines. We further provide detailed analysis and ablation studies that demonstrate the effectiveness of our approach.",
+"authors": "Darshan Deepak Prabhu (Sony Research India)*; Sai Ganesh Mirishkar (Sony Research India); Pankaj Wasnik (Sony Research India)",
+"has_supp": false,
+},
+{
+"id": "89",
+"title": "An efficient clustering algorithm for self-supervised speaker recognition",
+"abstract": "Clustering-based pseudo-labels (PLs) are widely used to optimize speaker embedding (SE) networks and train self-supervised speaker verification (SV) systems. However, PL-based self-supervised training depends on high-quality PLs and clustering performance relies heavily on time- and resource-consuming data augmentation regularization. In this paper, we propose an efficient and general-purpose multi-objective clustering algorithm that outperforms all other baselines used to cluster SEs.
+Our approach avoids explicit data augmentation for fast training and low memory and compute resource usage. 
+It is based on three principles: (1) Self-Augmented Training to enforce representation invariance and maximize the information-theoretic dependency between samples and their predicted PLs (2) Virtual Mixup Training to impose local-Lipschitzness and enforce the cluster assumption (3) Supervised contrastive learning to learn more discriminative features and pull samples of same class together and push apart samples of different clusters, while improving robustness to natural corruptions. We provide a thorough comparative analysis of the performance of our clustering method vs. baselines using a variety of clustering metrics and show that we outperform all other clustering benchmarks, perform an ablation study to analyze the contribution of each component including two other augmentation-based objectives, and show that our multi-objective approach provides beneficial complementary information. Moreover, using the generated PLs to train our SE system allows us to achieve state-of-the-art SV performance.",
+"authors": "Abderrahim Fathan (Computer Research Institute of Montreal (CRIM), Montreal, Quebec, Canada)*; Xiaolin Zhu (University of Edinburgh); Jahangir  Alam (Computer Research Institute of Montreal (CRIM), Montreal (Quebec) Canada)",
+"has_supp": false,
+},
+{
+"id": "91",
+"title": "HateXplain Space Model: Fusing Robustness with Explainability in Hate Speech Analysis",
+"abstract": "In the realm of Natural Language Processing, Language Models (LMs) excel in various tasks but face challenges in identifying hate contexts while considering zero-shot or transfer learning issues. To address this, we introduce Space Modeling (SM), a novel approach that enhances hate context detection by generating word-level attribution and bias scores. These scores provide intuitive insights into model predictions and aid in the recognition of hateful terms. Our experiments across six hatespeech datasets reveal SM's superiority over existing methods, marking a significant advancement in refining LM-based hate context detection.",
+"authors": "Md Fahim (CCDS Lab, IUB)*; Md Shihab Shahriar (Islamic University of Technology); Mohammad Ruhul Amin (Fordham University)",
+"has_supp": false,
+},
+{
+"id": "95",
+"title": "Revealing the Bias in Large Language Models via Reward Based Questioning",
+"abstract": "The success of large language models has been utterly demonstrated in recent times. Using these models and fine tuning for the specific task at hand results in high performance. However, these models also learn biased representations from the data they have been trained on. In particular, several studies recently showed that language models can learn to be biased towards certain genders. Quite recently, several studies tried to eliminate this bias via proposing human feedback included in fine-tuning. In our study we show that by changing the question asked to the language model the log probabilities of the bias measured in the responses changes dramatically. Furthermore, in several cases the language model ends up providing a completely opposite response. The recent language models finetuned on the prior gender bias datasets do not resolve the actual problem, but rather alleviate the problem for the dataset on which the model is fine-tuned. We believe our results might lay the foundation for further alignment and safety problems in large language models.",
+"authors": "Ezgi Korkmaz (DeepMind)*",
+"has_supp": false,
+},
+{
+"id": "16",
+"title": "Evaluating task specific finetuning for protein language models",
+"abstract": "Prediction methods inputting embeddings from protein Language Models (pLMs) have reached or even surpassed state-of-the-art (SOTA) performance on many protein prediction tasks.  In natural language processing (NLP) fine-tuning Language Models has become the de facto standard. In contrast, most protein-prediction tasks do not backpropagate to the pLM. Here, we compared the use of pretrained embeddings to fine-tuning three SOTA pLMs (ESM2, ProtT5, Ankh) on eight different tasks. Two results stood out: (1) task-specific supervised fine-tunig mostly increased downstream prediction performance. (2) Parameter-efficient fine-tuning could reach similar improvements consuming substantially fewer resources. These findings suggest task-specific fine-tuning as a generic improvement of pLM-based prediction methods. To help kick-off such an advance, we provided easy-to-use notebooks for parameter efficient fine-tuning of ProtT5 for per-protein (pooling) and per-residue prediction tasks at (link will be added in final version).",
+"authors": "Robert Schmirler (Abbvie)*; Michael Heinzinger (Technical University of Munich); Burkhard Rost (Technical University of Munich)",
+"has_supp": true,
 }
 ]
