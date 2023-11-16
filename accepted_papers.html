@@ -36,7 +36,7 @@ cursor: zoom-in;
 			        {% if row.has_supp %}
 			          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
 			        {% else %}
-				  <button type="button" class="btn btn-secondary">Supplementary Material</button>
+				  <button type="button" class="btn btn-secondary" disabled>Supplementary Material</button>
 			        {% endif %}
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 			</div>
