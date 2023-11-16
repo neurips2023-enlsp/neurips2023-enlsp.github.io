@@ -101,4 +101,25 @@ Our experiments on adapting an English LLM to Hungarian and Thai show that our r
 "authors": "Dong Ki Kim (LG AI Research)*; Sungryull Sohn (LG AI Research); Lajanugen Logeswaran (University of Michigan); Dongsub Shim (LG AI Research); Honglak Lee (LG AI Research)",
 "has_supp": false,
 },
+{
+"id": "21",
+"title": "Efficient LLM Inference on CPUs",
+"abstract": "Large language models (LLMs) have demonstrated remarkable performance and tremendous potential across a wide range of tasks. However, deploying these models has been challenging due to the astronomical amount of model parameters, which requires a demand for large memory capacity and high memory bandwidth. In this paper, we propose an effective approach that can make the deployment of LLMs more efficiently. We support an automatic INT4 weight-only quantization flow and design a special LLM runtime with highly-optimized kernels to accelerate the LLM inference on CPUs. We demonstrate the general applicability of our approach on popular LLMs including Llama2, Llama, GPT-NeoX, and showcase the extreme inference efficiency on CPUs. The code will be open-sourced soon.",
+"authors": "Haihao Shen (Intel)*; Hanwen Chang (Intel); Bo Dong (Intel); Hengyu Meng (Intel); Yu Luo (Intel)",
+"has_supp": false,
+},
+{
+"id": "22",
+"title": "FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores",
+"abstract": "Convolution models with long filters have demonstrated state-of-the-art reasoning abilities in many long-sequence tasks but lag behind the most optimized Transformers in wall-clock time. A major bottleneck is the Fast Fourier Transform (FFT)---which allows long convolutions to run in O(N log N) time in sequence length N but has poor hardware utilization. In this paper, we study how to optimize the FFT convolution. We find two key bottlenecks: the FFT does not effectively use specialized matrix multiply units, and it incurs expensive I/O between layers of the memory hierarchy. In response, we propose FlashFFTConv. FlashFFTConv uses a matrix decomposition that computes the FFT using matrix multiply units and enables kernel fusion for long sequences, reducing I/O. FlashFFTConv speeds up exact FFT convolutions by up to 6.54x over PyTorch and achieves up to 4.4x speedup end-to-end. Given the same compute budget, FlashFFTConv allows Hyena-GPT-s to achieve 2.3 points better perplexity and M2-BERT-base to achieve 3.3 points higher GLUE score---matching models with twice the parameter count.",
+"authors": "Daniel Y Fu (Stanford University)*; Hermann N Kumbong (Stanford University); Eric Nguyen (Stanford University); Christopher Re (Stanford University)",
+"has_supp": false,
+},
+{
+"id": "23",
+"title": "Efficient Long-Range Transformers: You Need to Attend More, but Not Necessarily at Every Layer",
+"abstract": "Pretrained transformer models leverage the attention mechanism to capture long- and short-range dependencies in the sequence. However, the (full) attention mechanism incurs high computational cost -- quadratic in the sequence length, which is not affordable in tasks with long sequences, e.g., inputs with 8k tokens. Although sparse attention can be used to improve computational efficiency, as suggested in existing work, it has limited modeling capacity and often fails to capture complicated dependencies in long sequences. To tackle this challenge, we propose MASFormer, an easy-to-implement transformer variant with mixed attention spans. Specifically, MASFormer is equipped with full attention to capture long-range dependencies, but only at a small number of layers. For the remaining layers, MASformer only employs sparse attention to capture short-range dependencies. Our experiments on natural language modeling and generation tasks show that a decoder-only MASFormer model of 1.3B parameters can achieve competitive performance to vanilla transformers with full attention while significantly reducing computational cost (up to 75%).  ",
+"authors": "Qingru Zhang (Georgia Institute of Technology)*; Dhananjay Ram (AWS); Cole Hawkins (Amazon Web Services); Sheng Zha (Amazon Web Services); Tuo Zhao (Georgia Tech)",
+"has_supp": false,
+},
 ]
