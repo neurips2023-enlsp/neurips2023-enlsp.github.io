@@ -32,9 +32,9 @@ cursor: zoom-in;
 				<b>Abstract:</b><p class="par_panel_perso">{{ row.abstract }}</p>
 			</div>
 			<div class="modal-footer">
-				<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Download Paper</a>
+				<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Paper</a>
         {% if row.has_supp %}
-          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Download Supplementary Material</a>
+          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
         {% else %}
           <a href="#" download class="btn btn-primary active" aria-current="page">Download Supplementary Material</a>
         {% endif %}
