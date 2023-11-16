@@ -19,8 +19,31 @@ $("#pop").on("click", function() {
 .img2zoom:hover{
 cursor: zoom-in;
 }
-
 </style>
+
+ <div class="row">
+    <div class="col col-md-3">
+	<div class="alert alert-primary" role="alert">
+	  A simple primary alert—check it out!
+	</div>
+    </div>
+    <div class="col col-md-3">
+	<div class="alert alert-primary" role="alert">
+	  A simple primary alert—check it out!
+	</div>
+    </div>
+    <div class="col col-md-3">
+	<div class="alert alert-primary" role="alert">
+	  A simple primary alert—check it out!
+	</div>
+    </div>
+    <div class="col col-md-3">
+	<div class="alert alert-primary" role="alert">
+	  A simple primary alert—check it out!
+	</div>
+    </div>
+  </div>
+
 {% for row in rows %}
 <div class="modal fade" id="paper_{{row.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
