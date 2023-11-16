@@ -6,9 +6,10 @@
 "has_supp": false
 },
 {
-"id": "2",
-"title": "NLLB-CLIP - train performant multilingual image retrieval model on a budget",
-"abstract": "Today, the exponential rise of large models developed by academic and industrial institutions with the help of massive computing resources raises the question of whether someone without access to such resources can make a valuable scientific contribution. To explore this, we tried to solve the challenging task of multilingual image retrieval having a limited budget of $1,000. As a result, we present NLLB-CLIP - CLIP model with a text encoder from the NLLB model. To train the model, we used an automatically created dataset of 106,246 good-quality images with captions in 201 languages derived from the LAION COCO dataset. We trained multiple models using image and text encoders of various sizes and kept different parts of the model frozen during the training. We thoroughly analyzed the trained models using existing evaluation datasets and newly created XTD200 and Flickr30k-200 datasets. We show that NLLB-CLIP is comparable in quality to state-of-the-art models and significantly outperforms them on low-resource languages.",
-"authors": "Alexander Visheratin (Independent researcher)*"
-"has_supp": true
-}]
+"id": "1",
+"title": "What is Lost in Knowledge Distillation?",
+"abstract": "Deep neural networks (DNNs) have improved NLP tasks significantly, but training and maintaining such networks could be costly. Model compression techniques, such as, knowledge distillation (KD), have been proposed to address the issue; however, the compression process could be lossy. Motivated by this, our work investigates how a distilled student model differs from its teacher, if the distillation process causes any information losses, and if the loss follows a specific pattern. Our experiments tries to shed light on what types of tasks might be less or more sensitive to KD by reporting data points on the contribution of different factors, such as the number of layers or attention heads. Results such as ours could be utilized when determining effective and efficient configurations to achieve an optimal information transfer between larger (teacher) and smaller (student) models.",
+"authors": "Manas Ranjan Mohanty (Amazon)*; Tanya G Roosta (Amazon); Peyman Passban (Amazon)",
+"has_supp": false
+}
+]
