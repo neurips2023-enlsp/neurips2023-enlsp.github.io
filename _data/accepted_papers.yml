@@ -526,4 +526,62 @@ We also show that low-dimensional specialized audio representations lead to lowe
 "authors": "Abdul Hameed Azeemi (Lahore University of Management Sciences)*; Ihsan Ayyub A Qazi (Lahore University of Management Sciences (LUMS)); Agha Ali  Raza (Lahore University of Management Sciences)",
 "has_supp": false,
 },
+{
+"id": "36",
+"title": "ASR Data Selection from Multiple Sources: A Practical Approach on Performance Scaling",
+"abstract": "This paper proposes a framework leveraging small samples from different Automatic Speech Recognition~(ASR) data sources to predict model performance and facilitate ASR data selection decisions. By utilizing data distribution distance and a mapping technique inspired by neural scaling laws, our framework estimates the model performance for various data mixtures within the disclosed range and extrapolates it onto much larger target data sizes. This is the first study on extending this novel approach to ASR problems. Experiments conducted on the Librispeech and the TED-LIUM3 datasets confirm the effectiveness of the proposed data selection framework. Compared to a heuristic-based selection baseline, our framework consistently demonstrates 13~17% relative word error rate reductions under 40$/ $50$/ $100-hour fine-tuning data hour budgets.",
+"authors": "Hoang Anh Just (Virginia Tech)*; I-Fan Chen (Amazon Inc.); Feiyang Kang (Virginia Tech); Yuanzhi Zhang (Virginia Tech); Anit Kumar Sahu (Amazon Alexa AI); Ruoxi Jia (Virginia Tech)",
+"has_supp": false,
+},
+{
+"id": "49",
+"title": "Fed-EE: Federating Heterogeneous ASR Models using Early-Exit Architectures",
+"abstract": "Automatic speech recognition models require large speech recordings for training. However, the collection of such data often is cumbersome and leads to privacy concerns. Federated learning has been widely used as an effective decentralized technique that collaboratively learns a shared prediction model while keeping the data local on different clients devices. Unfortunately, client devices often feature limited computation and communication resources leading to practical difficulties for large models. In addition, the heterogeneity that characterizes edge devices make unpractical federating a single model that fits all the different clients. Differently from the recent literature, where multiple models with different architectures are used, in this work we propose using early-exit models. This solution brings 2 benefits: a single model is used on a variety of devices; federating the models is straightforward. Experiments on the public dataset (TED-LIUM 3) show that our proposed approach is effective and can be combined with basic federated learning strategies. We also shed light on how to federate self-attention models for speech recognition, for which an established recipe does not exist in literature.",
+"authors": "Mohamed Nabih Ali Mohamed Nawar (FBK)*; Alessio Brutti (FBK); Falavigna Daniele (FBK)",
+"has_supp": false,
+},
+{
+"id": "58",
+"title": "Recursive Joint Cross-Attention for Audio-Visual Speaker Verification",
+"abstract": "Speaker verification has been recently gaining a lot of attention using audio-visual fusion as faces and voices share close associations with each other. Though existing approaches based on audio-visual fusion showed improvement over unimodal systems, the potential of audio-visual fusion for speaker verification is not fully exploited. In this paper, we have investigated the prospect of effectively capturing both the intra- and inter-modal relationships across audio and visual modalities simultaneously, which can play a crucial role in significantly improving the fusion performance over unimodal systems. Specifically, we introduce a recursive fusion of the joint cross-attentional model, where a joint audio-visual feature representation is employed in the cross-attention framework in a recursive fashion in order to obtain more refined feature representations that can efficiently capture the intra- and inter-modal associations. Extensive experiments are conducted on the Voxceleb1 dataset to evaluate the proposed model. Results indicate that the proposed model is found to be promising in improving the performance of the audio-visual system.",
+"authors": "Gnana Praveen Rajasekhar (Computer Research Institute Montreal)*; Jahangir  Alam (Computer Research Institute of Montreal (CRIM), Montreal (Quebec) Canada)",
+"has_supp": false,
+},
+{
+"id": "78",
+"title": "Efficient infusion of self-supervised representations in Automatic Speech Recognition",
+"abstract": "Self-supervised learned (SSL) models such as Wav2vec and HuBERT yield state-of-the-art results on speech-related tasks. Given the effectiveness of such models, it is advantageous to use them in conventional ASR systems. While some approaches suggest incorporating these models as a trainable encoder or a learnable frontend, training such systems is extremely slow and requires a lot of computation cycles. In this work, we propose two simple approaches that use (1) framewise addition and (2) cross-attention mechanisms to efficiently incorporate the representations from the SSL model(s) into the ASR architecture, resulting in models that are comparable in size with standard encoder-decoder conformer systems while also avoiding the usage of SSL models during training. Our approach results in faster training and yields significant performance gains on the Librispeech and Tedlium datasets compared to baselines. We further provide detailed analysis and ablation studies that demonstrate the effectiveness of our approach.",
+"authors": "Darshan Deepak Prabhu (Sony Research India)*; Sai Ganesh Mirishkar (Sony Research India); Pankaj Wasnik (Sony Research India)",
+"has_supp": false,
+},
+{
+"id": "89",
+"title": "An efficient clustering algorithm for self-supervised speaker recognition",
+"abstract": "Clustering-based pseudo-labels (PLs) are widely used to optimize speaker embedding (SE) networks and train self-supervised speaker verification (SV) systems. However, PL-based self-supervised training depends on high-quality PLs and clustering performance relies heavily on time- and resource-consuming data augmentation regularization. In this paper, we propose an efficient and general-purpose multi-objective clustering algorithm that outperforms all other baselines used to cluster SEs.
+Our approach avoids explicit data augmentation for fast training and low memory and compute resource usage. 
+It is based on three principles: (1) Self-Augmented Training to enforce representation invariance and maximize the information-theoretic dependency between samples and their predicted PLs (2) Virtual Mixup Training to impose local-Lipschitzness and enforce the cluster assumption (3) Supervised contrastive learning to learn more discriminative features and pull samples of same class together and push apart samples of different clusters, while improving robustness to natural corruptions. We provide a thorough comparative analysis of the performance of our clustering method vs. baselines using a variety of clustering metrics and show that we outperform all other clustering benchmarks, perform an ablation study to analyze the contribution of each component including two other augmentation-based objectives, and show that our multi-objective approach provides beneficial complementary information. Moreover, using the generated PLs to train our SE system allows us to achieve state-of-the-art SV performance.",
+"authors": "Abderrahim Fathan (Computer Research Institute of Montreal (CRIM), Montreal, Quebec, Canada)*; Xiaolin Zhu (University of Edinburgh); Jahangir  Alam (Computer Research Institute of Montreal (CRIM), Montreal (Quebec) Canada)",
+"has_supp": false,
+},
+{
+"id": "91",
+"title": "HateXplain Space Model: Fusing Robustness with Explainability in Hate Speech Analysis",
+"abstract": "In the realm of Natural Language Processing, Language Models (LMs) excel in various tasks but face challenges in identifying hate contexts while considering zero-shot or transfer learning issues. To address this, we introduce Space Modeling (SM), a novel approach that enhances hate context detection by generating word-level attribution and bias scores. These scores provide intuitive insights into model predictions and aid in the recognition of hateful terms. Our experiments across six hatespeech datasets reveal SM's superiority over existing methods, marking a significant advancement in refining LM-based hate context detection.",
+"authors": "Md Fahim (CCDS Lab, IUB)*; Md Shihab Shahriar (Islamic University of Technology); Mohammad Ruhul Amin (Fordham University)",
+"has_supp": false,
+},
+{
+"id": "95",
+"title": "Revealing the Bias in Large Language Models via Reward Based Questioning",
+"abstract": "The success of large language models has been utterly demonstrated in recent times. Using these models and fine tuning for the specific task at hand results in high performance. However, these models also learn biased representations from the data they have been trained on. In particular, several studies recently showed that language models can learn to be biased towards certain genders. Quite recently, several studies tried to eliminate this bias via proposing human feedback included in fine-tuning. In our study we show that by changing the question asked to the language model the log probabilities of the bias measured in the responses changes dramatically. Furthermore, in several cases the language model ends up providing a completely opposite response. The recent language models finetuned on the prior gender bias datasets do not resolve the actual problem, but rather alleviate the problem for the dataset on which the model is fine-tuned. We believe our results might lay the foundation for further alignment and safety problems in large language models.",
+"authors": "Ezgi Korkmaz (DeepMind)*",
+"has_supp": false,
+},
+{
+"id": "16",
+"title": "Evaluating task specific finetuning for protein language models",
+"abstract": "Prediction methods inputting embeddings from protein Language Models (pLMs) have reached or even surpassed state-of-the-art (SOTA) performance on many protein prediction tasks.  In natural language processing (NLP) fine-tuning Language Models has become the de facto standard. In contrast, most protein-prediction tasks do not backpropagate to the pLM. Here, we compared the use of pretrained embeddings to fine-tuning three SOTA pLMs (ESM2, ProtT5, Ankh) on eight different tasks. Two results stood out: (1) task-specific supervised fine-tunig mostly increased downstream prediction performance. (2) Parameter-efficient fine-tuning could reach similar improvements consuming substantially fewer resources. These findings suggest task-specific fine-tuning as a generic improvement of pLM-based prediction methods. To help kick-off such an advance, we provided easy-to-use notebooks for parameter efficient fine-tuning of ProtT5 for per-protein (pooling) and per-residue prediction tasks at (link will be added in final version).",
+"authors": "Robert Schmirler (Abbvie)*; Michael Heinzinger (Technical University of Munich); Burkhard Rost (Technical University of Munich)",
+"has_supp": true,
+},
 ]
