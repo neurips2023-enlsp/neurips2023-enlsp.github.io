@@ -72,19 +72,3 @@ cursor: zoom-in;
 	{% endfor %}
 	</div>
 </div>
-
-<div class="row">
-	<table id="customers">
-		
-		{% for row in rows %}
-
-		<tr>
-			<td>
-				<a href="" data-bs-toggle="modal" data-bs-target="#paper_{{row.id}}">{{ row.title }}</a>
-			</td>
-			<td><center><a href="/papers/paper_{{row.id}}.pdf" download><i class="bi bi-file-pdf" style="font-size: 1.4rem;"></i></a></center></td>
-		</tr>
-		{% endfor %}
-
-	</table>
-</div>
