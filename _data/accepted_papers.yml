@@ -455,4 +455,37 @@ This improved efficiency is applicable to training linear Transformers from scra
 "authors": "Siyan Zhao (UCLA)*; John Dang (University of California, Los Angeles); Aditya Grover (UCLA)",
 "has_supp": false,
 },
+{
+"id": "87",
+"title": "Fast-ELECTRA for Efficient Pre-training",
+"abstract": "ELECTRA pre-trains language models by detecting tokens in a sequence that have been replaced by an auxiliary model. Although ELECTRA offers a significant boost in efficiency, its potential is constrained by the training cost brought by the auxiliary model. Notably, this model, which is jointly trained with the main model, only serves to assist the training of the main model and is discarded post-training. This results in a substantial amount of training cost being expended in vain. To mitigate this issue, we propose Fast-ELECTRA, which leverages an existing language model as the auxiliary model. To construct a learning curriculum for the main model, we smooth its output distribution via temperature scaling following a descending schedule. Our approach rivals the performance of state-of-the-art ELECTRA-style pre-training methods, while significantly eliminating the computation and memory cost brought by the joint training of the auxiliary model. Our method also reduces the sensitivity to hyper-parameters and enhances the pre-training stability.",
+"authors": "Chengyu Dong (University of California, San Diego)*; Liyuan Liu (Microsoft Research); Hao Cheng (Microsoft Research Redmond); Jingbo Shang (University of California, San Diego); Jianfeng  Gao (Microsoft Research); Xiaodong Liu (Microsoft Research)",
+"has_supp": false,
+},
+{
+"id": "88",
+"title": "Parameter-Efficient Fine-tuning of InstructBLIP for Visual Reasoning Tasks",
+"abstract": "Visual language models have recently demonstrated enhanced capabilities in visual reasoning tasks by employing external modules upon language models for visual language alignment. InstructBLIP uses a Q-Former and a projection layer to convert input image embeddings into soft visual prompts to enhance the instruction-following capabilities of large language models (LLMs). Although fine-tuning InstructBLIP has shown great results in downstream tasks, previous works have been restrictive, only full fine-tuning the Q-Former, while freezing the LLM.
+In this work, we investigate the performance of the PEFT method, LoRA, on both the Q-Former and the base LLMs, specifically Flan-T5-XL and Vicuna-7B, using visual reasoning benchmarks ScienceQA and IconQA. We observe that, when the LLM is frozen, training the Q-Former with LoRA achieves comparable performance to full fine-tuning using under 2% of the trainable parameters. Furthermore, fine-tuning the LLM consistently result in better performances, regardless of how the Q-Former is fine-tuned.
+Lastly, applying LoRA to both the LLM and the Q-Former surpasses the performance of only full fine-tuning the Q-Former while using less than 10% of the trainable parameters. These results highlight the effectiveness of applying PEFT to visual language models for visual reasoning tasks. The code is available at https://github.com/AttentionX/InstructBLIP_PEFT.",
+"authors": "Sungkyung Kim (Seoul National University)*; Adam Lee (UC Berkeley); Junyoung Park (Seoul National University); Sounho Chung (Seoul National University); Jusang Oh (Seoul national university); Jay-Yoon Lee (Carnegie Mellon)",
+"has_supp": false,
+},
+{
+"id": "90",
+"title": "Local LoRA: Memory-Efficient Fine-Tuning of Large Language Models",
+"abstract": "We present Local LoRA, a memory-flexible fine-tuning approach that, in principle, can fine-tune an arbitrarily large model on fixed hardware, including consumer grade GPUs. Our approach aims to decouple the size of the model and the memory required to fine-tune it by dividing the model into chunks and sequentially fine tuning each chunk. Our results show that Local LoRA closes the gap between the un-tuned model and end-to-end LoRA on math reasoning tasks.",
+"authors": "Oscar Key (University College London)*; Jean Alexander Kaddour (University College London); Pasquale Minervini (University College London)",
+"has_supp": false,
+},
+{
+"id": "92",
+"title": "A Leap Forward in LLMs Post-Training W4A8 Quantization Using Floating-Point Formats",
+"abstract": "In the complex domain of large language models (LLMs), striking a balance between computational efficiency and maintaining model quality is a formidable challenge. 
+Navigating the inherent limitations of uniform quantization, particularly when dealing with outliers, and motivated by the launch of NVIDIA's H100 hardware, this study delves into the viability of floating-point (FP) quantization, particularly focusing on FP8 and FP4, as a potential solution. 
+Our comprehensive investigation reveals that for LLMs, FP8 activation consistently outshines its integer (INT8) equivalent, with the performance edge becoming more noticeable in models possessing parameters beyond one billion. 
+For weight quantization, our findings indicate that FP4 exhibits comparable, if not superior, performance to INT4, simplifying deployment on FP-supported hardware like H100.  To mitigate the overhead from precision alignment caused by the disparity between weights and activations, we propose two scaling constraints for weight quantization that negligibly impact the performance compared to the standard W4A8 model. We additionally enhance our quantization methods by integrating the Low Rank Compensation (LoRC) strategy, yielding improvements especially in smaller models. The results of our investigation emphasize the immense potential of FP quantization for LLMs, paving the way for high-efficiency deployment in resource-limited settings.",
+"authors": "Xiaoxia Wu (Microsoft)*; Zhewei Yao (University of California, Berkeley); Yuxiong He (Microsoft)",
+"has_supp": false,
+},
 ]
