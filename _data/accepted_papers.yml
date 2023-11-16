@@ -54,4 +54,25 @@
 "authors": "Bharat Runwal (Indian Institute of Technology(IIT), Delhi)*; Tejaswini Pedapati (IBM Research); Pin-Yu Chen (IBM Research)",
 "has_supp": false,
 },
+{
+"id": "11",
+"title": "GQKVA: Efficient Pre-training of Transformers by Grouping Queries, Keys, and Values",
+"abstract": "Massive transformer-based models face several challenges, including slow and computationally intensive pre-training and over-parametrization. This paper addresses these challenges by proposing a versatile method called GQKVA, which generalizes query, key, and value grouping techniques. GQKVA is designed to speed up transformer pre-training while reducing the model size. Our experiments with various GQKVA variants highlight a clear trade-off between performance and model size, allowing for customized choices based on resource and time limitations. Our findings also indicate that the conventional multi-head attention approach is not always the best choice, as there are lighter and faster alternatives available. We tested our method on ViT, which achieved an approximate 0.3% increase in accuracy while reducing the model size by about 4% in the task of image classification. Additionally, our most aggressive model reduction experiment resulted in a reduction of approximately 15% in model size, with only around a 1% drop in accuracy.",
+"authors": "Farnoosh Javadi (Huawei Technologies)*; Walid Ahmed (Huawei); Habib Hajimolahoseini (Huawei Toronto Research Centre); Foozhan Ataiefard (Huawei Technologies); Mohammad Hassanpour (Huawei Technologies); Saina Asani (University of Toronto); Austin Wen (Huawei Technologies); Omar Mohamed Awad (Huawei); Kangling Liu (Huawei Technologies); Yang Liu (Huawei Canada)",
+"has_supp": false,
+},
+{
+"id": "12",
+"title": "Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL",
+"abstract": "In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. We introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+"authors": "Hao Sun (University of Cambridge)*; Alihan Hüyük (University of Cambridge); Mihaela van der Schaar (University of California, Los Angeles)",
+"has_supp": false,
+},
+{
+"id": "13",
+"title": "Structure Discovery in Prompted Weak Supervision",
+"abstract": "Prompted weak supervision (PromptedWS) applies pre-trained large language models (LLMs) as supervision sources in a weak supervision setup to efficiently distill information from LLMs and obtain labeled datasets at scale. We further extend the use of LLMs to address one of the key challenges in weak supervision: learning the dependency structure among noisy supervision sources. In this work, we highlight the challenge of structure discovery in PromptedWS. We propose a Structure Refining Module, a simple yet effective first approach based on the similarities of the prompts by taking advantage of the intrinsic structure in the embedding space. At the core of our method are Labeling Function Removal (LaRe) and Correlation Structure Generation  (CosGen). Compared to previous methods that learn the dependencies from weak labels, our method finds the dependencies that are intrinsic in the embedding space. We show that Structure Refining Module improves the PromptedWS by up to 12.7 points on benchmark tasks.",
+"authors": "Jinyan Su (Cornell University); Peilin Yu (Brown University)*; Jieyu Zhang (University of Washington); Stephen H Bach (Brown University)",
+"has_supp": false,
+},
 ]
