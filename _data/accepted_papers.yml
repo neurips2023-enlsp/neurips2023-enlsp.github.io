@@ -383,4 +383,76 @@ To assess the effectiveness of this approach, we conduct an evaluation on two re
 "authors": "Nikhil Sardana (MosaicML)*; Jonathan Frankle (MosaicML)",
 "has_supp": false,
 },
+{
+"id": "76",
+"title": "Continual Pre-Training of Large Language Models: How to (re)warm your model?",
+"abstract": "Large language models (LLMs) are routinely pre-trained on billions of tokens, only to restart the process over again once new data becomes available. A much cheaper and more efficient solution would be to enable the continual pre-training of these models, i.e. updating pre-trained models with new data instead of re-training them from scratch. However, the distribution shift induced by novel data typically results in degraded performance on past data. Taking a step towards efficient continual pre-training, in this work, we examine the effect of different warm-up strategies. Our hypothesis is that the learning rate must be re-increased to improve compute efficiency when training on a new dataset. We study the warmup phase of models pre-trained on the Pile (upstream data, 300B tokens) as we continue to pre-train on SlimPajama (downstream data, 297B tokens), following a linear warmup and cosine decay schedule. We conduct all experiments on the Pythia 410M language model architecture and evaluate performance through validation perplexity. We experiment with different pre-training checkpoints, various maximum learning rates, and various warmup lengths. Our results show that while rewarming models first increases the loss on upstream and downstream data, in the longer run it improves the downstream performance, outperforming models trained from scratch---even for a large downstream dataset.",
+"authors": "Kshitij Gupta (University of Montreal)*; Benjamin Thérien (University of Waterloo); Adam Ibrahim (Mila, Université de Montréal); Mats L Richter (Mila - Quebec AI Institute); Quentin Anthony (Eleuther AI); Eugene Belilovsky (Concordia University); Irina Rish (University of Montreal); Timothee Lesort (UdeM)",
+"has_supp": false,
+},
+{
+"id": "79",
+"title": "Improving Natural Language Understanding with Computation-Efficient Retrieval Representation Fusion",
+"abstract": "Retrieval-based augmentations that aim to incorporate knowledge from an external database into language models have achieved great success in various knowledge-intensive (KI) tasks, such as question-answering and text generation.
+However, integrating retrievals in non-knowledge-intensive (NKI) tasks, such as text classification, is still challenging.
+Existing works focus on concatenating retrievals to inputs as context to form the prompt-based inputs. 
+Unfortunately, such methods require language models to have the capability to handle long texts.
+Besides, inferring such concatenated data would also consume a significant amount of computational resources.
+To solve these challenges, we propose \textbf{ReFusion} in this paper, a computation-efficient \textbf{Re}trieval representation \textbf{Fusion} with neural architecture search. 
+The main idea is to directly fuse the retrieval representations into the language models.
+Specifically, ReFusion first retrieves the representations of similar sentences and uses Neural Architecture Search (NAS) to seek the optimal fusion structures. 
+Experimental results demonstrate our ReFusion can achieve superior and robust performance on various NKI tasks.",
+"authors": "Shangyu Wu (City University of Hong Kong`)*; Ying Xiong (Harbin Institute of Technology¸Shenzhen); Yufei Cui (McGill University); Xue Liu (McGill University); Buzhou Tang (Harbin Institute of Technology, Shenzhen); Tei-Wei Kuo (National Taiwan University); Chun Jason XUE (City University of Hong Kong)",
+"has_supp": false,
+},
+{
+"id": "80",
+"title": "Improving Linear Attention via Softmax Mimicry",
+"abstract": "Linear attentions are promising methods to improve Transformer efficiency. 
+This improved efficiency is applicable to training linear Transformers from scratch, converting finetuned Transformers into linear versions that recover task-specific performance, and converting pretrained Transformers into linear versions for downstream transfer. However, linear attentions often lag behind softmax attention in performance. To address this gap, we identify two key empirical properties of softmax attention missing in linear attentions: low-entropy spiky weights and dot-product monotonicity.  We thus introduce Hedgehog, a learnable linear attention trained to mimic softmax attention by minimizing cross-entropy between attention weights. Experiments show Hedgehog significantly closes the attention performance gap. Hedgehog closes 68.6% of the gap on WikiText-103 when training 125M-parameter linear Transformers from scratch, improving upon prior linear attentions by up to 6 perplexity points (PPL), and recovers >99% of GLUE points when converting finetuned BERT models, outperforming prior methods up to 8.7 points. By linearizing GPT-2, Hedgehog outperforms efficient Transformer alternatives, obtaining state-of-the-art 16.7 perplexity on WikiText-103.",
+"authors": "Michael Zhang (Stanford University)*; Kush Bhatia (Stanford University); Hermann N Kumbong (Stanford University); Christopher Re (Stanford University)",
+"has_supp": false,
+},
+{
+"id": "81",
+"title": "Mixture of Quantized Experts (MoQE): Complementary Effect of Low-bit Quantization and Robustness",
+"abstract": "Large Mixture of Experts (MoE) models could achieve state-of-the-art quality on various language tasks, including machine translation task, thanks to the efficient model scaling capability with expert parallelism. However, it has brought a fundamental issue of larger memory consumption and increased memory bandwidth bottleneck at deployment time. In this paper, we propose Mixture of Quantized Experts (MoQE) which is a simple weight-only quantization method applying ultra low-bit down to 2-bit quantizations only to expert weights for mitigating the increased memory and latency issues of MoE models. We show that low-bit quantization together with the MoE architecture delivers a reliable model performance while reducing the memory size significantly even without any additional training in most cases. In particular, expert layers in MoE models are much more robust to the quantization than conventional feedforward networks (FFN) layers. In our comprehensive analysis, we show that MoE models with 2-bit expert weights can deliver better model performance than the dense model trained on the same dataset. As a result of low-bit quantization, we show the model size can be reduced by 79.6% of the original half precision floating point (fp16) MoE model. Combined with an optimized GPU runtime implementation, it also achieves 1.24X speed-up on A100 GPUs.",
+"authors": "Young Jin Kim (Microsoft)*; Raffy Fahim (Microsoft); Hany Hassan (microsoft)",
+"has_supp": false,
+},
+{
+"id": "82",
+"title": "DiffTune: A Diffusion-Based Approach to Diverse Instruction-Tuning Data Generation",
+"abstract": "Instruction tuning has become pivotal in enhancing the adaptability and responsiveness of Large Language Models (LLMs) to human instructions. Despite its critical role, current methods for generating instruction-tuning datasets exhibit significant bottlenecks, primarily in terms of high cost and limited diversity. However, as previously shown in the literature, the diversity of an instruction-tuning dataset is crucial to LLM's downstream performance. To address these challenges, we propose a Diffusion Language Model (DiffLM)-based technique to generate unlimited diverse instructions at a low cost. Specifically, we have enhanced the variability of instructions by strategically modifying the sampling process within the DiffLM. Our method presents the opportunity to augment any existing instruction-tuning dataset, thereby enriching its content and potential utility. Both automatic and human evaluation show that our generated instructions achieve high quality and better n-gram diversity than the original dataset. Instruction tuning of LLaMA on the augmented dataset delivers better instruction following capability and superior performance on a broad set of benchmarks, indicating the effectiveness of our instruction generation method.",
+"authors": "Suyuchen Wang (Université de Montréal)*; Bang Liu (University of Montreal)",
+"has_supp": false,
+},
+{
+"id": "83",
+"title": "PaSS: Parallel Speculative Sampling",
+"abstract": "Scaling the size of language models to tens of billions of parameters has led to impressive performance on a wide range of tasks. At generation, these models are used auto-regressively, requiring a forward pass for each generated token, and thus reading the full set of parameters from memory. This memory access forms the primary bottleneck for generation and it worsens as the model size increases. Moreover, executing a forward pass for multiple tokens in parallel often takes nearly the same time as it does for just one token. These two observations lead to the development of speculative sampling, where a second smaller model is used to draft a few tokens, that are then validated or rejected using a single forward pass of the large model. Unfortunately, this method requires two models that share the same tokenizer and thus limits its adoption. As an alternative, we propose to use parallel decoding as a way to draft multiple tokens from a single model with no computational cost, nor the need for a second model. Our approach only requires an additional input token that marks the words that will be generated simultaneously. We show promising performance (up to $30%$ speed-up) while requiring only as few as $O(d_{emb})$ additional parameters.",
+"authors": "Giovanni Monea (EPFL)*; Armand Joulin (FAIR); Edouard Grave (Apple)",
+"has_supp": false,
+},
+{
+"id": "84",
+"title": "QDyLoRA: Quantized Dynamic Low-Rank Adaptation for Efficient Large Language Model Tuning",
+"abstract": "We employ a tool-interacting divide-and-conquer strategy enabling large language models (LLMs) to answer complex multimodal multi-hop questions. In particular, we harness the power of large language models to divide a given multimodal multi-hop question into unimodal single-hop sub-questions to be  answered by the appropriate tool from a predefined set of tools. After all  corresponding tools provide the LLM with their answers, the LLM generates the next relevant unimodal single-hop question. To increase the reasoning ability of LLMs, we prompt chatGPT to generate a tool-interacting divide-and-conquer dataset. This dataset is then used to efficiently finetune the corresponding LLM. To assess the effectiveness of this approach, we conduct an evaluation on two recently introduced complex question-answering datasets. The experimental analysis demonstrate substantial improvements over existing state-of-the-art solutions, indicating the efficacy and generality of our strategy.",
+"authors": "Hossein Rajabzadeh (University of Waterloo)*; Mojtaba Valipour (University of Waterloo); Marzieh Tahaei (Huawei Noah's Ark Lab); HYOCK JU HJ KWON (University of Waterloo); Ali Ghodsi (University of Waterloo); Boxing Chen (Huawei Noah's Ark Lab); Mehdi Rezagholizadeh (Huawei Technologies)",
+"has_supp": false,
+},
+{
+"id": "85",
+"title": "Model Fusion through Bayesian Optimization in Language Model Fine-Tuning",
+"abstract": "Fine-tuning a pretrained model for downstream tasks is a widely-adopted technique, which is known for its adaptability and reliability across various domains. Despite its conceptual simplicity, fine-tuning entails several engineering choices such as the selection of hyperparameters and the determination of checkpoints from an optimization trajectory. To tackle the difficulty of choosing the best model among multiple ones obtained from those choices, one of the effective solutions is model fusion, which combines multiple models on a parameter space. On the other hand, we observe a large discrepancy between loss and actual metric values where a loss is often used to pick out models to fuse. While the loss is generally differentiable and thus easier to optimize, the consideration of metrics is often a preferable goal to improve model performance. In response, we present a novel model fusion technique, optimizing a desired metric as well as a loss using \gls{bo}. Moreover, combining the multi-objective \gls{bo} into model fusion, we devise a bilevel framework, composed of \gls{bo} models for hyperparameter optimization and model fusion. Experiments across various downstream tasks validate decent performance improvements achieved using our \gls{bo}-based model fusion method.",
+"authors": "Chaeyun Jang (kaist)*; Jungtaek Kim (University of Pittsburgh); Hyungi Lee (KAIST); Juho Lee (KAIST)",
+"has_supp": false,
+},
+{
+"id": "86",
+"title": "Group Preference Optimization: Few-Shot Alignment of Large Language Models",
+"abstract": "Applications of large language models (LLMs) often demand nuanced judgments that vary among different groups. Existing alignment algorithms can be costly, requiring extensive group-specific data and computation. We present Group Preference Optimization (GPO), a framework that efficiently aligns LLMs to group preferences using a few-shot approach. In GPO, we augment the base LLM with an independent transformer module to predict the preferences of a group for the LLM generations. For few-shot learning, this module acts as an in-context autoregressive transformer and is trained via meta-learning on several groups. Through empirical validation on opinion adaptation tasks involving US demographic groups, global countries, and individuals, GPO demonstrates superior alignment performance, requiring fewer group-specific preferences and reduced training and computational resources, surpassing existing strategies like in-context steering and fine-tuning.",
+"authors": "Siyan Zhao (UCLA)*; John Dang (University of California, Los Angeles); Aditya Grover (UCLA)",
+"has_supp": false,
+},
 ]
