@@ -171,6 +171,7 @@ Authors can submit up to 100 MB of supplementary materials separately. Authors a
 		</center>
 	</div>
 </div>
+<br><br>
 <h2 class="blackpar_title">Platinum Sponsor</h2>
 <div class="row">
 	<div class="col">
@@ -179,6 +180,7 @@ Authors can submit up to 100 MB of supplementary materials separately. Authors a
 		</center>
 	</div>
 </div>
+<br><br>
 <h2 class="blackpar_title">Gold Sponsor</h2>
 <div class="row">
 	<div class="col">
