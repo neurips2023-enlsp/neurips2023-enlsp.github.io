@@ -33,11 +33,11 @@ cursor: zoom-in;
 			</div>
 			<div class="modal-footer">
 				<a href="/papers/paper_{{row.id}}.pdf" download class="btn btn-primary active" aria-current="page">Paper</a>
-        {% if row.has_supp %}
-          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
-        {% else %}
-          <a href="" class="btn btn-secondary" aria-current="page" disabled>Supplementary Material</a>
-        {% endif %}
+			        {% if row.has_supp %}
+			          <a href="/papers/paper_{{row.id}}_supp.pdf" download class="btn btn-primary active" aria-current="page">Supplementary Material</a>
+			        {% else %}
+			          <a href="" class="btn btn-secondary" aria-current="page" disabled>Supplementary Material</a>
+			        {% endif %}
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
