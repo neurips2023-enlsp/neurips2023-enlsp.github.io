@@ -48,7 +48,6 @@ cursor: zoom-in;
 <h2>Accepted papers</h2>
 <div class="card-deck">
 {% for row in rows %}
-<div class="col-sm-12 col-md-3">
 	<div class="card">
 		<!--<img src="..." class="card-img-top" alt="...">-->
 		<iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="https://neurips2023-enlsp.github.io/papers/paper_{{row.id}}.pdf" frameborder="1" scrolling="auto"></iframe>
@@ -61,7 +60,6 @@ cursor: zoom-in;
 			</center>
 	  </div>
 	</div>
-</div>
 {% endfor %}
 </div>
 
