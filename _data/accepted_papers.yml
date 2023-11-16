@@ -122,4 +122,25 @@ Our experiments on adapting an English LLM to Hungarian and Thai show that our r
 "authors": "Qingru Zhang (Georgia Institute of Technology)*; Dhananjay Ram (AWS); Cole Hawkins (Amazon Web Services); Sheng Zha (Amazon Web Services); Tuo Zhao (Georgia Tech)",
 "has_supp": false,
 },
+{
+"id": "24",
+"title": "IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs",
+"abstract": "One limitation of existing transformer-based models is that they cannot handle very long sequences as input since their self-attention operations exhibit quadratic time and space complexity. This problem becomes especially acute when transformers are deployed on hardware platforms equipped only with CPUs. To address this issue, we propose a novel method for accelerating self-attention at inference time that works with pretrained transformer models out-of-the-box without requiring retraining. We experiment using our method to accelerate various long-sequence transformers on various benchmarks and demonstrate a greater speedup compared to the baselines. ",
+"authors": "Yuzhen Mao (School of Computing Sciences, Simon Fraser University)*; Martin Ester (Simon Fraser University); Ke Li (Simon Fraser University)",
+"has_supp": false,
+},
+{
+"id": "25",
+"title": "On the Zero-Shot Generalization of Machine-Generated Text Detectors",
+"abstract": "The rampant proliferation of large language models, fluent enough to generate text indistinguishable from human-written language, gives unprecedented importance to the detection of machine-generated text. This work is motivated by an important research question: How will the detectors of machine-generated text perform on outputs of a new generator, that the detectors were not trained on? We begin by collecting generation data from a wide range of LLMs, and train neural detectors on data from each generator and test its performance on held-out generators. While none of the detectors can generalize to all generators, we observe a consistent and interesting pattern that the detectors trained on data from a medium-size LLM can zero-shot generalize to the larger version. As a concrete application, we demonstrate that robust detectors can be built on an ensemble of training data from medium-sized models.",
+"authors": "Xiao Pu (Peking University)*; Jingyu Zhang (Johns Hopkins University); Xiaochuang Han (University of Washington); Yulia Tsvetkov (University of Washington); Tianxing He (University of Washington)",
+"has_supp": false,
+},
+{
+"id": "27",
+"title": "Intra-Class Similarity-Guided Feature Distillation",
+"abstract": "Knowledge Distillation (KD) is an effective technique for compressing large language models through the teacher-student framework. Previous work in feature distillation mainly applied an exact matching between the hidden representations of the student and the teacher. However, as the student has a lower capacity compared to the teacher, it may struggle to mimic its exact hidden representations. This leads to a large discrepancy between their features as shown in preceding research. Therefore, we propose intra-class similarity-guided feature distillation, a novel approach to make the task easier for the student. In this work, we map each sample representation by the student to its K nearest neighbor samples representations by the teacher that are within the same class. This method is novel and can be combined with other distillation techniques. Empirical results show the effectiveness of our proposed approach by maintaining good performance on benchmark datasets.",
+"authors": "Khouloud Saadi (University of Passau)*; Jelena Mitrović (University of Passau); Michael Granitzer (University of Passau)",
+"has_supp": false,
+},
 ]
