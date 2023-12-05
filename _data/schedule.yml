@@ -2,13 +2,14 @@
   Time: 08:30AM - 08:45AM
   Whole_line: true
   
-- Title: (KeyNote Talk) TBD
+- Title: Simple and efficient self-training approaches for speech recognition (KeyNote Talk)
   Time: 08:45AM - 09:30AM
   Presenter: Samy Bengio <br> Tatiana Likhomanenko
   Is_paper: false
   Whole_line: false
-  Bio: TBD
-  Abstract: TBD 
+  Bio: <br> Samy Bengio is a senior director of machine learning research at Apple since 2021. Before that, he was a distinguished scientist at Google Research since 2007 where he was heading part of the Google Brain team, and at IDIAP in the early 2000s where he co-wrote the well-known open-source Torch machine learning library. His research interests span many areas of machine learning such as deep architectures, representation learning, vision and language processing and more recently, reasoning. He is action editor of the Journal of Machine Learning Research and on the board of the NeurIPS foundation. He was on the editorial board of the Machine Learning Journal, has been program chair (2017) and general chair (2018) of NeurIPS, program chair of ICLR (2015, 2016), general chair of BayLearn (2012-2015), MLMI (2004-2006), as well as NNSP (2002), and on the program committee of several international conferences such as NeurIPS, ICML, ICLR, ECML and IJCAI. More details can be found at http://bengio.abracadoudou.com.
+  <br> Tatiana is a research scientist at the machine learning research team at Apple. Prior to Apple, she was an AI resident and later a postdoctoral research scientist in the speech recognition team, Facebook AI Research. Back in the day, Tatiana received a Ph.D. in mixed type partial differential equations from Moscow State University. For 4 years she worked on applications of machine learning to high energy physics as a researcher in the joint lab at Yandex and CERN, and later at the startup NTechLab, a leader in face recognition. The main focus of her recent research is transformers training and generalization, efficient speech recognition with less supervision and private federated learning. 
+  Abstract: Self-training, or pseudo-labeling (PL), algorithms have recently emerged as a powerful strategy for semi-supervised learning in speech recognition in the era of transformers and large scale data. In this talk, we will walk you from the first successful pseudo-labeling algorithms based on teacher-student training, that alternates between training a model and generating pseudo-labels (PLs) with it, to continuous pseudo-labeling algorithms, where PLs are generated in end-to-end manner as training proceeds, improving training speed and the accuracy of the final model. We will discuss different aspects of PL algorithms to make it simple and resource efficient and overall what are the key components of such huge success: what exactly the model learns, how training dynamics changes, how speaker diversity and amount of hours affect training, and how training depends on the language models. Finally, we will show how pseudo-labeling can be used to train a model on a source language with labeled data and to fine-tune it on a target language with only unlabeled data.
 
   
   
