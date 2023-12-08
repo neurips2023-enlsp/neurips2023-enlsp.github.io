@@ -1,13 +1,13 @@
 - Title: Breakfast 
-  Time: 08:15M - 08:20AM
+  Time: 8:15M - 8:20AM
   Whole_line: true
 
 - Title: Opening Speech
-  Time: 08:15AM - 08:20AM
+  Time: 8:15AM - 8:20AM
   Whole_line: true  
 
 - Title: (<b>KeyNote Talk</b>) Deploying efficient translation at every level of the stack 
-  Time: 08:20AM - 08:45AM
+  Time: 8:20AM - 8:45AM
   Presenter: Kenneth Heafield
   Is_paper: false
   Whole_line: false
@@ -15,7 +15,7 @@
   Abstract: Practical efficient neural networks combine several optimizations ranging from assembly code to network structure. Yet most papers about optimization start with an unoptimized baseline, omitting comparison even with simple methods like using a smaller network. Shared tasks force a different mentality, where each idea has to prove its worth against a highly optimized baseline. This informs our work on fast and small machine translation with latency under 20 ms for an average sentence. The models are now deployed in Firefox.
 
 - Title: (<b>KeyNote Talk</b>) Simple and efficient self-training approaches for speech recognition 
-  Time: 08:45AM - 09:30AM
+  Time: 8:45AM - 9:30AM
   Presenter: Samy Bengio <br> Tatiana Likhomanenko
   Is_paper: false
   Whole_line: false
@@ -24,35 +24,35 @@
   
   
 - Title: (<b>Spotlight 1</b>) Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL 
-  Time: 09:30AM - 09:36AM
+  Time: 9:30AM - 9:36AM
   Presenter: Hao Sun 
   Is_paper: true
   Whole_line: false
   Authors: Hao Sun · Alihan Hüyük · Mihaela van der Schaar
   Abstract: In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. We introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.
 - Title: (<b>Spotlight 2</b>) MultiPrompter:Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning
-  Time: 09:36AM - 09:42AM
+  Time:9:36AM - 9:42AM
   Presenter: Dong-Ki Kim 
   Is_paper: true
   Whole_line: false
   Authors: Dong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
   Abstract: Recently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines.
 - Title: (<b>Spotlight 3</b>) Decoding Data Quality via Synthetic Corruptions:Embedding-guided Pruning of Code Data 
-  Time: 09:42AM - 9:48AM
+  Time: 9:42AM - 9:48AM
   Presenter: Yu Yang
   Is_paper: true
   Whole_line: false
   Authors: Yu Yang · Aaditya Singh · Mostafa Elhoushi · Anas Mahmoud · Kushal Tirumala · Fabian Gloeckle · Baptiste Roziere · Carole-Jean Wu · Ari Morcos · Newsha Ardalani
   Abstract: TBDCode datasets, often collected from diverse and uncontrolled sources such as GitHub, potentially suffer from quality issues, thereby affecting the performance and training efficiency of Large Language Models (LLMs) optimized for code generation. Previous studies demonstrated the benefit of using embedding spaces for data pruning, but they mainly focused on duplicate removal or increasing variety, and in other modalities, such as images. Our work focuses on using embeddings to identify and remove low-quality'' code data. First, we explore features oflow-quality'' code in embedding space, through the use of synthetic corruptions. Armed with this knowledge, we devise novel pruning metrics that operate in embedding space to identify and remove low-quality entries in the Stack dataset. We demonstrate the benefits of this synthetic corruption informed pruning (SCIP) approach on the well-established HumanEval and MBPP benchmarks, outperforming existing embedding-based methods. Importantly, we achieve up to a 3% performance improvement over no pruning, thereby showing the promise of insights from synthetic corruptions for data pruning.
 - Title: (<b>Spotlight 4</b>) FlashFFTConv:Efficient Convolutions for Long Sequences with Tensor Cores 
-  Time: 09:48AM - 9:54AM
+  Time: 9:48AM - 9:54AM
   Presenter: Dan Fu
   Is_paper: true
   Whole_line: false
   Authors: Dan Fu · Hermann Kumbong · Eric Nguyen · Christopher Ré
   Abstract: Convolution models with long filters have demonstrated state-of-the-art reasoning abilities in many long-sequence tasks but lag behind the most optimized Transformers in wall-clock time.A major bottleneck is the Fast Fourier Transform (FFT)---which allows long convolutions to run in $O(N \log N)$ time in sequence length $N$ but has poor hardware utilization.In this paper, we study how to optimize the FFT convolution.We find two key bottlenecks:the FFT does not effectively use specialized matrix multiply units, and it incurs expensive I/O between layers of the memory hierarchy.In response, we propose FlashFFTConv.FlashFFTConv uses a matrix decomposition that computes the FFT using matrix multiply units and enables kernel fusion for long sequences, reducing I/O.FlashFFTConv speeds up exact FFT convolutions by up to 6.54$\times$ over PyTorch and achieves up to 4.4$\times$ speedup end-to-end.Given the same compute budget, FlashFFTConv allows Hyena-GPT-s to achieve 2.3 points better perplexity and M2-BERT-base to achieve 3.3 points higher GLUE score---matching models with twice the parameter count.
   Title: (<b>Spotlight 5</b>) Ensemble of low-rank adapters for large language model fine-tuning  
-  Time: 09:54AM - 10:00AM
+  Time: 9:54AM - 10:00AM
   Presenter: Xi Wang
   Is_paper: true
   Whole_line: false
@@ -119,57 +119,48 @@
   Abstract: Scaling the size of language models to tens of billions of parameters has led to impressive performance on a wide range of tasks. At generation, these models are used auto-regressively, requiring a forward pass for each generated token, and thus reading the full set of parameters from memory. This memory access forms the primary bottleneck for generation and it worsens as the model size increases. Moreover, executing a forward pass for multiple tokens in parallel often takes nearly the same time as it does for just one token. These two observations lead to the development of speculative sampling, where a second smaller model is used to draft a few tokens, that are then validated or rejected using a single forward pass of the large model. Unfortunately, this method requires two models that share the same tokenizer and thus limits its adoption. As an alternative, we propose to use parallel decoding as a way to draft multiple tokens from a single model with no computational cost, nor the need for a second model. Our approach only requires an additional input token that marks the words that will be generated simultaneously. We show promising performance (up to $30\%$ speed-up) while requiring only as few as $O(d_{emb})$ additional parameters.
 
 - Title: Lunch Break
-  Time: 12:00PM - 12:45PM
+  Time: 12:00PM - 1:00PM
   Whole_line: true
  
 - Title: <b>Poster Session I</b>
-  Time: 12:45PM - 01:45PM
+  Time: 1:00PM - 2:00PM
   Whole_line: true
   
-- Title: (KeyNote Talk) TBD
-  Time: 01:45PM - 02:15PM
+- Title: (<b>KeyNote Talk</b>) LLMs for Protein Design:A Research Journey
+  Time: 2:00PM - 2:30PM
   Presenter: Ali Madani
   Is_paper: false
   Whole_line: false
-  Bio: TBD
+  Bio: Ali Madani is the founder of Profluent Bio, an AI startup in protein design. Previously, he received his PhD from UC Berkeley and led machine learning research initiatives at Salesforce Research utilizing deep learning, language modeling, and computer vision. Most notably, Ali was the architect of the ProGen moonshot which demonstrated the first use of large language models for functional protein design.
   Abstract: TBD  
   
-- Title: Interactive Industrial Panel
-  Time: 02:15PM - 03:00PM
-  Presenter: <ul><li>Nazneen Rajan</li><li>Minjia Zhang</li><li>Tanya Roosta</li><li>Tim Dettmers</li></ul>
-  Is_paper: false
-  Whole_line: false
-
-- Title: Afternoon Break and <b>Poster Session II</b>
-  Time: 03:00PM - 03:30PM
-  Whole_line: true
-
-- Title: (KeyNote Talk) TBD
-  Time: 03:30PM-04:00PM
+- Title: (<b>KeyNote Talk</b>) TBD
+  Time: 2:30PM-3:00PM
   Presenter: Tara Sainath
   Is_paper: false
   Whole_line: false
   Bio: TBD
   Abstract: TBD  
-  
-  
-- Title: (KeyNote Talk) TBD
-  Time: 04:00PM-04:30PM
-  Presenter: Haoli Bai
-  Is_paper: false
-  Whole_line: false
-  Bio: TBD
-  Abstract: TBD  
-  
-- Title: (KeyNote Talk) TBD
-  Time: 04:30PM-05:00PM
-  Presenter: Kenneth Heafield
-  Is_paper: false
-  Whole_line: false
-  Bio: TBD
-  Abstract: TBD  
 
 
-- Title: Best Paper and Poster Award & Closing
-  Time: 05:00PM-05:10PM
+
+- Title: Afternoon Break and <b>Poster Setup II</b>
+  Time: 03:00PM - 03:20PM
   Whole_line: true
+
+- Title: Interactive Industrial Panel
+  Time: 3:20PM - 4:10PM
+  Presenter: <ul><li>Nazneen Rajan</li><li>Minjia Zhang</li><li>Tim Dettmers</li></ul>
+  Is_paper: false
+  Whole_line: false
+  
+- Title: Best Paper and Poster Awards 
+  Time: 4:10PM-4:15PM
+  Whole_line: true  
+  
+- Title: <b>Poster Session II</b>
+  Time: 4:15PM - 5:15PM
+  Whole_line: true
+
+
+
