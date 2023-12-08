@@ -14,13 +14,23 @@ $("#pop").on("click", function() {
    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
 });
 
+$(".img2zoom").on("click", function(){
+	console.log($(this));
+	console.log($(this).attr("src"));
+};
+
 </script>
 <style>
 .img2zoom:hover{
 cursor: zoom-in;
 }
 </style>
- 
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
 {% for row in rows %}
 <div class="modal fade" id="paper_{{row.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
