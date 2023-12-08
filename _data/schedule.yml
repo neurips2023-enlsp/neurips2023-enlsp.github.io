@@ -66,14 +66,14 @@
   Whole_line: true
 
 
-- Title: (KeyNote Talk) TBD
+- Title: (<b>KeyNote Talk</b>) Branch-Train-Merge:Embarrassingly Parallel Training of Expert Language Models
   Time: 10:30AM - 11:00AM
   Presenter: Luke Zettelmoyer
   Is_paper: false
   Whole_line: false
-  Bio: TBD
-  Abstract: TBD
-- Title: (KeyNote Talk) TBD
+  Bio: Luke Zettlemoyer is a Professor in the Paul G. Allen School of Computer Science & Engineering at the University of Washington, and a Research Director at Meta. His research focuses on empirical methods for natural language semantics, and involves designing machine learning algorithms, introducing new tasks and datasets, and, most recently, studying how to best develop self-supervision signals for pre-training. His honors include being named an ACL Fellow as well as winning a PECASE award, an Allen Distinguished Investigator award, and multiple best paper awards. Luke received his PhD from MIT and was a postdoc at the University of Edinburgh.
+  Abstract: Existing language model (LM) training regimes entangle compute, data, and parameters, requiring expensive synchronous communication with massive supercomputers. This talk introduces a new algorithm called Branch-Train-Merge (BTM) that asynchronously trains LMs that are fundamentally modular. In BTM, components (or experts) of the LM are specialized to distinct domains in the training corpus, and experts are conditionally updated based on the domain of the incoming document. We show how BTM enables LMs that are rapidly customizable (with the ability to mix, add, or remove experts after training), embarrassingly parallel (requiring no communication between experts), and sparse (needing only a few experts active at a time for inference). Key to our proposal is exploring what constitutes the domains to which experts specialize, as well as reflecting on the data sources used to train LMs. Our new techniques chart a path towards collaborative and iterative LM development, where anyone can contribute and maintain experts at modest computational cost.
+- Title: (<b>KeyNote Talk</b>) TBD
   Time: 11:00AM - 11:30AM
   Presenter: Sarath Chandar
   Is_paper: false
@@ -82,13 +82,13 @@
   Abstract: TBD
   
 
-- Title: (Paper Oral Presentation) TBD
-  Time: 11:30AM - 11:40AM
-  Presenter: TBD
+- Title: (<b>Spotlight 6</b>) LoDA:Low-Dimensional Adaptation of Large Language Models 
+  Time: 11:30AM - 11:36AM
+  Presenter: Jing Liu 
   Is_paper: true
   Whole_line: false
-  Authors: TBD
-  Abstract: TBD
+  Authors: Jing Liu · Toshiaki Koike-Akino · Perry Wang · Matthew Brand · Ye Wang · Kieran Parsons
+  Abstract: Parameter-Efficient Fine-Tuning (PEFT) has recently garnered significant attention, due to the enormous size of Large Language Models (LLM). Among various PEFT methods, Low-Rank Adaptation (LoRA) demonstrates comparable performance to full fine-tuning, despite having significantly fewer trainable parameters. In this work, we first generalize LoRA from a low-rank linear adaptation/mapping to low-dimensional, non-linear adaptation/mapping, called Low-Dimensional Adaptation (LoDA). We further propose LoDA+, which further improves the expressiveness of the non-linear adaptation and still uses almost the same number of tunable parameters as LoRA. Both LoDA and LoDA+ include LoRA as a special case. To improve computational efficiency at inference, we further propose R-LoDA(+) and S-LoDA(+), replacing the pre-trained weight matrix by its low-rank or sparse approximation, which is frozen during fine-tuning. Empirical evaluations on Natural Language Generation tasks show that LoDA(+) and some variants outperform LoRA as well as other baselines. We will release a package that facilitates the integration of LoDA(+) and their variants with PyTorch models.
 - Title: (Paper Oral Presentation) TBD
   Time: 11:40AM - 11:50AM
   Presenter: TBD
