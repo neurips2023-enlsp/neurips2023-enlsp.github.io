@@ -1,7 +1,19 @@
-- Title: Opening Speech
-  Time: 08:30AM - 08:45AM
+- Title: Breakfast 
+  Time: 08:15M - 08:20AM
   Whole_line: true
-  
+
+- Title: Opening Speech
+  Time: 08:15AM - 08:20AM
+  Whole_line: true  
+
+- Title: Deploying efficient translation at every level of the stack 
+  Time: 08:20AM - 08:45AM
+  Presenter: Kenneth Heafield
+  Is_paper: false
+  Whole_line: false
+  Bio: Kenneth Heafield is the founder of Efficient Translation Limited and left the University of Edinburgh last week, where he was an Associate Professor.  He trained a large language model on a trillion tokens in 2013 before it was cool.  Then he ran EU projects ParaCrawl to gather data from the web, Bergamot to make fast translation for browsers, and HPLT to make language models large again.
+  Abstract: Practical efficient neural networks combine several optimizations ranging from assembly code to network structure. Yet most papers about optimization start with an unoptimized baseline, omitting comparison even with simple methods like using a smaller network. Shared tasks force a different mentality, where each idea has to prove its worth against a highly optimized baseline. This informs our work on fast and small machine translation with latency under 20 ms for an average sentence. The models are now deployed in Firefox.
+
 - Title: Simple and efficient self-training approaches for speech recognition (KeyNote Talk)
   Time: 08:45AM - 09:30AM
   Presenter: Samy Bengio <br> Tatiana Likhomanenko
