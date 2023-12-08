@@ -23,16 +23,16 @@
   Abstract: Self-training, or pseudo-labeling (PL), algorithms have recently emerged as a powerful strategy for semi-supervised learning in speech recognition in the era of transformers and large scale data. In this talk, we will walk you from the first successful pseudo-labeling algorithms based on teacher-student training, that alternates between training a model and generating pseudo-labels (PLs) with it, to continuous pseudo-labeling algorithms, where PLs are generated in end-to-end manner as training proceeds, improving training speed and the accuracy of the final model. We will discuss different aspects of PL algorithms to make it simple and resource efficient and overall what are the key components of such huge success :what exactly the model learns, how training dynamics changes, how speaker diversity and amount of hours affect training, and how training depends on the language models. Finally, we will show how pseudo-labeling can be used to train a model on a source language with labeled data and to fine-tune it on a target language with only unlabeled data.
   
   
-- Title: \[Paper-Oral 1\] Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL 
+- Title: (Paper-Oral 1) Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL 
   Time: 09:30AM - 09:36AM
-  Presenter: Hao Sun · Alihan Hüyük · Mihaela van der Schaar
+  Presenter: Hao Sun 
   Is_paper: true
   Whole_line: false
   Authors: Hao Sun · Alihan Hüyük · Mihaela van der Schaar
   Abstract: In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. We introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.
-- Title: \[Paper-Oral 2\] MultiPrompter:Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning
+- Title: (Paper-Oral 2) MultiPrompter:Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning
   Time: 09:36AM - 09:42AM
-  Presenter: TBDDong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
+  Presenter: Dong-Ki Kim 
   Is_paper: true
   Whole_line: false
   Authors: Dong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
