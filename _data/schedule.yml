@@ -89,20 +89,34 @@
   Whole_line: false
   Authors: Jing Liu · Toshiaki Koike-Akino · Perry Wang · Matthew Brand · Ye Wang · Kieran Parsons
   Abstract: Parameter-Efficient Fine-Tuning (PEFT) has recently garnered significant attention, due to the enormous size of Large Language Models (LLM). Among various PEFT methods, Low-Rank Adaptation (LoRA) demonstrates comparable performance to full fine-tuning, despite having significantly fewer trainable parameters. In this work, we first generalize LoRA from a low-rank linear adaptation/mapping to low-dimensional, non-linear adaptation/mapping, called Low-Dimensional Adaptation (LoDA). We further propose LoDA+, which further improves the expressiveness of the non-linear adaptation and still uses almost the same number of tunable parameters as LoRA. Both LoDA and LoDA+ include LoRA as a special case. To improve computational efficiency at inference, we further propose R-LoDA(+) and S-LoDA(+), replacing the pre-trained weight matrix by its low-rank or sparse approximation, which is frozen during fine-tuning. Empirical evaluations on Natural Language Generation tasks show that LoDA(+) and some variants outperform LoRA as well as other baselines. We will release a package that facilitates the integration of LoDA(+) and their variants with PyTorch models.
-- Title: (Paper Oral Presentation) TBD
-  Time: 11:40AM - 11:50AM
-  Presenter: TBD
+- Title: (<b>Spotlight 7</b>) MatFormer:Nested Transformer for Elastic Inference
+  Time: 11:36AM - 11:42AM
+  Presenter: Fnu Devvrit
   Is_paper: true
   Whole_line: false
-  Authors: TBD
-  Abstract: TBD
-- Title: (Paper Oral Presentation) TBD
-  Time: 11:50AM - 12:00PM
-  Presenter: TBD
+  Authors: Fnu Devvrit · Sneha Kudugunta · Aditya Kusupati · Tim Dettmers · Kaifeng Chen · Inderjit Dhillon · Yulia Tsvetkov · Hanna Hajishirzi · Sham Kakade · Ali Farhadi · Prateek Jain
+  Abstract: Transformer models are deployed in a wide range of settings, from multi-accelerator clusters to standalone mobile phones. The diverse inference constraints in these scenarios necessitate practitioners to train foundation models such as PaLM 2 & Llama as a series of models of varying sizes. Due to significant training costs, only a select few model sizes are trained and supported, limiting more fine-grained control over relevant tradeoffs (latency, cost, accuracy). We introduce MatFormer, a nested Transformer architecture designed to offer elasticity in a variety of deployment constraints. Each Feed Forward Network (FFN) block of a MatFormer model is jointly optimized with a few nested smaller FFN blocks. This allows for the Mix'n'Match of model granularities across layers -- i.e., a trained universal MatFormer model enables extraction of hundreds of accurate smaller models which were never explicitly optimized. We empirically demonstrate MatFormer's effectiveness for decoder only language modeling and find that a 2.6B decoder-only MatFormer language model (MatLM) allows us to extract smaller models spanning from 1.5B to 2.6B, each exhibiting comparable validation loss and one-shot downstream evaluations to their independently trained counterparts. Finally, we showcase that speculative decoding with the accurate and consistent submodels extracted from MatFormer can further reduce inference latency.
+- Title: (<b>Spotlight 8</b>) LoftQ:LoRA-Fine-Tuning-Aware Quantization for Large Language Models 
+  Time: 11:42AM - 11:48PM
+  Presenter: Yixiao Li
   Is_paper: true
   Whole_line: false
-  Authors: TBD
-  Abstract: TBD
+  Authors: Yixiao Li · Yifan Yu · Chen Liang · Nikos Karampatziakis · Pengcheng He · Weizhu Chen · Tuo Zhao
+  Abstract: Quantization is an indispensable technique for serving Large Language Models(LLMs) and has recently found its way into LoRA fine-tuning (Dettmers et al.,2023). In this work we focus on the scenario where quantization and LoRA fine-tuning are applied together on a pre-trained model. In such cases it is commonto observe a consistent gap in the performance on downstream tasks between fullfine-tuning and quantization plus LoRA fine-tuning approach. In response, wepropose LoftQ (LoRA-Fine-Tuning-aware Quantization), a novel quantizationframework that simultaneously quantizes an LLM and finds a proper low-rankinitialization for LoRA fine-tuning. Such an initialization alleviates the discrep-ancy between the quantized and full-precision model and significantly improvesthe generalization in downstream tasks. We evaluate our method on natural lan-guage understanding, question answering, summarization, and natural languagegeneration tasks. Experiments show that our method is highly effective and out-performs existing quantization methods, especially in the challenging 2-bit and2/4-bit mixed precision regimes. We will release our code.
+- Title: (<b>Spotlight 9</b>) Improving Linear Attention via Softmax Mimicry 
+  Time: 11:48AM - 11:54PM
+  Presenter: Michael Zhang
+  Is_paper: true
+  Whole_line: false
+  Authors: Michael Zhang · Kush Bhatia · Hermann Kumbong · Christopher Ré
+  Abstract: Linear attentions are promising methods to improve Transformer efficiency. This improved efficiency is applicable to training linear Transformers from scratch, converting finetuned Transformers into linear versions that recover task-specific performance, and converting pretrained Transformers into linear versions for downstream transfer. However, linear attentions often lag behind softmax attention in performance. To address this gap, we identify two key empirical properties of softmax attention missing in linear attentions:low-entropy "spiky" weights and dot-product monotonicity. We thus introduce Hedgehog, a learnable linear attention trained to "mimic" softmax attention by minimizing cross-entropy between attention weights. Experiments show Hedgehog significantly closes the attention performance gap. Hedgehog closes 68.6% of the gap on WikiText-103 when training 125M-parameter linear Transformers from scratch, improving upon prior linear attentions by up to 6 perplexity points (PPL), and recovers >99% of GLUE points when converting finetuned BERT models, outperforming prior methods up to 8.7 points. By "linearizing" GPT-2, Hedgehog outperforms efficient Transformer alternatives, obtaining state-of-the-art 16.7 perplexity on WikiText-103.
+- Title: (<b>Spotlight 10</b>) PaSS:Parallel Speculative Sampling  
+  Time: 11:54AM - 12:00PM
+  Presenter: Giovanni Monea
+  Is_paper: true
+  Whole_line: false
+  Authors: Giovanni Monea · Armand Joulin · Edouard Grave
+  Abstract: Scaling the size of language models to tens of billions of parameters has led to impressive performance on a wide range of tasks. At generation, these models are used auto-regressively, requiring a forward pass for each generated token, and thus reading the full set of parameters from memory. This memory access forms the primary bottleneck for generation and it worsens as the model size increases. Moreover, executing a forward pass for multiple tokens in parallel often takes nearly the same time as it does for just one token. These two observations lead to the development of speculative sampling, where a second smaller model is used to draft a few tokens, that are then validated or rejected using a single forward pass of the large model. Unfortunately, this method requires two models that share the same tokenizer and thus limits its adoption. As an alternative, we propose to use parallel decoding as a way to draft multiple tokens from a single model with no computational cost, nor the need for a second model. Our approach only requires an additional input token that marks the words that will be generated simultaneously. We show promising performance (up to $30\%$ speed-up) while requiring only as few as $O(d_{emb})$ additional parameters.
 
 - Title: Lunch Break
   Time: 12:00PM - 12:45PM
