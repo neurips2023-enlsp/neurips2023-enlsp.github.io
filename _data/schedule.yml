@@ -28,15 +28,15 @@
   Presenter: Hao Sun · Alihan Hüyük · Mihaela van der Schaar
   Is_paper: true
   Whole_line: false
-  Authors: TBD
-  Abstract: TBD
-- Title: (Paper Oral Presentation) TBD
-  Time: 09:40AM - 09:50AM
-  Presenter: TBD
+  Authors: Hao Sun · Alihan Hüyük · Mihaela van der Schaar
+  Abstract: In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. We introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.
+- Title: [Paper-Oral 2] MultiPrompter:Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning
+  Time: 09:36AM - 09:42AM
+  Presenter: TBDDong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
   Is_paper: true
   Whole_line: false
-  Authors: TBD
-  Abstract: TBD
+  Authors: Dong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
+  Abstract: TBDRecently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines.
 - Title: (Paper Oral Presentation) TBD
   Time: 09:50AM - 10:00AM
   Presenter: TBD
