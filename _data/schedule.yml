@@ -36,7 +36,7 @@
   Is_paper: true
   Whole_line: false
   Authors: Dong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
-  Abstract: TBDRecently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines.
+  Abstract: Recently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines.
 - Title: (<b>Spotlight 3</b>) Decoding Data Quality via Synthetic Corruptions:Embedding-guided Pruning of Code Data 
   Time: 09:42AM - 9:48AM
   Presenter: Yu Yang
@@ -44,7 +44,15 @@
   Whole_line: false
   Authors: Yu Yang · Aaditya Singh · Mostafa Elhoushi · Anas Mahmoud · Kushal Tirumala · Fabian Gloeckle · Baptiste Roziere · Carole-Jean Wu · Ari Morcos · Newsha Ardalani
   Abstract: TBDCode datasets, often collected from diverse and uncontrolled sources such as GitHub, potentially suffer from quality issues, thereby affecting the performance and training efficiency of Large Language Models (LLMs) optimized for code generation. Previous studies demonstrated the benefit of using embedding spaces for data pruning, but they mainly focused on duplicate removal or increasing variety, and in other modalities, such as images. Our work focuses on using embeddings to identify and remove low-quality'' code data. First, we explore features oflow-quality'' code in embedding space, through the use of synthetic corruptions. Armed with this knowledge, we devise novel pruning metrics that operate in embedding space to identify and remove low-quality entries in the Stack dataset. We demonstrate the benefits of this synthetic corruption informed pruning (SCIP) approach on the well-established HumanEval and MBPP benchmarks, outperforming existing embedding-based methods. Importantly, we achieve up to a 3% performance improvement over no pruning, thereby showing the promise of insights from synthetic corruptions for data pruning.
-  
+- Title: (<b>Spotlight 4</b>) FlashFFTConv:Efficient Convolutions for Long Sequences with Tensor Cores 
+  Time: 09:48AM - 9:54AM
+  Presenter: Dan Fu
+  Is_paper: true
+  Whole_line: false
+  Authors: Dan Fu · Hermann Kumbong · Eric Nguyen · Christopher Ré
+  Abstract: Convolution models with long filters have demonstrated state-of-the-art reasoning abilities in many long-sequence tasks but lag behind the most optimized Transformers in wall-clock time.A major bottleneck is the Fast Fourier Transform (FFT)---which allows long convolutions to run in $O(N \log N)$ time in sequence length $N$ but has poor hardware utilization.In this paper, we study how to optimize the FFT convolution.We find two key bottlenecks:the FFT does not effectively use specialized matrix multiply units, and it incurs expensive I/O between layers of the memory hierarchy.In response, we propose FlashFFTConv.FlashFFTConv uses a matrix decomposition that computes the FFT using matrix multiply units and enables kernel fusion for long sequences, reducing I/O.FlashFFTConv speeds up exact FFT convolutions by up to 6.54$\times$ over PyTorch and achieves up to 4.4$\times$ speedup end-to-end.Given the same compute budget, FlashFFTConv allows Hyena-GPT-s to achieve 2.3 points better perplexity and M2-BERT-base to achieve 3.3 points higher GLUE score---matching models with twice the parameter count.
+
+
 - Title: Morning Break and <b>Poster Setup</b>
   Time: 10:00AM - 10:30AM
   Whole_line: true
