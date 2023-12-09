@@ -8,14 +8,12 @@
 layout: home
 ---
 {% assign rows = site.data.accepted_papers %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $("#pop").on("click", function() {
    $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
 });
 function display_poster(paper_id){
-	console.log("ok");
 	var modal = document.getElementById("myModal");
 	var modalImg = document.getElementById("img01");
 	modal.style.display = "block";
@@ -35,7 +33,7 @@ function close_modal() {
 .img2zoom:hover {opacity: 0.7;}
 
 /* The Modal (background) */
-.modal {
+.our-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -50,16 +48,16 @@ function close_modal() {
 }
 
 /* Modal Content (image) */
-.modal-content {
+.our-modal-content {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 
 /* Add Animation */
-.modal-content, #caption {  
+.our-modal-content {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -77,7 +75,7 @@ function close_modal() {
 }
 
 /* The Close Button */
-.close {
+.our-close {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -87,8 +85,8 @@ function close_modal() {
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.our-close:hover,
+.our-close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -96,15 +94,15 @@ function close_modal() {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-  .modal-content {
+  .our-modal-content {
     width: 100%;
   }
 }
 </style>
 
-<div id="myModal" class="modal">
-  <span class="close" onclick="close_modal()">&times;</span>
-  <img class="modal-content" id="img01">
+<div id="myModal" class="our-modal">
+  <span class="our-close" onclick="close_modal()">&times;</span>
+  <img class="our-modal-content" id="img01">
 </div>
 
 {% for row in rows %}
