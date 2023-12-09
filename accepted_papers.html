@@ -14,8 +14,16 @@ $("#pop").on("click", function() {
    $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
 });
-function display_poster(){
+function display_poster(paper_id){
 	console.log("ok");
+	var modal = document.getElementById("myModal");
+	var modalImg = document.getElementById("img01");
+	modal.style.display = "block";
+	modalImg.src = "/images/posters/"+paper_id+".png";
+}
+function close_modal() { 
+	var modal = document.getElementById("myModal");
+	modal.style.display = "none";
 }
 </script>
 <style>
@@ -25,7 +33,7 @@ cursor: zoom-in;
 </style>
 
 <div id="myModal" class="modal">
-  <span class="close">&times;</span>
+  <span class="close" onclick="close_modal()">&times;</span>
   <img class="modal-content" id="img01">
 </div>
 
@@ -59,7 +67,7 @@ cursor: zoom-in;
 	{% for row in rows %}
 	<div class="col-lg-3 mb-3 d-flex align-items-stretch">
 		<div class="card">
-			<img class="img2zoom" src="/images/posters/{{row.id}}.png" class="card-img-top" alt="poster" style="width:auto; height:13vw;" onclick="display_poster()">
+			<img class="img2zoom" src="/images/posters/{{row.id}}.png" class="card-img-top" alt="poster" style="width:auto; height:13vw;" onclick="display_poster({{row.id}})">
 			<!--<iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="https://neurips2023-enlsp.github.io/papers/paper_{{row.id}}.pdf" frameborder="1" scrolling="auto"></iframe>-->
 			<div class="card-body">
 				<h5 class="card-title">{{ row.title }}</h5>
