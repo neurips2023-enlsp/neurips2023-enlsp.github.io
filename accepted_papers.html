@@ -23,6 +23,12 @@ function close_modal() {
 	var modal = document.getElementById("myModal");
 	modal.style.display = "none";
 }
+function keyup_modal(e){
+	if(e.key=="Escape"){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+}
 </script>
 <style>
 .img2zoom:hover{
@@ -101,7 +107,7 @@ function close_modal() {
 }
 </style>
 
-<div id="myModal" class="our-modal">
+<div id="myModal" class="our-modal" onkeyup="keyup_modal(event)">
   <span class="our-close" onclick="close_modal()">&times;</span>
   <img class="our-modal-content" id="img01">
 </div>
