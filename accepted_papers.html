@@ -13,6 +13,9 @@ $("#pop").on("click", function() {
    $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
    $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
 });
+$("body").on("keyup", function(event){
+	console.log(event);
+});
 function display_poster(paper_id){
 	var modal = document.getElementById("myModal");
 	var modalImg = document.getElementById("img01");
@@ -24,6 +27,7 @@ function close_modal() {
 	modal.style.display = "none";
 }
 function keyup_modal(e){
+	console.log(e.key);
 	if(e.key=="Escape"){
 		var modal = document.getElementById("myModal");
 		modal.style.display = "none";
