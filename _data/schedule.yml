@@ -51,7 +51,7 @@
   Whole_line: false
   Authors: Dan Fu · Hermann Kumbong · Eric Nguyen · Christopher Ré
   Abstract: Convolution models with long filters have demonstrated state-of-the-art reasoning abilities in many long-sequence tasks but lag behind the most optimized Transformers in wall-clock time.A major bottleneck is the Fast Fourier Transform (FFT)---which allows long convolutions to run in $O(N \log N)$ time in sequence length $N$ but has poor hardware utilization.In this paper, we study how to optimize the FFT convolution.We find two key bottlenecks:the FFT does not effectively use specialized matrix multiply units, and it incurs expensive I/O between layers of the memory hierarchy.In response, we propose FlashFFTConv.FlashFFTConv uses a matrix decomposition that computes the FFT using matrix multiply units and enables kernel fusion for long sequences, reducing I/O.FlashFFTConv speeds up exact FFT convolutions by up to 6.54$\times$ over PyTorch and achieves up to 4.4$\times$ speedup end-to-end.Given the same compute budget, FlashFFTConv allows Hyena-GPT-s to achieve 2.3 points better perplexity and M2-BERT-base to achieve 3.3 points higher GLUE score---matching models with twice the parameter count.
- -Title: (<b>Spotlight 5</b>) Ensemble of low-rank adapters for large language model fine-tuning
+- Title: (<b>Spotlight 5</b>) Ensemble of low-rank adapters for large language model fine-tuning
   Time: 9:54AM - 10:00AM
   Presenter: Xi Wang
   Is_paper: true
