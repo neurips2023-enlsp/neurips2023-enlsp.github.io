@@ -30,13 +30,13 @@
   Whole_line: false
   Authors: Hao Sun · Alihan Hüyük · Mihaela van der Schaar
   Abstract: In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. We introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.
-- Title: (<b>Spotlight 2</b>) MultiPrompter:Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning
+- Title: (<b>Spotlight 2</b>) MatFormer:Nested Transformer for Elastic Inference
   Time: 9:36AM - 9:42AM
-  Presenter: Dong-Ki Kim 
+  Presenter: Fnu Devvrit
   Is_paper: true
   Whole_line: false
-  Authors: Dong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
-  Abstract: Recently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines.
+  Authors: Fnu Devvrit · Sneha Kudugunta · Aditya Kusupati · Tim Dettmers · Kaifeng Chen · Inderjit Dhillon · Yulia Tsvetkov · Hanna Hajishirzi · Sham Kakade · Ali Farhadi · Prateek Jain
+  Abstract: Transformer models are deployed in a wide range of settings, from multi-accelerator clusters to standalone mobile phones. The diverse inference constraints in these scenarios necessitate practitioners to train foundation models such as PaLM 2 & Llama as a series of models of varying sizes. Due to significant training costs, only a select few model sizes are trained and supported, limiting more fine-grained control over relevant tradeoffs (latency, cost, accuracy). We introduce MatFormer, a nested Transformer architecture designed to offer elasticity in a variety of deployment constraints. Each Feed Forward Network (FFN) block of a MatFormer model is jointly optimized with a few nested smaller FFN blocks. This allows for the Mix'n'Match of model granularities across layers -- i.e., a trained universal MatFormer model enables extraction of hundreds of accurate smaller models which were never explicitly optimized. We empirically demonstrate MatFormer's effectiveness for decoder only language modeling and find that a 2.6B decoder-only MatFormer language model (MatLM) allows us to extract smaller models spanning from 1.5B to 2.6B, each exhibiting comparable validation loss and one-shot downstream evaluations to their independently trained counterparts. Finally, we showcase that speculative decoding with the accurate and consistent submodels extracted from MatFormer can further reduce inference latency.
 - Title: (<b>Spotlight 3</b>) Decoding Data Quality via Synthetic Corruptions:Embedding-guided Pruning of Code Data 
   Time: 9:42AM - 9:48AM
   Presenter: Yu Yang
@@ -89,13 +89,13 @@
   Whole_line: false
   Authors: Jing Liu · Toshiaki Koike-Akino · Perry Wang · Matthew Brand · Ye Wang · Kieran Parsons
   Abstract: Parameter-Efficient Fine-Tuning (PEFT) has recently garnered significant attention, due to the enormous size of Large Language Models (LLM). Among various PEFT methods, Low-Rank Adaptation (LoRA) demonstrates comparable performance to full fine-tuning, despite having significantly fewer trainable parameters. In this work, we first generalize LoRA from a low-rank linear adaptation/mapping to low-dimensional, non-linear adaptation/mapping, called Low-Dimensional Adaptation (LoDA). We further propose LoDA+, which further improves the expressiveness of the non-linear adaptation and still uses almost the same number of tunable parameters as LoRA. Both LoDA and LoDA+ include LoRA as a special case. To improve computational efficiency at inference, we further propose R-LoDA(+) and S-LoDA(+), replacing the pre-trained weight matrix by its low-rank or sparse approximation, which is frozen during fine-tuning. Empirical evaluations on Natural Language Generation tasks show that LoDA(+) and some variants outperform LoRA as well as other baselines. We will release a package that facilitates the integration of LoDA(+) and their variants with PyTorch models.
-- Title: (<b>Spotlight 7</b>) MatFormer:Nested Transformer for Elastic Inference
+- Title: (<b>Spotlight 7</b>) MultiPrompter:Cooperative Prompt Optimization with Multi-Agent Reinforcement Learning
   Time: 11:36AM - 11:42AM
-  Presenter: Fnu Devvrit
+  Presenter: Dong-Ki Kim
   Is_paper: true
   Whole_line: false
-  Authors: Fnu Devvrit · Sneha Kudugunta · Aditya Kusupati · Tim Dettmers · Kaifeng Chen · Inderjit Dhillon · Yulia Tsvetkov · Hanna Hajishirzi · Sham Kakade · Ali Farhadi · Prateek Jain
-  Abstract: Transformer models are deployed in a wide range of settings, from multi-accelerator clusters to standalone mobile phones. The diverse inference constraints in these scenarios necessitate practitioners to train foundation models such as PaLM 2 & Llama as a series of models of varying sizes. Due to significant training costs, only a select few model sizes are trained and supported, limiting more fine-grained control over relevant tradeoffs (latency, cost, accuracy). We introduce MatFormer, a nested Transformer architecture designed to offer elasticity in a variety of deployment constraints. Each Feed Forward Network (FFN) block of a MatFormer model is jointly optimized with a few nested smaller FFN blocks. This allows for the Mix'n'Match of model granularities across layers -- i.e., a trained universal MatFormer model enables extraction of hundreds of accurate smaller models which were never explicitly optimized. We empirically demonstrate MatFormer's effectiveness for decoder only language modeling and find that a 2.6B decoder-only MatFormer language model (MatLM) allows us to extract smaller models spanning from 1.5B to 2.6B, each exhibiting comparable validation loss and one-shot downstream evaluations to their independently trained counterparts. Finally, we showcase that speculative decoding with the accurate and consistent submodels extracted from MatFormer can further reduce inference latency.
+  Authors: Dong-Ki Kim · Sungryull Sohn · Lajanugen Logeswaran · Dongsub Shim · Honglak Lee
+  Abstract: Recently, there has been an increasing interest in automated prompt optimization based on reinforcement learning (RL). This approach offers important advantages, such as generating interpretable prompts and being compatible with black-box foundation models. However, the substantial prompt space size poses challenges for RL-based methods, often leading to suboptimal policy convergence. This paper introduces MultiPrompter, a new framework that views prompt optimization as a cooperative game between prompters who take turns composing a prompt together. Our cooperative prompt optimization effectively reduces the problem size and helps prompters learn optimal prompts. We test our method on the text-to-image task and demonstrate its ability to generate higher-quality images than baselines.
 - Title: (<b>Spotlight 8</b>) LoftQ:LoRA-Fine-Tuning-Aware Quantization for Large Language Models
   Time: 11:42AM - 11:48PM
   Presenter: Yixiao Li
@@ -122,7 +122,7 @@
   Time: 12:00PM - 1:00PM
   Whole_line: true
  
-- Title: <b>Poster Session I </b> (Paper IDs:#1 to #45)
+- Title: <b>Poster Session I </b> (Paper IDs:# 1-45)
   Time: 1:00PM - 2:00PM
   Whole_line: true
   
@@ -158,7 +158,7 @@
   Time: 4:10PM-4:15PM
   Whole_line: true  
   
-- Title: <b>Poster Session II</b>
+- Title: <b>Poster Session II</b> (Paper IDs:# 46-96)
   Time: 4:15PM - 5:15PM
   Whole_line: true
 
