@@ -134,13 +134,13 @@
   Bio: Ali Madani is the founder of Profluent Bio, an AI startup in protein design. Previously, he received his PhD from UC Berkeley and led machine learning research initiatives at Salesforce Research utilizing deep learning, language modeling, and computer vision. Most notably, Ali was the architect of the ProGen moonshot which demonstrated the first use of large language models for functional protein design.
   Abstract: TBD  
   
-- Title: (<b>KeyNote Talk</b>) TBD
+- Title: (<b>KeyNote Talk</b>) End-to-End Speech Recognition:The Journey from Research to Production
   Time: 2:30PM-3:00PM
   Presenter: Tara Sainath
   Is_paper: false
   Whole_line: false
-  Bio: TBD
-  Abstract: TBD  
+  Bio: Tara Sainath received her S.B., M.Eng and PhD in Electrical Engineering and Computer Science (EECS) from MIT. After her PhD, she spent 5 years at the Speech and Language Algorithms group at IBM T.J. Watson Research Center, before joining Google Research. She has served as a Program Chair for ICLR in 2017 and 2018. Also, she has co-organized numerous special sessions and workshops, including Interspeech 2010, ICML 2013, Interspeech 2016, ICML 2017, Interspeech 2019, NeurIPS 2020. In addition, she has served as a member of the IEEE Speech and Language Processing Technical Committee (SLTC) as well as the Associate Editor for IEEE/ACM Transactions on Audio, Speech, and Language Processing. She is an IEEE and ISCA Fellow and the recipient of the 2021 IEEE SPS Industrial Innovation Award. She is currently a Principal Research Scientist at Google, working on applications of deep neural networks for automatic speech recognition.
+  Abstract: End-to-end (E2E) speech recognition has become a popular research paradigm in recent years, allowing the modular components of a conventional speech recognition system (acoustic model, pronunciation model, language model), to be replaced by one neural network. In this talk, we will discuss a multi-year research journey of E2E modeling for speech recognition at Google. This journey has resulted in E2E models that can surpass the performance of conventional models across many different quality and latency metrics, as well as the productionization of E2E models for Pixel 4, 5 and 6 phones. We will also touch upon future research efforts with E2E models, including multi-lingual speech recognition.
 
 
 
