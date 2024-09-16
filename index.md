@@ -13,6 +13,15 @@ The third version of the Efficient Natural Language and Speech Processing (ENLSP
 This will be a unique opportunity to discuss and share challenging problems, build connections,  exchange ideas and brainstorm solutions, and foster future collaborations. The topics of this workshop can be of interest for people working on general machine learning, deep learning, optimization, theory and NLP & Speech applications. 
 </p>
 
+<br>
+<div class="alert alert-danger" role="alert">
+	<center>
+		<i class="bi bi-info-circle"></i>
+		<br>
+		<b>The latest version of the worshop (NeurIPS ENLSP 2024) is out, you can check it on the new <a href="https://neurips2024-enlsp.github.io/">website</a>.</b>
+	</center>
+</div>
+<br>
 
 <h2 class="blackpar_title" id="overview">Overview</h2>
 <p>
